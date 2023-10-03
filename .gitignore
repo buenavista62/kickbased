@@ -1,2 +1,4 @@
 test.py
 calculate_odds.py
+.vscode
+__pycache__
