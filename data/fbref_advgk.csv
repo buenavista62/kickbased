@@ -1,0 +1,20 @@
+player,nationality,position,team,age,birth_year,minutes_90s,gk_goals_against,gk_pens_allowed,gk_free_kick_goals_against,gk_corner_kick_goals_against,gk_own_goals_against,gk_psxg,gk_psnpxg_per_shot_on_target_against,gk_psxg_net,gk_psxg_net_per90,gk_passes_completed_launched,gk_passes_launched,gk_passes_pct_launched,gk_passes,gk_passes_throws,gk_pct_passes_launched,gk_passes_length_avg,gk_goal_kicks,gk_pct_goal_kicks_launched,gk_goal_kick_length_avg,gk_crosses,gk_crosses_stopped,gk_crosses_stopped_pct,gk_def_actions_outside_pen_area,gk_def_actions_outside_pen_area_per90,gk_avg_distance_def_actions,matches
+Noah Atubolu,de GER,GK,Freiburg,21-131,2002,6.0,10,0,0,2,0,8.5,0.38,-1.5,-0.24,30,119,25.2,224,30,34.8,34.8,49,83.7,59.0,80,3,3.8,4,0.67,11.6,Matches
+Oliver Baumann,de GER,GK,Hoffenheim,33-123,1990,6.0,9,0,1,1,1,10.6,0.26,+2.6,+0.44,34,102,33.3,179,32,36.9,35.1,53,67.9,50.9,134,8,6.0,13,2.17,15.6,Matches
+Janis Blaswich,de GER,GK,RB Leipzig,32-154,1991,6.0,6,1,0,1,0,7.9,0.31,+1.9,+0.31,21,57,36.8,242,28,17.4,26.6,44,34.1,31.7,72,7,9.7,12,2.00,17.0,Matches
+Koen Casteels,be BEL,GK,Wolfsburg,31-100,1992,6.0,6,0,0,0,0,7.3,0.34,+1.3,+0.22,40,83,48.2,196,28,28.1,32.5,51,54.9,44.7,85,4,4.7,10,1.67,17.1,Matches
+Finn Dahmen,de GER,GK,Augsburg,25-190,1998,6.0,15,3,0,2,1,11.0,0.28,-3.0,-0.51,24,74,32.4,282,21,22.3,29.3,23,47.8,45.0,79,9,11.4,11,1.83,14.4,Matches
+Lukáš Hrádecký,fi FIN,GK,Leverkusen,33-313,1989,6.0,6,0,0,2,0,6.8,0.30,+0.8,+0.14,18,41,43.9,135,31,24.4,29.3,24,33.3,33.0,68,9,13.2,7,1.17,15.1,Matches
+Gregor Kobel,ch SUI,GK,Dortmund,25-301,1997,6.0,6,2,0,0,0,7.3,0.22,+1.3,+0.21,29,65,44.6,211,30,22.7,29.1,51,33.3,34.3,75,3,4.0,6,1.00,14.4,Matches
+Kevin Müller,de GER,GK,Heidenheim,32-202,1991,6.0,13,3,0,1,0,14.5,0.25,+1.5,+0.24,51,112,45.5,204,34,39.7,37.2,60,51.7,42.4,88,4,4.5,6,1.00,13.8,Matches
+Moritz Nicolas,de GER,GK,M'Gladbach,25-347,1997,4.0,7,0,0,2,0,5.5,0.24,-1.5,-0.36,18,62,29.0,109,19,38.5,34.6,39,51.3,44.9,78,2,2.6,3,0.75,12.9,Matches
+Alexander Nübel,de GER,GK,Stuttgart,27-003,1996,6.0,7,0,0,1,1,6.5,0.25,+0.5,+0.09,31,50,62.0,209,42,18.2,27.4,26,46.2,38.0,70,11,15.7,12,2.00,15.6,Matches
+Jonas Omlin,ch SUI,GK,M'Gladbach,29-266,1994,2.0,7,1,0,1,0,6.0,0.28,-1.0,-0.51,11,32,34.4,67,13,40.3,37.0,10,50.0,40.4,27,1,3.7,2,1.00,13.3,Matches
+Jiří Pavlenka,cz CZE,GK,Werder Bremen,31-172,1992,6.0,14,2,0,1,0,11.6,0.29,-2.4,-0.40,26,70,37.1,154,32,37.7,34.4,60,20.0,29.2,98,7,7.1,9,1.50,15.1,Matches
+Manuel Riemann,de GER,GK,Bochum,35-024,1988,6.0,19,1,0,3,0,15.8,0.34,-3.2,-0.53,74,181,40.9,273,19,58.2,40.1,35,62.9,46.7,81,0,0.0,23,3.83,22.9,Matches
+Frederik Rønnow,dk DEN,GK,Union Berlin,31-060,1992,6.0,10,1,1,1,0,10.0,0.27,0.0,0.00,25,106,23.6,191,23,41.4,35.8,41,65.9,51.7,88,10,11.4,12,2.00,15.2,Matches
+Marcel Schuhen,de GER,GK,Darmstadt 98,30-263,1993,6.0,18,0,0,2,0,16.1,0.31,-1.9,-0.32,38,117,32.5,226,33,41.6,38.4,46,50.0,42.7,86,5,5.8,10,1.67,16.8,Matches
+Marvin Schwäbe,de GER,GK,Köln,28-161,1995,6.0,11,0,0,1,0,10.1,0.43,-0.9,-0.15,30,72,41.7,199,24,32.2,32.3,22,36.4,35.6,67,1,1.5,7,1.17,15.5,Matches
+Kevin Trapp,de GER,GK,Eint Frankfurt,33-087,1990,6.0,5,2,0,0,0,7.4,0.18,+2.4,+0.40,17,76,22.4,180,29,32.8,31.5,50,34.0,32.4,78,3,3.8,9,1.50,16.5,Matches
+Sven Ulreich,de GER,GK,Bayern Munich,35-061,1988,6.0,6,1,1,2,0,5.8,0.34,-0.2,-0.04,14,45,31.1,177,28,23.2,26.7,27,14.8,24.1,53,2,3.8,9,1.50,20.7,Matches
+Robin Zentner,de GER,GK,Mainz 05,28-340,1994,6.0,17,1,1,0,1,13.4,0.49,-2.6,-0.44,22,62,35.5,166,42,31.3,32.9,31,32.3,32.7,54,8,14.8,9,1.50,17.5,Matches
