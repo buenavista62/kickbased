@@ -18,12 +18,14 @@ def loadKBPlayer():
                     str(player.first_name) + " " + str(player.last_name)
                     for player in players
                 ],
+                "Team": [player.team_name for player in players],
                 "Position": [str(player.position) for player in players],
                 "Marktwert": [player.market_value for player in players],
                 "Trend": [player.market_value_trend for player in players],
                 "Bild": [player.profile_big_path for player in players],
                 "Status": [player.status for player in players],
                 "Punkteschnitt": [player.average_points for player in players],
+                "Punktetotal": [player.totalPoints for player in players],
                 "UserID": [str(player.user_id) for player in players],
             }
         )
@@ -34,7 +36,7 @@ def loadKBPlayer():
 
 
 def main():
-    st.title("Kickbase League Stats App")
+    st.title("Kickbased")
 
     if "logged" not in st.session_state:
         st.session_state.logged = False
@@ -44,25 +46,33 @@ def main():
 
     if st.session_state.logged == False:
         st.write("Please log in")
-        email = st.text_input("Email")
-        password = st.text_input("Password", type="password")
-        login_checkbox = st.button("Login")
+        with st.form(key="login_form"):
+            email = st.text_input("Email")
+            password = st.text_input("Password", type="password")
+            login_checkbox = st.form_submit_button("Login")
 
-        if login_checkbox and email and password:
-            with st.spinner("Logging in..."):
-                logging = kickbase_singleton.login(email, password)
-                if logging:
-                    st.success("Logged in successfully!")
-                    st.session_state.logged = True
-                else:
-                    st.error("Invalid email or password. Please try again.")
-                    st.session_state.logged = False
+            if login_checkbox and email and password:
+                with st.spinner("Logging in..."):
+                    logging = kickbase_singleton.login(email, password)
+                    if logging:
+                        st.success("Logged in successfully!")
+                        st.session_state.logged = True
+                    else:
+                        st.error("Invalid email or password. Please try again.")
+                        st.session_state.logged = False
+
     if st.session_state.logged == True:
-        kb = kickbase_singleton.kb
-        league_names = [kb.leagues()[i].name for i in range(len(kb.leagues()))]
+        if "kb" not in st.session_state:
+            st.session_state.kb = kickbase_singleton.kb
+        league_names = [
+            st.session_state.kb.leagues()[i].name
+            for i in range(len(st.session_state.kb.leagues()))
+        ]
         selected_league = st.selectbox("Wähle eine Liga", league_names)
         if "liga" not in st.session_state:
-            st.session_state.liga = kb.leagues()[league_names.index(selected_league)]
+            st.session_state.liga = st.session_state.kb.leagues()[
+                league_names.index(selected_league)
+            ]
 
         logout_button = st.button("Logout")
         if logout_button:
@@ -73,10 +83,14 @@ def main():
             with st.status("Data preperation"):
                 st.write("Downloading Kickbase data...")
                 st.session_state.kb_data = loadKBPlayer()
-                st.write("Merging data with ligainsider and fbref...")
-                df_li_fbref = pd.read_csv("./data/full_df.csv")
+                st.write("Merging data with ligainsider...")
+                df_li = pd.read_csv("./data/ligainsider_df.csv")
+                df_li.ID = df_li.ID.astype("str")
                 st.session_state.kb_data_merged = fn.mergeKB(
-                    df_li_fbref, st.session_state.kb_data
+                    df_li, st.session_state.kb_data
+                )
+                st.session_state.kb_radarcharts = fn.radarcharts(
+                    st.session_state.kb_data_merged
                 )
                 st.write("Data is ready")
 
