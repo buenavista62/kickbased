@@ -32,3 +32,11 @@ jobs:
       run: |
         cd preprocessing
         python scrape_li.py  # Replace with your script's name
+
+    - name: Commit and push if changes
+      run: |
+        git config --global user.email "sercan-ates@outlook.com"
+        git config --global user.name "buenavista62"
+        git add -A
+        git commit -m "Automated data update" -a || echo "No changes to commit"
+        git push
