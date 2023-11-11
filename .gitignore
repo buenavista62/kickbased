@@ -3,3 +3,4 @@ calculate_odds.py
 .vscode/*
 **/__pycache__/*
 archive/*
+/preprocessing/scrape_li copy.py
