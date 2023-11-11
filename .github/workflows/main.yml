@@ -2,7 +2,7 @@ name: Scheduled Script Run
 
 on:
   schedule:
-    - cron: '0 3 * * *'     # Every day at 3 AM UTC
+    - cron: '0 0 * * *'     # Every day at 0 AM UTC
     - cron: '0 22 * * 5'    # Every Friday at 10 PM UTC
     - cron: '0 17 * * 6'    # Every Saturday at 5 PM UTC
     - cron: '0 20 * * 6'    # Every Saturday at 8 PM UTC
