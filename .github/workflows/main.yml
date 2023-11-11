@@ -8,6 +8,7 @@ on:
     - cron: '0 20 * * 6'    # Every Saturday at 8 PM UTC
     - cron: '0 21 * * 0'    # Every Sunday at 9 PM UTC
     - cron: '22 23 * * *' 
+    - cron: '30 23 * * *'
 
 jobs:
   run-script:
