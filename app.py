@@ -27,6 +27,8 @@ def loadKBPlayer():
                 "Punkteschnitt": [player.average_points for player in players],
                 "Punktetotal": [player.totalPoints for player in players],
                 "UserID": [str(player.user_id) for player in players],
+                "TeamID": [str(player.team_id) for player in players],
+                "TeamCover": [str(player.team_cover_path) for player in players],
             }
         )
     except:
@@ -73,11 +75,19 @@ def main():
             st.session_state.liga = st.session_state.kb.leagues()[
                 league_names.index(selected_league)
             ]
+        if "user_info" not in st.session_state:
+            keys = [
+                x.id for x in st.session_state.kb.league_users(st.session_state.liga)
+            ]
+            values = [
+                x.name for x in st.session_state.kb.league_users(st.session_state.liga)
+            ]
+            st.session_state.user_info = dict(zip(keys, values))
 
         logout_button = st.button("Logout")
         if logout_button:
             del st.session_state.logged
-            st.experimental_rerun()
+            st.rerun()
 
         if "kb_data" not in st.session_state:
             with st.status("Data preperation"):

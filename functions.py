@@ -8,6 +8,8 @@ import json
 import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
+import datetime
+import plotly.express as px
 
 
 def SearchPlayer(df, search):
@@ -89,7 +91,7 @@ def display_selected_stats(player_stats_str, stat_cols, df):
     }
 
     # Display the DataFrame using st.data_editor
-    st.data_editor(
+    st.dataframe(
         data=display_df,
         column_config=column_config,
         hide_index=True,
@@ -200,6 +202,31 @@ def radarcharts(df):
     # df_new.to_csv("./data/full_df.csv", index=False)
 
     return df_new
+
+
+def mw_trend(mwslider):
+    today = datetime.date.today()
+    # Generate a list of the last 14 days
+    last_n_days = [today - datetime.timedelta(days=x) for x in range(mwslider)]
+    market_value = st.session_state.kb.get_player_market_value_last_n_days(
+        player_id=st.session_state.einzel_index.values[0],
+        league_id=st.session_state.kb.leagues()[0].id,
+        days=mwslider,
+    )
+    market_value.reverse()
+    mw_data = pd.DataFrame(
+        {
+            "Day": last_n_days,
+            "Market Value": market_value,  # Your market values here
+        }
+    )
+
+    fig = px.line(
+        mw_data,
+        x="Day",
+        y="Market Value",
+    )
+    return fig
 
 
 """ def mergeKB(df_full, df_kb):
