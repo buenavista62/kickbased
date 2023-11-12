@@ -8,9 +8,9 @@ import functions as fn
 
 @st.cache_data
 def loadKBPlayer():
-    kb = kickbase_singleton.kb
+    # kb = kickbase_singleton.kb
     try:
-        players = kb.get_all_players(st.session_state.liga.id)
+        players = st.session_state.kb.get_all_players(st.session_state.liga.id)
         df = pd.DataFrame(
             {
                 "ID": [str(player.id) for player in players],
@@ -28,7 +28,7 @@ def loadKBPlayer():
                 "Punktetotal": [player.totalPoints for player in players],
                 "UserID": [str(player.user_id) for player in players],
                 "TeamID": [str(player.team_id) for player in players],
-                "TeamCover": [str(player.team_cover_path) for player in players],
+                "TeamCover": [str(player.team_path) for player in players],
             }
         )
     except:
@@ -102,6 +102,25 @@ def main():
                 st.session_state.kb_radarcharts = fn.radarcharts(
                     st.session_state.kb_data_merged
                 )
+                if "matches" not in st.session_state:
+                    m = st.session_state.kb.matches()
+                    matches_df = pd.DataFrame(m)
+                    st.session_state.matches = pd.DataFrame(
+                        {
+                            "Match Time": pd.to_datetime(matches_df["d"]).dt.strftime(
+                                "%Y-%m-%d %H:%M"
+                            ),
+                            "Home Team ID": matches_df["t1i"],
+                            "Home Team": matches_df["t1n"],
+                            "Home Team Abbreviation": matches_df["t1y"],
+                            "Home Team Score": matches_df["t1s"],
+                            "Away Team ID": matches_df["t2i"],
+                            "Away Team": matches_df["t2n"],
+                            "Away Team Abbreviation": matches_df["t2y"],
+                            "Away Team Score": matches_df["t2s"],
+                            "Matchday": matches_df["md"],
+                        }
+                    )
                 st.write("Data is ready")
 
 

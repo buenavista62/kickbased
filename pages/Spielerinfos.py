@@ -178,15 +178,31 @@ with tab2:
             fn.display_selected_stats(
                 player_stats, stat_cols, st.session_state.kb_data_merged
             )
-
+            player_team = st.session_state.kb_data_merged.loc[
+                st.session_state.kb_data_merged["ID"]
+                == st.session_state.einzel_index.values[0],
+                "TeamID",
+            ].values[0]
+            ngs = st.session_state.kb.get_next_games(team_id=player_team)
+            ngs_name = []
+            for ng in ngs:
+                ngs_name.append(
+                    st.session_state.kb_data_merged.loc[
+                        st.session_state.kb_data_merged["TeamID"] == ng, "Team"
+                    ].values[0]
+                )
+            teams_line = ", ".join(
+                ngs_name
+            )  # This joins all team names with a comma and a space
+            st.markdown(f"### Nächste Gegner\n{teams_line}")
         # Zeigen Sie die Figur in Streamlit an
         with col2:
             plotly_fig.update_layout(
                 autosize=False,
                 width=625,  # Set the width to your preference
                 height=400,  # Set the height to your preference
-                margin_l=45,
-                margin_r=200,
+                margin_l=20,
+                margin_r=195,
                 title="",
             )
             st.plotly_chart(plotly_fig, use_container_width=False)
@@ -218,6 +234,7 @@ with tab2:
                     f"<h4 style='text-align: left;'>Besitzer: {owner_name}</h4>",
                     unsafe_allow_html=True,
                 )
+
         if "mwslider" not in st.session_state:
             st.session_state.mwslider = 14
         st.markdown(
