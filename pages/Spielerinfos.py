@@ -52,6 +52,7 @@ else:
             }
 
             st.session_state.df_spieler = st.session_state.kb_data_merged.copy()
+            st.session_state.df_spieler.sort_values(by=["Marktwert"], inplace=True)
 
             # Assuming 'Status' is the column in your DataFrame you wish to map
             st.session_state.df_spieler["Status"] = st.session_state.df_spieler[
@@ -187,11 +188,13 @@ else:
                 ngs = st.session_state.kb.get_next_games(team_id=player_team)
                 ngs_name = []
                 for ng in ngs:
-                    ngs_name.append(
+                    g = str(
                         st.session_state.kb_data_merged.loc[
-                            st.session_state.kb_data_merged["TeamID"] == ng, "Team"
+                            st.session_state.kb_data_merged["TeamID"] == ng[1], "Team"
                         ].values[0]
                     )
+                    g = g + " (" + str(ng[0]) + ")"
+                    ngs_name.append(g)
                 teams_line = ", ".join(
                     ngs_name
                 )  # This joins all team names with a comma and a space
