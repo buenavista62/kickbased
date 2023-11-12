@@ -52,7 +52,9 @@ else:
             }
 
             st.session_state.df_spieler = st.session_state.kb_data_merged.copy()
-            st.session_state.df_spieler.sort_values(by=["Marktwert"], inplace=True)
+            st.session_state.df_spieler.sort_values(
+                by=["Marktwert"], inplace=True, ascending=False
+            )
 
             # Assuming 'Status' is the column in your DataFrame you wish to map
             st.session_state.df_spieler["Status"] = st.session_state.df_spieler[
