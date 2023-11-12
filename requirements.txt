@@ -26,7 +26,7 @@ Jinja2==3.1.2
 joblib==1.2.0
 jsonschema==4.19.0
 jsonschema-specifications==2023.7.1
--e git+https://github.com/buenavista62/kickbase-api-extended.git@4cb50ff596e7e88cde4425852f52213fcb0887de#egg=Kickbase_API
+-e git+https://github.com/buenavista62/kickbase-api-extended.git@6270ff3c9bc24168cffe9c201d6869231ef7c3d2#egg=Kickbase_API
 kiwisolver==1.4.4
 lxml==4.9.3
 markdown-it-py==3.0.0
