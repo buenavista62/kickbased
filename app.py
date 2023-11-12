@@ -18,7 +18,7 @@ def loadKBPlayer():
                     str(player.first_name) + " " + str(player.last_name)
                     for player in players
                 ],
-                "Team": [player.team_name for player in players],
+                "Team": [player.teamName for player in players],
                 "Position": [str(player.position) for player in players],
                 "Marktwert": [player.market_value for player in players],
                 "Trend": [player.market_value_trend for player in players],
