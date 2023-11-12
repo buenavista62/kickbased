@@ -14,30 +14,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check out repository
-      uses: actions/checkout@v2
+      - name: Check out repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # This is important to ensure history is available for commits
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.11.5'
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r preprocessing/requirements.txt
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.11.5'
 
-    - name: Run the script
-      run: |
-        cd preprocessing
-        python scrape_li.py  # Replace with your script's name
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r preprocessing/requirements.txt
 
-    - name: Commit and push if changes
-      run: |
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git config --global user.name "github-actions[bot]"
-        git add -A
-        git commit -m "Automated data update" -a || echo "No changes to commit"
-        git push origin HEAD:main  # Replace 'main' with your default branch name if different
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run the script
+        run: |
+          cd preprocessing
+          python scrape_li.py  # Replace with your script's name
+
+      - name: Commit and push if changes
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git add -A
+          git commit -m "Automated data update" -a || echo "No changes to commit"
+          git push origin HEAD:main  # Replace 'main' with your default branch name if different
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
