@@ -13,6 +13,7 @@ async def fetch_url(session, url):
 async def ligains_async():
     player_ids = []
     player_stats = []
+    player_playeratio = []
     base_url = "https://www.ligainsider.de"
 
     async with aiohttp.ClientSession() as session:
@@ -65,14 +66,15 @@ async def ligains_async():
                 if match:
                     d[key] = match.group(1).strip()
 
+            einsatzquote = tree.find(attrs={"class": "progress_signal pull-right"}).text
+            pattern2 = re.search(r"(\d+)%", einsatzquote)
+            einsatzquote = pattern2.group(1)
             player_stats.append(d)
             player_ids.append(player_id)
+            player_playeratio.append(int(einsatzquote))
 
     liplayerdf = pd.DataFrame(
-        {
-            "ID": player_ids,
-            "Stats": player_stats,
-        }
+        {"ID": player_ids, "Stats": player_stats, "Einsatzquote": player_playeratio}
     )
 
     return liplayerdf

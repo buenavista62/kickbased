@@ -168,17 +168,43 @@ else:
             fig_dict = json.loads(fig_string)
             plotly_fig = go.Figure(fig_dict)
 
-            col1, col2 = st.columns([0.6, 0.4])
+            col1, col2 = st.columns([0.575, 0.425])
             with col1:
-                st.image(
-                    st.session_state.kb_data_merged["Bild"]
-                    .loc[
+                col1_1, col2_2 = st.columns(2)
+                with col1_1:
+                    st.image(
+                        st.session_state.kb_data_merged["Bild"]
+                        .loc[
+                            st.session_state.kb_data_merged["ID"]
+                            == st.session_state.einzel_index.values[0]
+                        ]
+                        .values[0],
+                        width=190,
+                    )
+                with col2_2:
+                    player_mw = st.session_state.kb_data_merged.loc[
                         st.session_state.kb_data_merged["ID"]
-                        == st.session_state.einzel_index.values[0]
-                    ]
-                    .values[0],
-                    width=350,
-                )
+                        == st.session_state.einzel_index.values[0],
+                        "Marktwert",
+                    ].values[0]
+                    player_mw_yd = (
+                        st.session_state.kb.get_player_market_value_last_n_days(
+                            days=2,
+                            league_id=st.session_state.liga.id,
+                            player_id=st.session_state.einzel_index.values[0],
+                        )[0]
+                    )
+                    delta = player_mw - player_mw_yd
+                    player_mw = str(player_mw)
+                    player_mw = player_mw[:-2]
+                    player_mw = f"{int(player_mw):,} €"
+
+                    delta = f"{int(delta):,} €"
+                    st.metric(
+                        label="Marktwert",
+                        value=player_mw,
+                        delta=delta,
+                    )
                 player_stats = st.session_state.kb_data_merged.loc[
                     st.session_state.kb_data_merged["ID"]
                     == st.session_state.einzel_index.values[0],
@@ -189,25 +215,36 @@ else:
                     == st.session_state.einzel_index.values[0],
                     "Position",
                 ].values[0]
-
-                if player_pos == "1":
-                    stat_cols = ["Paraden", "Weiße Weste", "Fehler vor Schuss/Gegentor"]
+                einsatz_quote_spieler = st.session_state.kb_data_merged.loc[
+                    st.session_state.kb_data_merged["ID"]
+                    == st.session_state.einzel_index.values[0],
+                    "Einsatzquote",
+                ].values[0]
+                if einsatz_quote_spieler < 10:
+                    st.write("Keine Statistiken verfügbar, da zu wenig gespielt")
                 else:
-                    stat_cols = [
-                        "Begangene Fouls",
-                        "Geklärte Bälle",
-                        "Abgefangene Bälle",
-                        "Balleroberungen",
-                        "Ballverluste",
-                        "Torschussvorlagen",
-                        "Kreierte Großchancen",
-                        "Schüsse aufs Tor",
-                        "Fehler vor Schuss/Gegentor",
-                        "Geblockte Bälle",
-                    ]
-                fn.display_selected_stats(
-                    player_stats, stat_cols, st.session_state.kb_data_merged
-                )
+                    if player_pos == "1":
+                        stat_cols = [
+                            "Paraden",
+                            "Weiße Weste",
+                            "Fehler vor Schuss/Gegentor",
+                        ]
+                    else:
+                        stat_cols = [
+                            "Begangene Fouls",
+                            "Geklärte Bälle",
+                            "Abgefangene Bälle",
+                            "Balleroberungen",
+                            "Ballverluste",
+                            "Torschussvorlagen",
+                            "Kreierte Großchancen",
+                            "Schüsse aufs Tor",
+                            "Fehler vor Schuss/Gegentor",
+                            "Geblockte Bälle",
+                        ]
+                    fn.display_selected_stats(
+                        player_stats, stat_cols, st.session_state.kb_data_merged
+                    )
                 player_team = st.session_state.kb_data_merged.loc[
                     st.session_state.kb_data_merged["ID"]
                     == st.session_state.einzel_index.values[0],
@@ -234,7 +271,7 @@ else:
                     width=625,  # Set the width to your preference
                     height=400,  # Set the height to your preference
                     margin_l=20,
-                    margin_r=195,
+                    margin_r=180,
                     title="",
                 )
                 st.plotly_chart(plotly_fig, use_container_width=False)
@@ -267,16 +304,17 @@ else:
                         unsafe_allow_html=True,
                     )
 
-            if "mwslider" not in st.session_state:
-                st.session_state.mwslider = 14
-            st.markdown(
-                f"<h1 style='text-align: center; font-size: 30px;'>Marktwert in den letzten {st.session_state.mwslider} Tagen</h1>",
-                unsafe_allow_html=True,
-            )
-            mw_slider = st.slider(
-                "Anzahl Tage", min_value=2, max_value=360, key="mwslider"
-            )
-            st.plotly_chart(fn.mw_trend(mw_slider))
+            with st.expander("Marktwertentwicklung"):
+                if "mwslider" not in st.session_state:
+                    st.session_state.mwslider = 14
+                st.markdown(
+                    f"<h1 style='text-align: center; font-size: 30px;'>Marktwert in den letzten {st.session_state.mwslider} Tagen</h1>",
+                    unsafe_allow_html=True,
+                )
+                mw_slider = st.slider(
+                    "Anzahl Tage", min_value=2, max_value=360, key="mwslider"
+                )
+                st.plotly_chart(fn.mw_trend(mw_slider), use_container_width=True)
 
         else:
             st.write("Kein Spieler gefunden")

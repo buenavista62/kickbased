@@ -34,10 +34,11 @@ import numpy as np
 import ast
 
 
-def get_player_stat_agg(df, stat_cols):
+def get_player_stat_agg(df, stat_cols, exclude_at=10):
+    df_filtered = df[df["Einsatzquote"] >= exclude_at]
     # Aggregate player statistics for each stat in stat_cols
     player_stat_agg = {stat: [] for stat in stat_cols}
-    for stats_str in df["Stats"]:
+    for stats_str in df_filtered["Stats"]:
         stats_dict = ast.literal_eval(stats_str)
         for stat in stat_cols:
             if stat in stats_dict:

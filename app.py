@@ -125,6 +125,7 @@ def main():
                             }
                         )
                     st.write("Data is ready")
+                    st.toast("Daten sind geladen!")
 
 
 if __name__ == "__main__":
