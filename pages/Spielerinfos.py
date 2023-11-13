@@ -8,6 +8,7 @@ from unidecode import unidecode
 import plotly.graph_objects as go
 import ast
 from datetime import datetime
+from babel.dates import format_datetime
 import pytz
 import plotly.express as px
 import locale
@@ -19,36 +20,26 @@ else:
     with open("li_update.txt") as li_datenstand:
         for line in li_datenstand:
             line = line.strip()
-            date_format = "%H:%M:%S %A, %B %d, %Y"
-            locale.setlocale(locale.LC_TIME, "en_US.UTF-8")
-            utc_time = datetime.strptime(line, date_format)
-            zurich = pytz.timezone("Europe/Zurich")
-            cet_time = utc_time.replace(tzinfo=pytz.utc).astimezone(zurich)
-            formatted_time = cet_time.strftime("%H:%M Uhr %A, %d. %B %Y")
-            translations = {
-                "Monday": "Montag",
-                "Tuesday": "Dienstag",
-                "Wednesday": "Mittwoch",
-                "Thursday": "Donnerstag",
-                "Friday": "Freitag",
-                "Saturday": "Samstag",
-                "Sunday": "Sonntag",
-                "January": "Januar",
-                "February": "Februar",
-                "March": "März",
-                "April": "April",
-                "May": "Mai",
-                "June": "Juni",
-                "July": "Juli",
-                "August": "August",
-                "September": "September",
-                "October": "Oktober",
-                "November": "November",
-                "December": "Dezember",
-            }
+            # Parse the UTC timestamp into a datetime object
+            utc_time = datetime.strptime(line, "%H:%M:%S %A, %B %d, %Y")
 
-            for eng, de in translations.items():
-                formatted_time = formatted_time.replace(eng, de)
+            # Define the UTC timezone
+            utc_zone = pytz.timezone("UTC")
+
+            # Associate the parsed time with the UTC timezone
+            utc_time = utc_zone.localize(utc_time)
+
+            # Define the Switzerland timezone
+            zurich_zone = pytz.timezone("Europe/Zurich")
+
+            # Convert the time to Switzerland's timezone
+            zurich_time = utc_time.astimezone(zurich_zone)
+
+            # Format the datetime object into a string using Babel
+            formatted_time = format_datetime(
+                zurich_time, "HH:mm 'Uhr,' EEEE, dd. MMMM yyyy", locale="de_DE"
+            )
+
             st.write(f"Ligainsider Datenstand: {formatted_time}")
     if "info_auswahl" not in st.session_state:
         st.session_state.info_auswahl = "Nur Standard Infos"
