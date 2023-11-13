@@ -7,14 +7,49 @@ import numpy as np
 from unidecode import unidecode
 import plotly.graph_objects as go
 import ast
-import datetime
+from datetime import datetime
+import pytz
 import plotly.express as px
-
+import locale
 
 if "logged" not in st.session_state or not st.session_state.logged:
     st.warning("Bitte zuerst anmelden!")
 
 else:
+    with open("li_update.txt") as li_datenstand:
+        for line in li_datenstand:
+            line = line.strip()
+            date_format = "%H:%M:%S %A, %B %d, %Y"
+            locale.setlocale(locale.LC_TIME, "en_US.UTF-8")
+            utc_time = datetime.strptime(line, date_format)
+            zurich = pytz.timezone("Europe/Zurich")
+            cet_time = utc_time.replace(tzinfo=pytz.utc).astimezone(zurich)
+            formatted_time = cet_time.strftime("%H:%M Uhr %A, %d. %B %Y")
+            translations = {
+                "Monday": "Montag",
+                "Tuesday": "Dienstag",
+                "Wednesday": "Mittwoch",
+                "Thursday": "Donnerstag",
+                "Friday": "Freitag",
+                "Saturday": "Samstag",
+                "Sunday": "Sonntag",
+                "January": "Januar",
+                "February": "Februar",
+                "March": "März",
+                "April": "April",
+                "May": "Mai",
+                "June": "Juni",
+                "July": "Juli",
+                "August": "August",
+                "September": "September",
+                "October": "Oktober",
+                "November": "November",
+                "December": "Dezember",
+            }
+
+            for eng, de in translations.items():
+                formatted_time = formatted_time.replace(eng, de)
+            st.write(f"Ligainsider Datenstand: {formatted_time}")
     if "info_auswahl" not in st.session_state:
         st.session_state.info_auswahl = "Nur Standard Infos"
 
