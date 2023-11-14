@@ -124,18 +124,20 @@ def main():
                     st.toast("Daten sind geladen!")
                     if "data_ready" not in st.session_state:
                         st.session_state.data_ready = True
+
+                    if "data_ready" in st.session_state:
                         show_pages(
                             [
                                 Page("./pages_/Spielerinfos.py", "Spieler"),
                                 Page("./pages_/Mein_Team.py", "Mein Verein"),
                             ]
                         )
-                    st.link_button(
+                    """ st.link_button(
                         "Zum Verein", "https://kickbased.streamlit.app/Mein%20Verein"
                     )
                     st.link_button(
                         "Spielerinfos", "https://kickbased.streamlit.app/Spieler"
-                    )
+                    ) """
 
         logout_button = st.button("Logout")
         if logout_button:
