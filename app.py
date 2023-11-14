@@ -4,7 +4,7 @@ from kickbase_api.exceptions import KickbaseLoginException
 import pandas as pd
 from kickbase_singleton import kickbase_singleton
 import functions as fn
-from st_pages import Page, show_pages, add_page_title
+from st_pages import Page, show_pages, hide_pages
 
 
 @st.cache_data
@@ -43,6 +43,7 @@ def main():
 
     if "logged" not in st.session_state:
         st.session_state.logged = False
+        hide_pages(["Spieler", "Mein Verein"])
         # Use kickbase_singleton.kb, kickbase_singleton.user, kickbase_singleton.leagues
     elif st.session_state.logged == True:
         st.success("eingeloggt")
@@ -128,6 +129,7 @@ def main():
                     if "data_ready" in st.session_state:
                         show_pages(
                             [
+                                Page("app.py", "Startseite"),
                                 Page("./pages_/Spielerinfos.py", "Spieler"),
                                 Page("./pages_/Mein_Team.py", "Mein Verein"),
                             ]
