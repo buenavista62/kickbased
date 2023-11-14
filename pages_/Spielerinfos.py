@@ -17,6 +17,7 @@ import mappings as mp
 if __name__ == "__main__":
     if "data_ready" not in st.session_state or not st.session_state.logged:
         st.warning("Bitte zuerst anmelden!")
+        st.link_button("Zum Login", "https://kickbased.streamlit.app/")
 
     else:
         with open("li_update.txt") as li_datenstand:
