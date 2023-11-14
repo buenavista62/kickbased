@@ -134,12 +134,13 @@ def main():
                                 Page("./pages_/Mein_Team.py", "Mein Verein"),
                             ]
                         )
-                    st.link_button(
-                        "Zum Verein", "https://kickbased.streamlit.app/Mein%20Verein"
-                    )
-                    st.link_button(
-                        "Spielerinfos", "https://kickbased.streamlit.app/Spieler"
-                    )
+                        st.link_button(
+                            "Zum Verein",
+                            "https://kickbased.streamlit.app/Mein%20Verein",
+                        )
+                        st.link_button(
+                            "Spielerinfos", "https://kickbased.streamlit.app/Spieler"
+                        )
 
         logout_button = st.button("Logout")
         if logout_button:
