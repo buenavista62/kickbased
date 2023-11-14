@@ -56,6 +56,7 @@ def display_player_data(df):
 if __name__ == "__main__":
     if "data_ready" not in st.session_state or not st.session_state.logged:
         st.warning("Bitte zuerst anmelden!")
+        st.link_button("Zum Login", "https://kickbased.streamlit.app/")
 
     else:
         col1, col2 = st.columns([0.6, 0.4])

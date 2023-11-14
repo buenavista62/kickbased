@@ -44,7 +44,7 @@ def main():
     if "logged" not in st.session_state:
         st.session_state.logged = False
         hide_pages(["Spieler", "Mein Verein"])
-        # Use kickbase_singleton.kb, kickbase_singleton.user, kickbase_singleton.leagues
+
     elif st.session_state.logged == True:
         st.success("eingeloggt")
 
@@ -134,12 +134,12 @@ def main():
                                 Page("./pages_/Mein_Team.py", "Mein Verein"),
                             ]
                         )
-                    """ st.link_button(
+                    st.link_button(
                         "Zum Verein", "https://kickbased.streamlit.app/Mein%20Verein"
                     )
                     st.link_button(
                         "Spielerinfos", "https://kickbased.streamlit.app/Spieler"
-                    ) """
+                    )
 
         logout_button = st.button("Logout")
         if logout_button:
