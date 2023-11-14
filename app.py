@@ -44,10 +44,10 @@ def main():
         st.session_state.logged = False
         # Use kickbase_singleton.kb, kickbase_singleton.user, kickbase_singleton.leagues
     elif st.session_state.logged == True:
-        st.write("Logged in")
+        st.success("eingeloggt")
 
     if st.session_state.logged == False:
-        st.write("Please log in")
+        st.warning("Logge dich bei Kickbase ein")
         with st.form(key="login_form"):
             email = st.text_input("Email")
             password = st.text_input("Password", type="password")
@@ -70,7 +70,7 @@ def main():
             st.session_state.kb.leagues()[i].name
             for i in range(len(st.session_state.kb.leagues()))
         ]
-        selected_league = st.selectbox("Wähle eine Liga", league_names)
+        selected_league = st.selectbox("Liga", league_names)
         if selected_league != "Wähle eine Liga...":
             if "liga" not in st.session_state:
                 st.session_state.liga = st.session_state.kb.leagues()[
@@ -86,11 +86,6 @@ def main():
                     for x in st.session_state.kb.league_users(st.session_state.liga)
                 ]
                 st.session_state.user_info = dict(zip(keys, values))
-
-            logout_button = st.button("Logout")
-            if logout_button:
-                del st.session_state.logged
-                st.rerun()
 
             if "kb_data" not in st.session_state:
                 with st.status("Data preperation"):
@@ -126,6 +121,13 @@ def main():
                         )
                     st.write("Data is ready")
                     st.toast("Daten sind geladen!")
+                    if "data_ready" not in st.session_state:
+                        st.session_state.data_ready = True
+
+        logout_button = st.button("Logout")
+        if logout_button:
+            del st.session_state.logged
+            st.rerun()
 
 
 if __name__ == "__main__":

@@ -15,7 +15,7 @@ import plotly.express as px
 import mappings as mp
 
 if __name__ == "__main__":
-    if "logged" not in st.session_state or not st.session_state.logged:
+    if "data_ready" not in st.session_state or not st.session_state.logged:
         st.warning("Bitte zuerst anmelden!")
 
     else:

@@ -5,7 +5,7 @@ position_mapping = {
     "4": "Sturm",
 }
 status_mapping = {
-    0: "OK",
+    0: "Fit",
     1: "Verletzt",
     2: "Erkrankt",
     4: "Reha",
