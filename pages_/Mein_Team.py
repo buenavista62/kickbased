@@ -1,13 +1,4 @@
 import streamlit as st
-from kickbase_singleton import kickbase_singleton
-import pandas as pd
-from mplsoccer import VerticalPitch
-import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
-from PIL import Image
-import requests
-from io import BytesIO
-import numpy as np
 import functions as fn
 import mappings as mp
 

@@ -2,15 +2,15 @@ import pandas as pd
 import streamlit as st
 import json
 import functions as fn
-from kickbase_singleton import kickbase_singleton
-import numpy as np
+
+
 from unidecode import unidecode
 import plotly.graph_objects as go
-import ast
+
 from datetime import datetime
 from babel.dates import format_datetime
 import pytz
-import plotly.express as px
+
 
 import mappings as mp
 

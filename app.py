@@ -43,7 +43,7 @@ def main():
 
     if "logged" not in st.session_state:
         st.session_state.logged = False
-        hide_pages(["Spieler", "Mein Verein"])
+        hide_pages(["Spieler", "Mein Verein", "Meine Liga"])
 
     elif st.session_state.logged == True:
         st.success("eingeloggt")
@@ -132,20 +132,29 @@ def main():
                                 Page("app.py", "Startseite"),
                                 Page("./pages_/Spielerinfos.py", "Spieler"),
                                 Page("./pages_/Mein_Team.py", "Mein Verein"),
+                                Page("./pages_/Meine_Liga.py", "Meine Liga"),
                             ]
                         )
-                        st.link_button(
-                            "Zum Verein",
-                            "https://kickbased.streamlit.app/Mein%20Verein",
-                        )
-                        st.link_button(
-                            "Spielerinfos", "https://kickbased.streamlit.app/Spieler"
-                        )
+            col1, col2, col3, col4 = st.columns(4)
+            with col1:
+                st.link_button(
+                    "Zum Verein",
+                    "https://kickbased.streamlit.app/Mein%20Verein",
+                )
+            with col2:
+                st.link_button(
+                    "Spielerinfos", "https://kickbased.streamlit.app/Spieler"
+                )
+            with col3:
+                st.link_button(
+                    "Ligainfos", "https://kickbased.streamlit.app/Meine%20Liga"
+                )
 
-        logout_button = st.button("Logout")
-        if logout_button:
-            del st.session_state.logged
-            st.rerun()
+            with col4:
+                logout_button = st.button("Logout")
+                if logout_button:
+                    del st.session_state.logged
+                    st.rerun()
 
 
 if __name__ == "__main__":
