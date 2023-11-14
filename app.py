@@ -135,26 +135,14 @@ def main():
                                 Page("./pages_/Meine_Liga.py", "Meine Liga"),
                             ]
                         )
-            col1, col2, col3, col4 = st.columns(4)
-            with col1:
-                st.link_button(
-                    "Zum Verein",
-                    "https://kickbased.streamlit.app/Mein%20Verein",
-                )
-            with col2:
-                st.link_button(
-                    "Spielerinfos", "https://kickbased.streamlit.app/Spieler"
-                )
-            with col3:
-                st.link_button(
-                    "Ligainfos", "https://kickbased.streamlit.app/Meine%20Liga"
-                )
-
-            with col4:
-                logout_button = st.button("Logout")
-                if logout_button:
-                    del st.session_state.logged
-                    st.rerun()
+                        st.info(
+                            "Nutze die Sidebar links um auf die anderen Seiten zu gelangen",
+                            icon="ℹ️",
+                        )
+            logout_button = st.button("Logout")
+            if logout_button:
+                del st.session_state.logged
+                st.rerun()
 
 
 if __name__ == "__main__":
