@@ -4,6 +4,7 @@ from kickbase_api.exceptions import KickbaseLoginException
 import pandas as pd
 from kickbase_singleton import kickbase_singleton
 import functions as fn
+from st_pages import Page, show_pages, add_page_title
 
 
 @st.cache_data
@@ -123,6 +124,12 @@ def main():
                     st.toast("Daten sind geladen!")
                     if "data_ready" not in st.session_state:
                         st.session_state.data_ready = True
+                        show_pages(
+                            [
+                                Page("./pages_/Spielerinfos.py", "Spieler"),
+                                Page("./pages_/Mein_Team.py", "Mein Verein"),
+                            ]
+                        )
 
         logout_button = st.button("Logout")
         if logout_button:
