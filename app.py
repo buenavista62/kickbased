@@ -4,7 +4,7 @@ from kickbase_api.exceptions import KickbaseLoginException
 import pandas as pd
 from kickbase_singleton import kickbase_singleton
 import functions as fn
-from st_pages import Page, show_pages, hide_pages
+from st_pages import hide_pages, show_pages_from_config
 
 
 @st.cache_data
@@ -127,18 +127,8 @@ def main():
                         st.session_state.data_ready = True
 
                     if "data_ready" in st.session_state:
-                        show_pages(
-                            [
-                                Page("app.py", "Startseite"),
-                                Page("./pages_/Spielerinfos.py", "Spieler"),
-                                Page("./pages_/Mein_Team.py", "Mein Verein"),
-                                Page("./pages_/Meine_Liga.py", "Meine Liga"),
-                            ]
-                        )
-                        st.info(
-                            "Nutze die Sidebar links um auf die anderen Seiten zu gelangen",
-                            icon="ℹ️",
-                        )
+                        show_pages_from_config()
+
             logout_button = st.button("Logout")
             if logout_button:
                 del st.session_state.logged

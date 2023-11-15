@@ -1,0 +1,16 @@
+[[pages]]
+path = "app.py"
+name = "Startseite"
+
+[[pages]]
+path = "./pages_/Spielerinfos.py"
+name = "Spieler"
+
+
+[[pages]]
+path = "./pages_/Mein_Team.py"
+name = "Mein Verein"
+
+[[pages]]
+path = "./pages_/Meine_Liga.py"
+name = "Meine Liga"
