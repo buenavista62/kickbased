@@ -14,3 +14,7 @@ name = "Mein Verein"
 [[pages]]
 path = "./pages_/Meine_Liga.py"
 name = "Meine Liga"
+
+[[pages]]
+path = "./pages_/Kickbot.py"
+name = "Kickbot"

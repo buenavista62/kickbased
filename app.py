@@ -43,7 +43,7 @@ def main():
 
     if "logged" not in st.session_state:
         st.session_state.logged = False
-        hide_pages(["Spieler", "Mein Verein", "Meine Liga"])
+        hide_pages(["Spieler", "Mein Verein", "Meine Liga", "Kickbot"])
 
     elif st.session_state.logged == True:
         st.success("eingeloggt")
