@@ -16,14 +16,7 @@ if "data_ready" not in st.session_state or not st.session_state.logged:
 else:
     df = st.session_state.kb_data_merged
     openai_api_key = os.environ.get("OPENAI_API_KEY")
-    if "llm" not in st.session_state:
-        st.session_state.llm = ChatOpenAI(
-            temperature=0,
-            model="gpt-3.5-turbo-0613",
-            openai_api_key=openai_api_key,
-            streaming=True,
-        )
-
+    if "pandas_df_agent" not in st.session_state:
         st.session_state.pandas_df_agent = create_pandas_dataframe_agent(
             OpenAI(temperature=0), df, verbose=True
         )
