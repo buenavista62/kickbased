@@ -4,7 +4,8 @@ import os
 
 
 from langchain.agents.agent_types import AgentType
-from langchain_experimental.agents.agent_toolkits import create_pandas_dataframe_agent
+
+# from langchain_experimental.agents.agent_toolkits import create_pandas_dataframe_agent
 from langchain.callbacks import StreamlitCallbackHandler
 
 from langchain.llms import OpenAI
@@ -17,8 +18,10 @@ else:
     df = st.session_state.kb_data_merged
     openai_api_key = os.environ.get("OPENAI_API_KEY")
     if "pandas_df_agent" not in st.session_state:
-        st.session_state.pandas_df_agent = create_pandas_dataframe_agent(
-            OpenAI(temperature=0), df, verbose=True
+        st.session_state.pandas_df_agent = (
+            create_pandas_dataframe_agent(  ## change this
+                OpenAI(temperature=0), df, verbose=True
+            )
         )
 
     if not openai_api_key:
