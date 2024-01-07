@@ -15,6 +15,11 @@ name = "Mein Verein"
 path = "./pages_/Meine_Liga.py"
 name = "Meine Liga"
 
+
+#[[pages]]
+#path = "./pages_/Kickbot.py"
+#name = "Kickbot"
+
 [[pages]]
-path = "./pages_/Kickbot.py"
-name = "Kickbot"
+path = "./pages_/Vorhersagen.py"
+name = "Vorhersagen"

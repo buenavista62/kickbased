@@ -7,31 +7,32 @@ import functions as fn
 from st_pages import hide_pages, show_pages_from_config
 
 
-@st.cache_data
 def loadKBPlayer():
     # kb = kickbase_singleton.kb
     try:
-        players = st.session_state.kb.get_all_players(st.session_state.liga.id)
-        df = pd.DataFrame(
-            {
-                "ID": [str(player.id) for player in players],
-                "Name": [
-                    str(player.first_name) + " " + str(player.last_name)
-                    for player in players
-                ],
-                "Team": [player.teamName for player in players],
-                "Position": [str(player.position) for player in players],
-                "Marktwert": [player.market_value for player in players],
-                "Trend": [player.market_value_trend for player in players],
-                "Bild": [player.profile_big_path for player in players],
-                "Status": [player.status for player in players],
-                "Punkteschnitt": [player.average_points for player in players],
-                "Punktetotal": [player.totalPoints for player in players],
-                "UserID": [str(player.user_id) for player in players],
-                "TeamID": [str(player.team_id) for player in players],
-                "TeamCover": [str(player.team_path) for player in players],
-            }
-        )
+        if "kb_data_merged" not in st.session_state:
+            players = st.session_state.kb.get_all_players(st.session_state.liga.id)
+            df = pd.DataFrame(
+                {
+                    "ID": [str(player.id) for player in players],
+                    "Name": [
+                        str(player.first_name) + " " + str(player.last_name)
+                        for player in players
+                    ],
+                    "Team": [player.teamName for player in players],
+                    "Position": [str(player.position) for player in players],
+                    "Marktwert": [player.market_value for player in players],
+                    "Trend": [player.market_value_trend for player in players],
+                    "Bild": [player.profile_big_path for player in players],
+                    "Status": [player.status for player in players],
+                    "Punkteschnitt": [player.average_points for player in players],
+                    "Punktetotal": [player.totalPoints for player in players],
+                    "UserID": [str(player.user_id) for player in players],
+                    "TeamID": [str(player.team_id) for player in players],
+                    "TeamCover": [str(player.team_path) for player in players],
+                }
+            )
+            st.session_state.players = players
     except:
         pass
 
@@ -43,7 +44,7 @@ def main():
 
     if "logged" not in st.session_state:
         st.session_state.logged = False
-        hide_pages(["Spieler", "Mein Verein", "Meine Liga", "Kickbot"])
+        hide_pages(["Spieler", "Mein Verein", "Meine Liga", "Kickbot", "Vorhersagen"])
 
     elif st.session_state.logged == True:
         st.success("eingeloggt")
@@ -96,9 +97,11 @@ def main():
                     st.write("Merging data with ligainsider...")
                     df_li = pd.read_csv("./data/ligainsider_df.csv")
                     df_li.ID = df_li.ID.astype("str")
+                    df_li.drop(columns=(["Name", "Team", "birth_year"]), inplace=True)
                     st.session_state.kb_data_merged = fn.mergeKB(
                         df_li, st.session_state.kb_data
                     )
+
                     st.session_state.kb_radarcharts = fn.radarcharts(
                         st.session_state.kb_data_merged
                     )

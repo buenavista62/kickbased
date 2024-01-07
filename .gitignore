@@ -4,3 +4,4 @@ calculate_odds.py
 **/__pycache__/*
 archive/*
 /preprocessing/scrape_li copy.py
+.env

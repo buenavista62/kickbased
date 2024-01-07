@@ -33,6 +33,8 @@ jobs:
         run: |
           cd preprocessing
           python scrape_li.py  # Replace with your script's name
+          python scrape_fbref.py
+          python scrape_understat.py
 
       - name: Save timestamp
         run: date '+%T %A, %B %d, %Y' > li_update.txt

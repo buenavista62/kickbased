@@ -41,6 +41,8 @@ if __name__ == "__main__":
         st.write(f"Durchschnittliche Punkte: {league_instance.average_points}")
         st.write(f"Maximale Nutzer: {league_instance.max_users}")
         st.write(f"Totale Transfers: {league_instance.total_transfers}")
+        st.divider()
+        st.divider()
         # Display league stats
         col1, col2 = st.columns(2)
 

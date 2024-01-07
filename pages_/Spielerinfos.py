@@ -44,8 +44,6 @@ if __name__ == "__main__":
                 )
 
                 st.write(f"Ligainsider Datenstand: {formatted_time}")
-        if "info_auswahl" not in st.session_state:
-            st.session_state.info_auswahl = "Nur Standard Infos"
 
         if "einzel_select" not in st.session_state:
             st.session_state.einzel_select = pd.DataFrame(
@@ -80,6 +78,9 @@ if __name__ == "__main__":
                 st.session_state.df_spieler["UserID"] = st.session_state.df_spieler[
                     "UserID"
                 ].map(st.session_state.user_info)
+                st.session_state.df_spieler.loc[
+                    st.session_state.df_spieler["UserID"].isna(), "UserID"
+                ] = "Kickbase"
 
             search_query = st.text_input("Spielersuche")
             if search_query:
@@ -91,6 +92,12 @@ if __name__ == "__main__":
                         "ID": None,
                         "TeamID": None,
                         "TeamCover": None,
+                        "Einsatzquote": st.column_config.NumberColumn(
+                            "Einsatzquote",
+                            min_value=0,
+                            max_value=100,
+                            format="%2f%%",
+                        ),
                     },
                     hide_index=True,
                 )
@@ -103,6 +110,12 @@ if __name__ == "__main__":
                         "ID": None,
                         "TeamID": None,
                         "TeamCover": None,
+                        "Einsatzquote": st.column_config.NumberColumn(
+                            "Einsatzquotes",
+                            min_value=0,
+                            max_value=100,
+                            format="%2f%%",
+                        ),
                     },
                     hide_index=True,
                 )

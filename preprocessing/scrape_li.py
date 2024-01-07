@@ -12,6 +12,9 @@ async def fetch_url(session, url):
 
 async def ligains_async():
     player_ids = []
+    player_name = []
+    player_teams = []
+    player_born = []
     player_stats = []
     player_playeratio = []
     base_url = "https://www.ligainsider.de"
@@ -69,12 +72,26 @@ async def ligains_async():
             einsatzquote = tree.find(attrs={"class": "progress_signal pull-right"}).text
             pattern2 = re.search(r"(\d+)%", einsatzquote)
             einsatzquote = pattern2.group(1)
+            name = tree.find(attrs={"itemprop": "name"}).text
+            born = tree.find(attrs={"itemprop": "birthDate"}).text
+            born = born[-4::]
+            player_team = tree.find(attrs={"itemprop": "affiliation"}).text
+            player_name.append(name)
+            player_born.append(born)
             player_stats.append(d)
             player_ids.append(player_id)
+            player_teams.append(player_team)
             player_playeratio.append(int(einsatzquote))
 
     liplayerdf = pd.DataFrame(
-        {"ID": player_ids, "Stats": player_stats, "Einsatzquote": player_playeratio}
+        {
+            "ID": player_ids,
+            "Name": player_name,
+            "Team": player_teams,
+            "birth_year": player_born,
+            "Stats": player_stats,
+            "Einsatzquote": player_playeratio,
+        }
     )
 
     return liplayerdf
@@ -83,4 +100,4 @@ async def ligains_async():
 if __name__ == "__main__":
     # To run the async function
     df = asyncio.run(ligains_async())
-    df.to_csv("../data/ligainsider_df.csv", index=False)
+    df.to_csv("./data/ligainsider_df.csv", index=False)

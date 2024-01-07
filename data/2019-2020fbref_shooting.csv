@@ -1,0 +1,499 @@
+player,nationality,position,team,age,birth_year,minutes_90s,goals,shots,shots_on_target,shots_on_target_pct,shots_per90,shots_on_target_per90,goals_per_shot,goals_per_shot_on_target,average_shot_distance,shots_free_kicks,pens_made,pens_att,xg,npxg,npxg_per_shot,xg_net,npxg_net,matches
+Suleiman Abdullahi,ng NGA,"FW,MF",Union Berlin,22,1996,1.7,1,6,3,50.0,3.44,1.72,0.17,0.33,16.0,0,0,0,1.1,1.1,0.19,-0.1,-0.1,Matches
+David Abraham,ar ARG,DF,Eint Frankfurt,33,1986,18.8,2,7,4,57.1,0.37,0.21,0.29,0.50,8.1,0,0,0,1.6,1.6,0.22,+0.4,+0.4,Matches
+Amir Abrashi,al ALB,MF,Freiburg,29,1990,7.4,0,4,2,50.0,0.54,0.27,0.00,0.00,20.1,0,0,0,0.5,0.5,0.12,-0.5,-0.5,Matches
+Tyler Adams,us USA,"MF,DF",RB Leipzig,20,1999,10.6,0,7,1,14.3,0.66,0.09,0.00,0.00,18.5,0,0,0,0.4,0.4,0.06,-0.4,-0.4,Matches
+Sargis Adamyan,am ARM,"FW,MF",Hoffenheim,26,1993,8.3,5,21,11,52.4,2.53,1.33,0.24,0.45,12.1,0,0,0,5.9,5.9,0.28,-0.9,-0.9,Matches
+Manuel Akanji,ch SUI,DF,Dortmund,24,1995,25.7,0,8,2,25.0,0.31,0.08,0.00,0.00,21.2,0,0,0,0.4,0.4,0.05,-0.4,-0.4,Matches
+Kevin Akpoguma,ng NGA,DF,Hoffenheim,24,1995,12.7,0,2,0,0.0,0.16,0.00,0.00,,19.5,0,0,0,0.1,0.1,0.05,-0.1,-0.1,Matches
+David Alaba,at AUT,DF,Bayern Munich,27,1992,27.8,1,19,7,36.8,0.68,0.25,0.05,0.14,25.7,6,0,0,1.0,1.0,0.05,0.0,0.0,Matches
+Lucas Alario,ar ARG,FW,Leverkusen,26,1992,13.0,7,49,18,36.7,3.76,1.38,0.12,0.33,12.7,0,1,1,7.3,6.5,0.13,-0.3,-0.5,Matches
+Paco Alcácer,es ESP,FW,Dortmund,25,1993,5.9,5,16,7,43.8,2.72,1.19,0.31,0.71,13.1,0,0,0,3.9,3.9,0.25,+1.1,+1.1,Matches
+Thiago Alcántara,es ESP,MF,Bayern Munich,28,1991,19.7,3,18,8,44.4,0.91,0.41,0.17,0.38,17.7,0,0,0,2.4,2.4,0.14,+0.6,+0.6,Matches
+Nadiem Amiri,de GER,"MF,FW",Leverkusen,22,1996,20.6,1,42,18,42.9,2.04,0.87,0.02,0.06,23.3,1,0,0,2.2,2.2,0.05,-1.2,-1.2,Matches
+Ethan Ampadu,wls WAL,DF,RB Leipzig,18,2000,0.9,0,1,0,0.0,1.11,0.00,0.00,,8.6,0,0,0,0.1,0.1,0.10,-0.1,-0.1,Matches
+Opoku Ampomah,gh GHA,"FW,MF",Düsseldorf,23,1996,5.6,0,16,5,31.3,2.88,0.90,0.00,0.00,20.6,0,0,0,0.7,0.7,0.05,-0.7,-0.7,Matches
+Sebastian Andersson,se SWE,FW,Union Berlin,28,1991,29.8,12,63,35,55.6,2.11,1.17,0.17,0.31,12.3,0,1,2,11.9,10.3,0.16,+0.1,+0.7,Matches
+Robert Andrich,de GER,MF,Union Berlin,24,1994,28.6,1,49,7,14.3,1.71,0.24,0.02,0.14,24.9,4,0,0,2.6,2.6,0.05,-1.6,-1.6,Matches
+Angeliño,es ESP,"DF,FW",RB Leipzig,22,1997,12.2,1,5,2,40.0,0.41,0.16,0.20,0.50,12.5,0,0,0,0.9,0.9,0.18,+0.1,+0.1,Matches
+Christopher Antwi-Adjei,gh GHA,"MF,FW",Paderborn 07,25,1994,27.4,1,46,8,17.4,1.68,0.29,0.02,0.13,17.9,1,0,0,3.8,3.8,0.08,-2.8,-2.8,Matches
+Charles Aránguiz,cl CHI,MF,Leverkusen,30,1989,23.5,1,16,2,12.5,0.68,0.08,0.06,0.50,18.6,0,0,0,1.4,1.4,0.09,-0.4,-0.4,Matches
+Maximilian Arnold,de GER,MF,Wolfsburg,25,1994,31.3,4,63,16,25.4,2.01,0.51,0.06,0.25,26.4,9,0,0,2.9,2.9,0.05,+1.1,+1.1,Matches
+Santiago Ascacíbar,ar ARG,MF,Hertha BSC,22,1997,7.0,0,2,0,0.0,0.28,0.00,0.00,,30.9,0,0,0,0.1,0.1,0.03,-0.1,-0.1,Matches
+Ludwig Augustinsson,se SWE,"DF,MF",Werder Bremen,25,1994,10.3,0,5,0,0.0,0.49,0.00,0.00,,24.1,2,0,0,0.2,0.2,0.05,-0.2,-0.2,Matches
+Taiwo Awoniyi,ng NGA,"FW,MF",Mainz 05,21,1997,5.4,1,14,3,21.4,2.61,0.56,0.07,0.33,11.1,0,0,0,3.2,3.2,0.23,-2.2,-2.2,Matches
+Kaan Ayhan,tr TUR,DF,Düsseldorf,24,1994,30.3,2,29,5,17.2,0.96,0.16,0.07,0.40,17.9,8,0,0,2.2,2.2,0.07,-0.2,-0.2,Matches
+Matthias Bader,de GER,DF,Köln,22,1997,0.1,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Daniel Baier,de GER,MF,Augsburg,35,1984,21.6,1,16,2,12.5,0.74,0.09,0.06,0.50,27.2,0,0,0,0.5,0.5,0.03,+0.5,+0.5,Matches
+Leon Bailey,jm JAM,"FW,MF",Leverkusen,21,1997,12.1,5,29,11,37.9,2.39,0.91,0.17,0.45,17.7,1,0,0,4.3,4.3,0.15,+0.7,+0.7,Matches
+Lewis Baker,eng ENG,MF,Düsseldorf,24,1995,6.1,0,12,5,41.7,1.98,0.83,0.00,0.00,27.0,2,0,0,0.6,0.6,0.05,-0.6,-0.6,Matches
+Ridle Baku,de GER,"DF,MF",Mainz 05,21,1998,26.1,1,22,6,27.3,0.84,0.23,0.05,0.17,22.9,0,0,0,1.0,1.0,0.05,0.0,0.0,Matches
+Leonardo Balerdi,ar ARG,"DF,MF",Dortmund,20,1999,1.5,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Philipp Bargfrede,de GER,MF,Werder Bremen,30,1989,6.5,0,5,0,0.0,0.77,0.00,0.00,,17.2,0,0,0,0.2,0.2,0.05,-0.2,-0.2,Matches
+Aymen Barkok,ma MAR,"FW,MF",Düsseldorf,21,1998,0.9,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Leandro Barreiro Martins,lu LUX,MF,Mainz 05,19,2000,10.4,0,8,1,12.5,0.77,0.10,0.00,0.00,19.5,0,0,0,0.4,0.4,0.05,-0.4,-0.4,Matches
+Fin Bartels,de GER,"MF,FW",Werder Bremen,32,1987,3.8,0,7,3,42.9,1.85,0.79,0.00,0.00,23.0,0,0,0,0.3,0.3,0.04,-0.3,-0.3,Matches
+Oliver Batista-Meier,de GER,MF,Bayern Munich,18,2001,0.1,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Oliver Baumann,de GER,GK,Hoffenheim,29,1990,30.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Julian Baumgartlinger,at AUT,MF,Leverkusen,31,1988,19.9,2,17,5,29.4,0.85,0.25,0.12,0.40,13.0,0,0,0,2.0,2.0,0.11,0.0,0.0,Matches
+Christoph Baumgartner,at AUT,"MF,FW",Hoffenheim,19,1999,16.6,7,55,23,41.8,3.32,1.39,0.13,0.30,14.5,0,0,0,8.8,8.8,0.16,-1.8,-1.8,Matches
+Noah Joel Sarenren Bazee,ng NGA,FW,Augsburg,22,1996,4.2,1,4,3,75.0,0.94,0.71,0.25,0.33,12.1,0,0,0,1.0,1.0,0.24,0.0,0.0,Matches
+Ihlas Bebou,tg TOG,"FW,MF",Hoffenheim,25,1994,23.4,6,35,17,48.6,1.50,0.73,0.17,0.35,16.1,0,0,0,4.5,4.5,0.13,+1.5,+1.5,Matches
+Sheraldo Becker,sr SUR,"MF,FW",Union Berlin,24,1995,6.0,0,6,4,66.7,1.00,0.67,0.00,0.00,23.6,0,0,0,0.2,0.2,0.03,-0.2,-0.2,Matches
+Timo Becker,de GER,"DF,MF",Schalke 04,22,1997,3.7,0,4,1,25.0,1.07,0.27,0.00,0.00,14.9,0,0,0,0.2,0.2,0.06,-0.2,-0.2,Matches
+Maximilian Beier,de GER,FW,Hoffenheim,16,2002,1.2,0,5,3,60.0,4.13,2.48,0.00,0.00,14.8,0,0,0,1.1,1.1,0.22,-1.1,-1.1,Matches
+Ishak Belfodil,dz ALG,"FW,MF",Hoffenheim,27,1992,3.0,0,10,2,20.0,3.35,0.67,0.00,0.00,13.5,0,0,0,1.3,1.3,0.13,-1.3,-1.3,Matches
+Karim Bellarabi,de GER,"FW,DF",Leverkusen,29,1990,15.8,4,54,24,44.4,3.41,1.52,0.07,0.17,16.5,0,0,0,6.4,6.4,0.12,-2.4,-2.4,Matches
+Lars Bender,de GER,"DF,MF",Leverkusen,30,1989,15.3,2,15,2,13.3,0.98,0.13,0.13,1.00,14.1,0,0,0,0.9,0.9,0.06,+1.1,+1.1,Matches
+Sven Bender,de GER,DF,Leverkusen,30,1989,30.3,2,17,4,23.5,0.56,0.13,0.12,0.50,11.5,0,0,0,1.7,1.7,0.10,+0.3,+0.3,Matches
+László Bénes,sk SVK,MF,M'Gladbach,21,1997,10.0,0,23,6,26.1,2.31,0.60,0.00,0.00,23.0,6,0,0,1.4,1.4,0.06,-1.4,-1.4,Matches
+Keanan Bennetts,eng ENG,MF,M'Gladbach,20,1999,0.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Ramy Bensebaini,dz ALG,DF,M'Gladbach,24,1995,16.1,5,21,8,38.1,1.31,0.50,0.14,0.38,17.3,2,2,2,4.4,2.8,0.13,+0.6,+0.2,Matches
+Valon Berisha,xk KVX,MF,Düsseldorf,26,1993,10.5,0,12,2,16.7,1.15,0.19,0.00,0.00,20.7,0,0,0,0.9,0.9,0.07,-0.9,-0.9,Matches
+Jordan Beyer,de GER,DF,M'Gladbach,19,2000,1.2,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Ermin Bičakčić,ba BIH,DF,Hoffenheim,29,1990,13.1,2,7,2,28.6,0.54,0.15,0.29,1.00,11.9,0,0,0,0.6,0.6,0.09,+1.4,+1.4,Matches
+Leonardo Bittencourt,de GER,MF,Hoffenheim,25,1993,0.0,0,1,0,0.0,30.00,0.00,0.00,,20.9,0,0,0,0.0,0.0,0.03,0.0,0.0,Matches
+Leonardo Bittencourt,de GER,"FW,MF",Werder Bremen,25,1993,21.0,4,42,11,26.2,2.00,0.52,0.10,0.36,18.2,0,0,0,2.9,2.9,0.07,+1.1,+1.1,Matches
+Jérôme Boateng,de GER,DF,Bayern Munich,30,1988,20.0,0,6,2,33.3,0.30,0.10,0.00,0.00,25.1,0,0,0,0.3,0.3,0.05,-0.3,-0.3,Matches
+Adam Bodzek,de GER,MF,Düsseldorf,33,1985,22.4,0,9,4,44.4,0.40,0.18,0.00,0.00,18.0,0,0,0,0.8,0.8,0.09,-0.8,-0.8,Matches
+Jean-Paul Boëtius,nl NED,MF,Mainz 05,25,1994,25.2,4,36,12,33.3,1.43,0.48,0.11,0.33,20.0,0,0,0,3.7,3.7,0.10,+0.3,+0.3,Matches
+Melayro Bogarde,nl NED,DF,Hoffenheim,17,2002,0.6,0,1,0,0.0,1.76,0.00,0.00,,9.3,0,0,0,0.1,0.1,0.08,-0.1,-0.1,Matches
+Dennis Borkowski,de GER,FW,RB Leipzig,17,2002,0.1,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Robin Bormuth,de GER,DF,Düsseldorf,23,1995,2.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Sebastiaan Bornauw,be BEL,DF,Köln,20,1999,27.2,6,18,7,38.9,0.66,0.26,0.33,0.86,8.0,0,0,0,2.7,2.7,0.15,+3.3,+3.3,Matches
+Brandon Borrello,au AUS,"MF,FW",Freiburg,24,1995,3.3,0,7,1,14.3,2.11,0.30,0.00,0.00,16.8,0,0,0,0.4,0.4,0.06,-0.4,-0.4,Matches
+Nassim Boujellab,ma MAR,"MF,FW",Schalke 04,20,1999,4.7,0,6,0,0.0,1.29,0.00,0.00,,16.1,0,0,0,0.3,0.3,0.06,-0.3,-0.3,Matches
+Dedryck Boyata,be BEL,DF,Hertha BSC,28,1990,27.1,4,16,4,25.0,0.59,0.15,0.25,1.00,9.0,0,0,0,1.5,1.5,0.10,+2.5,+2.5,Matches
+Can Bozdogan,de GER,MF,Schalke 04,18,2001,2.6,0,4,2,50.0,1.53,0.77,0.00,0.00,30.9,0,0,0,0.1,0.1,0.03,-0.1,-0.1,Matches
+Julian Brandt,de GER,"MF,FW",Dortmund,23,1996,24.5,3,33,16,48.5,1.35,0.65,0.09,0.19,16.8,0,0,0,3.6,3.6,0.11,-0.6,-0.6,Matches
+Josip Brekalo,hr CRO,"MF,FW",Wolfsburg,21,1998,18.6,3,42,16,38.1,2.26,0.86,0.07,0.19,20.9,1,0,0,3.8,3.8,0.09,-0.8,-0.8,Matches
+John Brooks,us USA,DF,Wolfsburg,26,1993,24.7,0,13,4,30.8,0.53,0.16,0.00,0.00,11.1,0,0,0,1.2,1.2,0.09,-1.2,-1.2,Matches
+Daniel Brosinski,de GER,DF,Mainz 05,31,1988,19.0,2,22,7,31.8,1.16,0.37,0.05,0.14,28.1,5,1,1,2.0,1.2,0.05,0.0,-0.2,Matches
+Jeffrey Bruma,nl NED,DF,Wolfsburg,27,1991,9.0,0,9,2,22.2,1.00,0.22,0.00,0.00,11.3,0,0,0,0.8,0.8,0.09,-0.8,-0.8,Matches
+Jeffrey Bruma,nl NED,DF,Mainz 05,27,1991,7.5,0,7,0,0.0,0.93,0.00,0.00,,15.5,1,0,0,0.6,0.6,0.08,-0.6,-0.6,Matches
+Jacob Bruun Larsen,dk DEN,"FW,MF",Hoffenheim,20,1998,4.3,0,4,1,25.0,0.92,0.23,0.00,0.00,15.3,0,0,0,0.2,0.2,0.06,-0.2,-0.2,Matches
+Jacob Bruun Larsen,dk DEN,FW,Dortmund,20,1998,0.8,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Marius Bülter,de GER,"MF,FW",Union Berlin,26,1993,25.8,7,41,15,36.6,1.59,0.58,0.17,0.47,20.0,0,0,0,3.7,3.7,0.09,+3.3,+3.3,Matches
+Guido Burgstaller,at AUT,FW,Schalke 04,30,1989,13.7,0,35,9,25.7,2.55,0.66,0.00,0.00,14.6,0,0,0,3.9,3.9,0.11,-3.9,-3.9,Matches
+Jonathan Burkardt,de GER,"FW,MF",Mainz 05,19,2000,2.8,1,7,2,28.6,2.49,0.71,0.14,0.50,16.1,0,0,0,0.7,0.7,0.11,+0.3,+0.3,Matches
+Roman Bürki,ch SUI,GK,Dortmund,28,1990,30.8,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Daniel Caligiuri,it ITA,"MF,FW",Schalke 04,31,1988,25.5,2,43,11,25.6,1.69,0.43,0.02,0.09,23.1,8,1,1,3.4,2.6,0.06,-1.4,-1.6,Matches
+Emre Can,de GER,"MF,DF",Dortmund,25,1994,10.6,2,16,4,25.0,1.51,0.38,0.13,0.50,18.6,0,0,0,1.2,1.2,0.07,+0.8,+0.8,Matches
+Koen Casteels,be BEL,GK,Wolfsburg,27,1992,26.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Timothy Chandler,us USA,"DF,MF",Eint Frankfurt,29,1990,13.6,5,20,8,40.0,1.48,0.59,0.25,0.63,13.5,0,0,0,2.0,2.0,0.10,+3.0,+3.0,Matches
+Kwon Chang-hoon,kr KOR,"MF,FW",Freiburg,25,1994,7.5,2,15,6,40.0,2.00,0.80,0.13,0.33,20.6,0,0,0,2.1,2.1,0.14,-0.1,-0.1,Matches
+Darko Churlinov,mk MKD,MF,Köln,19,2000,0.2,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Per Ciljan Skjelbred,no NOR,MF,Hertha BSC,32,1987,18.1,0,1,0,0.0,0.06,0.00,0.00,,12.8,0,0,0,0.0,0.0,0.04,0.0,0.0,Matches
+Christian Clemens,de GER,FW,Köln,27,1991,0.2,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Jamilu Collins,ng NGA,DF,Paderborn 07,24,1994,29.6,1,18,1,5.6,0.61,0.03,0.06,1.00,26.8,1,0,1,2.1,1.3,0.07,-1.1,-0.3,Matches
+Kingsley Coman,fr FRA,"FW,MF",Bayern Munich,23,1996,16.7,4,37,15,40.5,2.21,0.90,0.11,0.27,16.9,0,0,0,4.7,4.7,0.13,-0.7,-0.7,Matches
+Jhon Córdoba,co COL,FW,Köln,26,1993,22.2,13,61,25,41.0,2.75,1.13,0.21,0.52,14.4,0,0,0,8.9,8.9,0.15,+4.1,+4.1,Matches
+Sergio Córdova,ve VEN,FW,Augsburg,21,1997,4.1,2,5,2,40.0,1.23,0.49,0.40,1.00,13.2,0,0,0,1.3,1.3,0.26,+0.7,+0.7,Matches
+Danny da Costa,de GER,"DF,FW",Eint Frankfurt,26,1993,15.4,1,17,4,23.5,1.10,0.26,0.06,0.25,16.2,0,0,0,1.6,1.6,0.09,-0.6,-0.6,Matches
+Philippe Coutinho,br BRA,"MF,FW",Bayern Munich,27,1992,15.7,8,57,26,45.6,3.64,1.66,0.12,0.27,19.1,2,1,1,8.6,7.8,0.14,-0.6,-0.8,Matches
+Mickaël Cuisance,fr FRA,"MF,FW",Bayern Munich,19,1999,3.4,1,12,1,8.3,3.52,0.29,0.08,1.00,22.7,1,0,0,0.6,0.6,0.05,+0.4,+0.4,Matches
+Matheus Cunha,br BRA,"FW,MF",Hertha BSC,20,1999,8.3,5,35,15,42.9,4.23,1.81,0.14,0.33,21.2,1,0,0,3.3,3.3,0.10,+1.7,+1.7,Matches
+Matheus Cunha,br BRA,"FW,MF",RB Leipzig,20,1999,3.1,0,16,7,43.8,5.16,2.26,0.00,0.00,15.1,0,0,0,2.0,2.0,0.12,-2.0,-2.0,Matches
+Rafael Czichos,de GER,DF,Köln,29,1990,24.5,1,13,8,61.5,0.53,0.33,0.08,0.13,11.2,0,0,0,1.7,1.7,0.13,-0.7,-0.7,Matches
+Moanes Dabbur,il ISR,FW,Hoffenheim,27,1992,8.5,4,24,11,45.8,2.82,1.29,0.17,0.36,13.9,0,0,0,3.9,3.9,0.16,+0.1,+0.1,Matches
+Mahmoud Dahoud,de GER,MF,Dortmund,23,1996,6.2,0,12,4,33.3,1.94,0.65,0.00,0.00,21.0,0,0,0,0.9,0.9,0.07,-0.9,-0.9,Matches
+Leon Dajaku,de GER,"DF,MF",Bayern Munich,18,2001,0.1,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Vladimír Darida,cz CZE,MF,Hertha BSC,28,1990,25.1,3,43,14,32.6,1.72,0.56,0.07,0.21,20.7,0,0,0,3.1,3.1,0.07,-0.1,-0.1,Matches
+Alphonso Davies,ca CAN,DF,Bayern Munich,18,2000,24.8,3,12,5,41.7,0.48,0.20,0.25,0.60,19.2,0,0,0,2.3,2.3,0.19,+0.7,+0.7,Matches
+Thomas Delaney,dk DEN,MF,Dortmund,27,1991,9.2,0,3,1,33.3,0.33,0.11,0.00,0.00,10.1,0,0,0,0.6,0.6,0.19,-0.6,-0.6,Matches
+Kerem Demirbay,de GER,MF,Leverkusen,26,1993,17.5,1,30,8,26.7,1.72,0.46,0.03,0.13,21.4,2,0,0,3.2,3.2,0.11,-2.2,-2.2,Matches
+Diego Demme,de GER,MF,RB Leipzig,27,1991,13.5,0,4,2,50.0,0.30,0.15,0.00,0.00,21.3,0,0,0,0.8,0.8,0.19,-0.8,-0.8,Matches
+Moussa Diaby,fr FRA,"FW,MF",Leverkusen,20,1999,19.7,5,41,23,56.1,2.08,1.17,0.12,0.22,18.3,0,0,0,5.1,5.1,0.12,-0.1,-0.1,Matches
+Javairô Dilrosun,nl NED,"MF,FW",Hertha BSC,21,1998,14.5,4,19,6,31.6,1.31,0.41,0.21,0.67,19.4,3,0,0,2.8,2.8,0.15,+1.2,+1.2,Matches
+Ji Dong-won,kr KOR,"FW,MF",Mainz 05,28,1991,1.1,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Bas Dost,nl NED,FW,Eint Frankfurt,30,1989,16.4,8,32,17,53.1,1.95,1.04,0.25,0.47,9.5,0,0,0,7.8,7.8,0.24,+0.2,+0.2,Matches
+Mamadou Doucouré,fr FRA,MF,M'Gladbach,21,1998,0.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Mohamed Dräger,tn TUN,DF,Paderborn 07,23,1996,16.2,1,14,2,14.3,0.87,0.12,0.07,0.50,21.4,0,0,0,0.6,0.6,0.04,+0.4,+0.4,Matches
+Aleksandar Dragović,at AUT,DF,Leverkusen,28,1991,11.4,0,2,0,0.0,0.17,0.00,0.00,,6.7,0,0,0,0.7,0.7,0.36,-0.7,-0.7,Matches
+Dominick Drexler,de GER,"MF,FW",Köln,29,1990,17.6,3,20,8,40.0,1.13,0.45,0.15,0.38,18.9,0,0,0,1.9,1.9,0.10,+1.1,+1.1,Matches
+Ondrej Duda,sk SVK,MF,Hertha BSC,24,1994,5.0,0,7,5,71.4,1.41,1.01,0.00,0.00,21.4,2,0,0,0.5,0.5,0.08,-0.5,-0.5,Matches
+Erik Durm,de GER,"DF,FW",Eint Frankfurt,27,1992,5.7,0,14,3,21.4,2.47,0.53,0.00,0.00,20.4,0,0,0,0.6,0.6,0.04,-0.6,-0.6,Matches
+Johannes Eggestein,de GER,"MF,FW",Werder Bremen,21,1998,5.7,1,15,6,40.0,2.65,1.06,0.07,0.17,18.4,0,0,0,0.7,0.7,0.05,+0.3,+0.3,Matches
+Maximilian Eggestein,de GER,MF,Werder Bremen,22,1996,31.7,1,45,11,24.4,1.42,0.35,0.02,0.09,22.3,0,0,0,2.6,2.6,0.06,-1.6,-1.6,Matches
+Kingsley Ehizibue,nl NED,DF,Köln,24,1995,25.9,1,12,4,33.3,0.46,0.15,0.08,0.25,20.5,0,0,0,1.3,1.3,0.10,-0.3,-0.3,Matches
+Ilay Elmkies,il ISR,MF,Hoffenheim,19,2000,0.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Nico Elvedi,ch SUI,DF,M'Gladbach,22,1996,29.1,1,9,1,11.1,0.31,0.03,0.11,1.00,9.2,0,0,0,0.8,0.8,0.09,+0.2,+0.2,Matches
+Breel Embolo,ch SUI,"FW,MF",M'Gladbach,22,1997,17.2,8,45,18,40.0,2.61,1.05,0.18,0.44,12.4,0,0,1,10.4,9.6,0.22,-2.4,-1.6,Matches
+Alexander Esswein,de GER,"FW,MF",Hertha BSC,29,1990,2.4,0,2,1,50.0,0.85,0.42,0.00,0.00,32.7,0,0,0,0.1,0.1,0.05,-0.1,-0.1,Matches
+Antony Evans,eng ENG,"MF,DF",Paderborn 07,20,1998,1.7,0,2,1,50.0,1.15,0.58,0.00,0.00,25.2,0,0,0,0.1,0.1,0.03,-0.1,-0.1,Matches
+Simon Falette,gn GUI,DF,Eint Frankfurt,27,1992,1.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Ohis Felix Uduokhai,de GER,DF,Augsburg,21,1997,21.8,0,4,0,0.0,0.18,0.00,0.00,,18.6,0,0,0,0.2,0.2,0.05,-0.2,-0.2,Matches
+Edimilson Fernandes,ch SUI,"MF,DF",Mainz 05,23,1996,16.5,1,23,2,8.7,1.39,0.12,0.04,0.50,26.1,0,0,0,0.8,0.8,0.04,+0.2,+0.2,Matches
+Gelson Fernandes,ch SUI,MF,Eint Frankfurt,32,1986,8.6,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Oliver Fink,de GER,"MF,FW",Düsseldorf,37,1982,7.5,0,8,0,0.0,1.07,0.00,0.00,,14.7,0,0,0,0.5,0.5,0.06,-0.5,-0.5,Matches
+Alfreð Finnbogason,is ISL,FW,Augsburg,30,1989,10.7,3,17,7,41.2,1.58,0.65,0.12,0.29,14.0,0,1,1,4.0,3.2,0.19,-1.0,-1.2,Matches
+Mark Flekken,nl NED,GK,Freiburg,26,1993,10.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Emil Forsberg,se SWE,MF,RB Leipzig,27,1991,12.7,5,24,8,33.3,1.89,0.63,0.13,0.38,21.4,3,2,2,3.6,2.0,0.08,+1.4,+1.0,Matches
+Raphael Framberger,de GER,DF,Augsburg,23,1995,13.1,0,1,0,0.0,0.08,0.00,0.00,,14.5,0,0,0,0.1,0.1,0.10,-0.1,-0.1,Matches
+Mike Frantz,de GER,MF,Freiburg,32,1986,3.9,0,4,1,25.0,1.03,0.26,0.00,0.00,13.3,0,0,0,0.4,0.4,0.10,-0.4,-0.4,Matches
+Marco Friedl,at AUT,"DF,MF",Werder Bremen,21,1998,24.3,1,12,3,25.0,0.49,0.12,0.08,0.33,18.2,1,0,0,0.9,0.9,0.08,+0.1,+0.1,Matches
+Marvin Friedrich,de GER,DF,Union Berlin,23,1995,31.0,2,28,4,14.3,0.90,0.13,0.07,0.50,13.4,0,0,0,2.5,2.5,0.09,-0.5,-0.5,Matches
+Samúel Friðjónsson,is ISL,MF,Paderborn 07,23,1996,2.1,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Niclas Füllkrug,de GER,FW,Werder Bremen,26,1993,4.5,4,17,10,58.8,3.80,2.23,0.24,0.40,13.2,0,0,0,1.8,1.7,0.10,+2.2,+2.3,Matches
+Mijat Gaćinović,rs SRB,"MF,FW",Eint Frankfurt,24,1995,11.6,0,25,7,28.0,2.15,0.60,0.00,0.00,20.8,2,0,0,3.1,3.1,0.12,-3.1,-3.1,Matches
+Theodor Gebre Selassie,cz CZE,"DF,MF",Werder Bremen,32,1986,27.0,2,12,3,25.0,0.44,0.11,0.17,0.67,10.8,0,0,0,1.5,1.5,0.12,+0.5,+0.5,Matches
+Dennis Geiger,de GER,MF,Hoffenheim,21,1998,12.6,0,12,0,0.0,0.95,0.00,0.00,,20.0,1,0,0,0.9,0.9,0.08,-0.9,-0.9,Matches
+Christian Gentner,de GER,MF,Union Berlin,33,1985,27.1,3,35,11,31.4,1.29,0.41,0.09,0.27,18.1,0,0,0,2.4,2.4,0.07,+0.6,+0.6,Matches
+Yannick Gerhardt,de GER,MF,Wolfsburg,25,1994,9.2,2,11,4,36.4,1.20,0.43,0.18,0.50,17.4,0,0,0,2.0,2.0,0.18,0.0,0.0,Matches
+Niko Gießelmann,de GER,DF,Düsseldorf,27,1991,22.9,1,14,3,21.4,0.61,0.13,0.07,0.33,22.2,2,0,0,0.6,0.6,0.04,+0.4,+0.4,Matches
+Rafał Gikiewicz,pl POL,GK,Union Berlin,31,1987,33.0,0,2,1,50.0,0.06,0.03,0.00,0.00,9.0,0,0,0,0.3,0.3,0.13,-0.3,-0.3,Matches
+Daniel Ginczek,de GER,FW,Wolfsburg,28,1991,8.5,3,24,6,25.0,2.81,0.70,0.13,0.50,14.9,0,0,0,3.2,3.2,0.13,-0.2,-0.2,Matches
+Matthias Ginter,de GER,DF,M'Gladbach,25,1994,30.9,1,18,7,38.9,0.58,0.23,0.06,0.14,13.4,0,0,0,1.7,1.7,0.10,-0.7,-0.7,Matches
+Klaus Gjasula,al ALB,MF,Paderborn 07,29,1989,25.3,2,14,4,28.6,0.55,0.16,0.14,0.50,14.5,0,0,1,2.1,1.3,0.10,-0.1,+0.7,Matches
+Serge Gnabry,de GER,"FW,MF",Bayern Munich,24,1995,24.4,12,95,40,42.1,3.90,1.64,0.13,0.30,15.6,0,0,0,13.1,13.1,0.14,-1.1,-1.1,Matches
+Akaki Gogia,de GER,"MF,FW",Union Berlin,27,1992,1.3,0,1,0,0.0,0.74,0.00,0.00,,23.5,0,0,0,0.0,0.0,0.03,0.0,0.0,Matches
+Benjamin Goller,de GER,"FW,MF",Werder Bremen,20,1999,3.2,0,2,0,0.0,0.62,0.00,0.00,,17.2,0,0,0,0.1,0.1,0.07,-0.1,-0.1,Matches
+Jérôme Gondorf,de GER,MF,Freiburg,31,1988,1.3,0,2,1,50.0,1.50,0.75,0.00,0.00,27.1,0,0,0,0.1,0.1,0.03,-0.1,-0.1,Matches
+Leon Goretzka,de GER,MF,Bayern Munich,24,1995,16.8,6,39,15,38.5,2.32,0.89,0.15,0.40,17.7,0,0,0,5.5,5.5,0.14,+0.5,+0.5,Matches
+Mario Götze,de GER,FW,Dortmund,27,1992,5.8,3,7,3,42.9,1.21,0.52,0.29,0.67,12.3,0,1,1,2.0,1.2,0.18,+1.0,+0.8,Matches
+Jeffrey Gouweleeuw,nl NED,DF,Augsburg,28,1991,18.3,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Michael Gregoritsch,at AUT,"MF,FW",Augsburg,25,1994,3.4,0,4,0,0.0,1.19,0.00,0.00,,16.1,1,0,0,0.2,0.2,0.05,-0.2,-0.2,Matches
+Michael Gregoritsch,at AUT,FW,Schalke 04,25,1994,9.2,1,24,8,33.3,2.61,0.87,0.04,0.13,13.6,2,0,0,3.9,3.9,0.16,-2.9,-2.9,Matches
+Vincenzo Grifo,it ITA,MF,Hoffenheim,26,1993,0.2,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Vincenzo Grifo,it ITA,"MF,FW",Freiburg,26,1993,18.0,4,48,17,35.4,2.67,0.95,0.06,0.18,23.5,12,1,1,3.5,2.7,0.06,+0.5,+0.3,Matches
+Florian Grillitsch,at AUT,"MF,DF",Hoffenheim,23,1995,26.8,0,17,1,5.9,0.64,0.04,0.00,0.00,20.4,0,0,0,1.3,1.3,0.08,-1.3,-1.3,Matches
+Christian Groß,de GER,"DF,MF",Werder Bremen,30,1989,9.7,0,3,0,0.0,0.31,0.00,0.00,,15.6,0,0,0,0.2,0.2,0.06,-0.2,-0.2,Matches
+Carlos Gruezo,ec ECU,MF,Augsburg,24,1995,9.8,0,6,0,0.0,0.61,0.00,0.00,,25.6,0,0,0,0.2,0.2,0.03,-0.2,-0.2,Matches
+Marko Grujić,rs SRB,MF,Hertha BSC,23,1996,26.8,4,36,13,36.1,1.34,0.48,0.11,0.31,18.0,0,0,0,4.9,4.9,0.14,-0.9,-0.9,Matches
+Raphaël Guerreiro,pt POR,"DF,MF",Dortmund,25,1993,25.9,8,40,15,37.5,1.54,0.58,0.20,0.53,20.1,7,0,0,4.6,4.6,0.12,+3.4,+3.4,Matches
+Babacar Guèye,sn SEN,FW,Paderborn 07,24,1994,1.2,0,2,0,0.0,1.64,0.00,0.00,,11.1,0,0,0,0.2,0.2,0.12,-0.2,-0.2,Matches
+Josuha Guilavogui,fr FRA,"MF,DF",Wolfsburg,28,1990,22.9,0,24,6,25.0,1.05,0.26,0.00,0.00,18.6,0,0,0,1.3,1.3,0.05,-1.3,-1.3,Matches
+Péter Gulácsi,hu HUN,GK,RB Leipzig,29,1990,32.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Manuel Gulde,de GER,DF,Freiburg,28,1991,15.2,1,14,2,14.3,0.92,0.13,0.07,0.50,10.6,0,0,0,1.6,1.6,0.11,-0.6,-0.6,Matches
+Christian Günter,de GER,DF,Freiburg,26,1993,33.7,2,32,8,25.0,0.95,0.24,0.06,0.25,22.6,2,0,0,1.3,1.3,0.04,+0.7,+0.7,Matches
+Jonathan de Guzmán,nl NED,MF,Eint Frankfurt,31,1987,1.0,0,1,0,0.0,1.03,0.00,0.00,,23.7,0,0,0,0.0,0.0,0.04,0.0,0.0,Matches
+Erling Haaland,no NOR,FW,Dortmund,19,2000,11.8,13,34,19,55.9,2.88,1.61,0.38,0.68,12.1,0,0,0,8.8,8.8,0.26,+4.2,+4.2,Matches
+Janik Haberer,de GER,"MF,FW",Freiburg,25,1994,19.1,2,13,4,30.8,0.68,0.21,0.15,0.50,19.9,0,0,0,0.6,0.6,0.05,+1.4,+1.4,Matches
+Alexander Hack,de GER,DF,Mainz 05,25,1993,8.9,0,8,1,12.5,0.89,0.11,0.00,0.00,20.6,0,0,0,0.5,0.5,0.06,-0.5,-0.5,Matches
+André Hahn,de GER,"FW,MF",Augsburg,28,1990,7.8,1,15,4,26.7,1.92,0.51,0.07,0.25,15.7,0,0,1,2.6,1.9,0.12,-1.6,-0.9,Matches
+Amadou Haidara,ml MLI,MF,RB Leipzig,21,1998,8.4,0,19,6,31.6,2.26,0.71,0.00,0.00,24.8,0,0,0,0.7,0.7,0.04,-0.7,-0.7,Matches
+Achraf Hakimi,ma MAR,"DF,MF",Dortmund,20,1998,30.2,5,38,20,52.6,1.26,0.66,0.13,0.25,16.2,3,0,0,4.9,4.9,0.13,+0.1,+0.1,Matches
+Marcel Halstenberg,de GER,DF,RB Leipzig,27,1991,28.0,3,31,9,29.0,1.11,0.32,0.10,0.33,20.8,7,0,0,2.1,2.1,0.07,+0.9,+0.9,Matches
+Amine Harit,ma MAR,"MF,FW",Schalke 04,22,1997,23.4,6,28,11,39.3,1.20,0.47,0.18,0.45,22.0,0,1,1,3.3,2.5,0.09,+2.7,+2.5,Matches
+Martin Harnik,at AUT,"MF,FW",Werder Bremen,32,1987,0.1,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Makoto Hasebe,jp JPN,"DF,MF",Eint Frankfurt,35,1984,21.9,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Kai Havertz,de GER,"MF,FW",Leverkusen,20,1999,27.3,12,58,25,43.1,2.13,0.92,0.19,0.44,15.6,0,1,1,9.1,8.4,0.14,+2.9,+2.6,Matches
+Thorgan Hazard,be BEL,"FW,MF",Dortmund,26,1993,26.4,7,50,21,42.0,1.89,0.79,0.14,0.33,18.5,0,0,0,5.4,5.4,0.11,+1.6,+1.6,Matches
+Jonas Hector,de GER,"MF,DF",Köln,29,1990,27.0,4,30,9,30.0,1.11,0.33,0.13,0.44,17.2,2,0,0,1.9,1.8,0.06,+2.1,+2.2,Matches
+Dominique Heintz,de GER,DF,Freiburg,25,1993,27.0,0,4,2,50.0,0.15,0.07,0.00,0.00,17.9,0,0,0,0.2,0.2,0.06,-0.2,-0.2,Matches
+Rouwen Hennings,de GER,FW,Düsseldorf,31,1987,27.3,15,69,23,33.3,2.53,0.84,0.16,0.48,17.4,2,4,4,10.8,7.7,0.11,+4.2,+3.3,Matches
+Lucas Hernández,fr FRA,DF,Bayern Munich,23,1996,10.2,0,3,1,33.3,0.29,0.10,0.00,0.00,19.6,0,0,0,0.4,0.4,0.15,-0.4,-0.4,Matches
+Patrick Herrmann,de GER,"FW,MF",M'Gladbach,28,1991,16.1,6,40,15,37.5,2.48,0.93,0.15,0.40,14.6,1,0,0,6.9,6.9,0.17,-0.9,-0.9,Matches
+Martin Hinteregger,at AUT,DF,Eint Frankfurt,26,1992,30.2,8,44,16,36.4,1.46,0.53,0.18,0.50,16.2,1,0,0,3.8,3.8,0.09,+4.2,+4.2,Matches
+Marwin Hitz,ch SUI,GK,Dortmund,31,1987,3.2,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+André Hoffmann,de GER,DF,Düsseldorf,26,1993,27.0,2,14,4,28.6,0.52,0.15,0.14,0.50,15.9,0,0,0,1.1,1.1,0.08,+0.9,+0.9,Matches
+Nicolas Höfler,de GER,MF,Freiburg,29,1990,30.9,1,26,3,11.5,0.84,0.10,0.04,0.33,18.1,0,0,0,2.6,2.6,0.10,-1.6,-1.6,Matches
+Jonas Hofmann,de GER,"MF,FW",M'Gladbach,27,1992,18.1,5,24,10,41.7,1.32,0.55,0.21,0.50,17.4,3,0,0,4.4,4.4,0.18,+0.6,+0.6,Matches
+Jonas Hofmann,de GER,MF,Schalke 04,22,1997,0.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Marco Höger,de GER,MF,Köln,29,1989,7.5,0,1,0,0.0,0.13,0.00,0.00,,11.6,0,0,0,0.1,0.1,0.10,-0.1,-0.1,Matches
+Lucas Höler,de GER,"FW,MF",Freiburg,25,1994,27.6,8,51,22,43.1,1.85,0.80,0.16,0.36,14.1,0,0,1,8.9,8.1,0.16,-0.9,-0.1,Matches
+Gerrit Holtmann,ph PHI,"MF,DF",Paderborn 07,24,1995,11.8,1,24,9,37.5,2.03,0.76,0.04,0.11,22.1,0,0,0,1.1,1.1,0.05,-0.1,-0.1,Matches
+Luca Horn,de GER,DF,Wolfsburg,20,1998,0.1,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Timo Horn,de GER,GK,Köln,26,1993,34.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Lukáš Hrádecký,fi FIN,GK,Leverkusen,29,1989,34.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Benjamin Hübner,de GER,DF,Hoffenheim,30,1989,23.0,1,26,4,15.4,1.13,0.17,0.04,0.25,14.0,0,0,0,2.0,2.0,0.08,-1.0,-1.0,Matches
+Florian Hübner,de GER,DF,Union Berlin,28,1991,9.4,0,6,1,16.7,0.64,0.11,0.00,0.00,6.9,0,0,0,1.5,1.5,0.24,-1.5,-1.5,Matches
+Mats Hummels,de GER,DF,Dortmund,30,1988,28.7,1,22,4,18.2,0.77,0.14,0.05,0.25,10.7,0,0,0,1.9,1.9,0.09,-0.9,-0.9,Matches
+Uwe Hünemeier,de GER,DF,Paderborn 07,33,1986,13.4,1,11,1,9.1,0.82,0.07,0.00,0.00,16.0,2,1,1,1.5,0.7,0.07,-0.5,-0.7,Matches
+Jannik Huth,de GER,GK,Paderborn 07,25,1994,6.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Iago,br BRA,"DF,MF",Augsburg,22,1997,7.5,1,2,1,50.0,0.27,0.13,0.50,1.00,11.1,0,0,0,0.7,0.7,0.35,+0.3,+0.3,Matches
+Vedad Ibišević,ba BIH,FW,Hertha BSC,34,1984,14.0,7,27,12,44.4,1.93,0.86,0.22,0.50,13.4,0,1,1,5.4,4.7,0.17,+1.6,+1.3,Matches
+Luc Ihorst,de GER,FW,Werder Bremen,19,2000,0.1,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Stefan Ilsanker,at AUT,DF,RB Leipzig,30,1989,4.6,0,6,0,0.0,1.29,0.00,0.00,,8.8,0,0,0,0.7,0.7,0.12,-0.7,-0.7,Matches
+Stefan Ilsanker,at AUT,"DF,MF",Eint Frankfurt,30,1989,9.3,2,6,2,33.3,0.64,0.21,0.33,1.00,10.3,0,0,0,1.1,1.1,0.18,+0.9,+0.9,Matches
+Marcus Ingvartsen,dk DEN,"MF,FW",Union Berlin,23,1996,19.1,5,44,13,29.5,2.31,0.68,0.09,0.31,19.8,1,1,1,3.8,3.1,0.07,+1.2,+0.9,Matches
+Gian-Luca Itter,de GER,"DF,MF",Freiburg,20,1999,0.4,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Ismail Jakobs,sn SEN,"FW,DF",Köln,19,1999,18.6,2,18,9,50.0,0.97,0.48,0.11,0.22,18.4,0,0,0,2.3,2.3,0.13,-0.3,-0.3,Matches
+Laurent Jans,lu LUX,DF,Paderborn 07,26,1992,17.5,0,8,0,0.0,0.46,0.00,0.00,,26.7,0,0,0,0.2,0.2,0.03,-0.2,-0.2,Matches
+Tony Jantschke,de GER,DF,M'Gladbach,29,1990,11.2,0,4,0,0.0,0.36,0.00,0.00,,11.7,0,0,0,0.5,0.5,0.12,-0.5,-0.5,Matches
+Rune Jarstein,no NOR,GK,Hertha BSC,34,1984,28.3,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Dennis Jastrzembski,pl POL,"MF,FW",Paderborn 07,19,2000,2.0,0,2,1,50.0,1.02,0.51,0.00,0.00,18.3,0,0,0,0.3,0.3,0.16,-0.3,-0.3,Matches
+Tin Jedvaj,hr CRO,DF,Augsburg,23,1995,29.3,2,14,5,35.7,0.48,0.17,0.14,0.40,13.6,0,0,0,1.8,1.8,0.13,+0.2,+0.2,Matches
+Fredrik Jensen,fi FIN,"MF,FW",Augsburg,21,1997,5.1,1,6,3,50.0,1.18,0.59,0.17,0.33,23.4,0,0,0,0.7,0.7,0.12,+0.3,+0.3,Matches
+Fabian Johnson,us USA,"MF,DF",M'Gladbach,31,1987,3.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Dejan Joveljić,rs SRB,FW,Eint Frankfurt,19,1999,1.7,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Mathias Jørgensen,dk DEN,DF,Düsseldorf,29,1990,5.5,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Ozan Kabak,tr TUR,DF,Schalke 04,19,2000,19.7,3,11,7,63.6,0.56,0.35,0.27,0.43,9.7,0,0,0,1.8,1.8,0.17,+1.2,+1.2,Matches
+Pavel Kadeřábek,cz CZE,"DF,FW",Hoffenheim,27,1992,27.5,2,28,10,35.7,1.02,0.36,0.07,0.20,11.9,0,0,0,2.8,2.8,0.10,-0.8,-0.8,Matches
+Florian Kainz,at AUT,"FW,MF",Köln,26,1992,17.3,5,40,13,32.5,2.31,0.75,0.10,0.31,22.2,7,1,1,4.2,3.4,0.09,+0.8,+0.6,Matches
+Salomon Kalou,ci CIV,"FW,MF",Hertha BSC,33,1985,1.6,1,5,2,40.0,3.08,1.23,0.20,0.50,9.1,0,0,0,1.1,1.1,0.22,-0.1,-0.1,Matches
+Daichi Kamada,jp JPN,"MF,FW",Eint Frankfurt,22,1996,21.9,2,46,18,39.1,2.10,0.82,0.04,0.11,15.3,1,0,0,6.7,6.7,0.15,-4.7,-4.7,Matches
+Kevin Kampl,si SVN,MF,RB Leipzig,28,1990,7.5,2,5,3,60.0,0.67,0.40,0.40,0.67,21.9,0,0,0,0.3,0.3,0.06,+1.7,+1.7,Matches
+Stefanos Kapino,gr GRE,GK,Werder Bremen,25,1994,1.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Kenan Karaman,tr TUR,"FW,MF",Düsseldorf,25,1994,15.0,6,32,11,34.4,2.13,0.73,0.19,0.55,15.8,0,0,0,4.0,4.0,0.13,+2.0,+2.0,Matches
+Mamoudou Karamoko,fr FRA,MF,Wolfsburg,19,1999,0.1,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Florian Kastenmeier,de GER,GK,Düsseldorf,22,1997,17.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Noah Katterbach,de GER,DF,Köln,18,2001,14.6,0,3,2,66.7,0.21,0.14,0.00,0.00,21.9,0,0,0,0.1,0.1,0.04,-0.1,-0.1,Matches
+Yannik Keitel,de GER,MF,Freiburg,19,2000,1.9,0,2,1,50.0,1.03,0.52,0.00,0.00,24.1,0,0,0,0.1,0.1,0.03,-0.1,-0.1,Matches
+Jonjoe Kenny,eng ENG,DF,Schalke 04,22,1997,30.2,2,12,5,41.7,0.40,0.17,0.17,0.40,20.8,0,0,0,1.3,1.3,0.11,+0.7,+0.7,Matches
+Rani Khedira,de GER,MF,Augsburg,25,1994,29.4,0,9,0,0.0,0.31,0.00,0.00,,20.9,0,0,0,0.5,0.5,0.05,-0.5,-0.5,Matches
+Luca Kilian,de GER,DF,Paderborn 07,19,1999,14.0,0,1,0,0.0,0.07,0.00,0.00,,15.9,0,0,0,0.0,0.0,0.03,0.0,0.0,Matches
+Joshua Kimmich,de GER,"MF,DF",Bayern Munich,24,1995,31.3,4,26,13,50.0,0.83,0.42,0.15,0.31,24.9,2,0,0,1.2,1.2,0.04,+2.8,+2.8,Matches
+Davy Klaassen,nl NED,MF,Werder Bremen,26,1993,32.6,7,42,14,33.3,1.29,0.43,0.14,0.43,20.0,0,1,3,7.2,4.9,0.12,-0.2,+1.1,Matches
+Felix Klaus,de GER,"MF,FW",Wolfsburg,26,1992,7.4,0,19,6,31.6,2.55,0.81,0.00,0.00,17.6,0,0,0,2.4,2.4,0.13,-2.4,-2.4,Matches
+Lukas Klostermann,de GER,DF,RB Leipzig,23,1996,29.4,3,12,6,50.0,0.41,0.20,0.25,0.50,11.1,0,0,0,2.7,2.7,0.23,+0.3,+0.3,Matches
+Lukas Klünter,de GER,DF,Hertha BSC,23,1996,20.9,0,2,0,0.0,0.10,0.00,0.00,,20.7,0,0,0,0.3,0.3,0.14,-0.3,-0.3,Matches
+Robin Knoche,de GER,DF,Wolfsburg,27,1992,17.7,1,4,2,50.0,0.23,0.11,0.25,0.50,10.3,0,0,0,0.3,0.3,0.07,+0.7,+0.7,Matches
+Robin Koch,de GER,"DF,MF",Freiburg,23,1996,30.1,1,35,10,28.6,1.16,0.33,0.03,0.10,12.2,0,0,0,4.0,4.0,0.11,-3.0,-3.0,Matches
+Dominik Kohr,de GER,MF,Eint Frankfurt,25,1994,16.1,0,28,10,35.7,1.74,0.62,0.00,0.00,22.5,0,0,0,1.7,1.7,0.06,-1.7,-1.7,Matches
+Ibrahima Konaté,fr FRA,DF,RB Leipzig,20,1999,6.3,0,1,0,0.0,0.16,0.00,0.00,,6.4,0,0,0,0.1,0.1,0.10,-0.1,-0.1,Matches
+Pascal Köpke,de GER,FW,Hertha BSC,23,1995,1.3,0,6,3,50.0,4.46,2.23,0.00,0.00,10.9,0,0,0,1.2,1.2,0.24,-1.2,-1.2,Matches
+Filip Kostić,rs SRB,"DF,FW",Eint Frankfurt,26,1992,32.9,4,88,27,30.7,2.68,0.82,0.05,0.15,22.6,10,0,0,6.3,6.3,0.07,-2.3,-2.3,Matches
+Tomáš Koubek,cz CZE,GK,Augsburg,26,1992,24.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Dawid Kownacki,pl POL,"FW,MF",Düsseldorf,22,1997,12.1,0,26,11,42.3,2.14,0.91,0.00,0.00,17.1,0,0,0,2.3,2.3,0.09,-2.3,-2.3,Matches
+Thomas Kraft,de GER,GK,Hertha BSC,31,1988,4.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Andrej Kramarić,hr CRO,"FW,MF",Hoffenheim,28,1991,15.8,12,41,21,51.2,2.59,1.33,0.24,0.48,14.8,3,2,2,9.6,8.0,0.21,+2.4,+2.0,Matches
+Christoph Kramer,de GER,MF,M'Gladbach,28,1991,16.3,0,10,0,0.0,0.61,0.00,0.00,,23.7,0,0,0,0.4,0.4,0.04,-0.4,-0.4,Matches
+Tom Krauß,de GER,MF,RB Leipzig,18,2001,0.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Felix Kroos,de GER,"MF,DF",Union Berlin,28,1991,4.2,0,5,3,60.0,1.19,0.71,0.00,0.00,23.7,1,0,0,0.4,0.4,0.07,-0.4,-0.4,Matches
+Lukas Kübler,de GER,DF,Freiburg,26,1992,2.3,0,2,1,50.0,0.86,0.43,0.00,0.00,22.8,0,0,0,0.1,0.1,0.04,-0.1,-0.1,Matches
+Pierre Kunde,cm CMR,MF,Mainz 05,24,1995,20.7,4,39,11,28.2,1.88,0.53,0.10,0.36,24.2,4,0,0,3.2,3.2,0.08,+0.8,+0.8,Matches
+Ahmed Kutucu,tr TUR,"FW,MF",Schalke 04,19,2000,7.5,3,16,5,31.3,2.12,0.66,0.19,0.60,19.2,0,0,0,1.9,1.9,0.12,+1.1,+1.1,Matches
+Konrad Laimer,at AUT,MF,RB Leipzig,22,1997,23.5,2,9,5,55.6,0.38,0.21,0.22,0.40,21.1,0,0,0,0.8,0.8,0.09,+1.2,+1.2,Matches
+Stefan Lainer,at AUT,DF,M'Gladbach,26,1992,30.1,1,16,5,31.3,0.53,0.17,0.06,0.20,17.5,0,0,0,1.7,1.7,0.11,-0.7,-0.7,Matches
+Michael Lang,ch SUI,"DF,FW",Werder Bremen,28,1991,6.0,0,5,2,40.0,0.83,0.33,0.00,0.00,15.3,0,0,0,0.3,0.3,0.05,-0.3,-0.3,Matches
+Sebastian Langkamp,de GER,DF,Werder Bremen,31,1988,3.5,0,4,1,25.0,1.15,0.29,0.00,0.00,15.3,0,0,0,0.3,0.3,0.08,-0.3,-0.3,Matches
+Danny Latza,de GER,MF,Mainz 05,29,1989,15.3,0,17,3,17.6,1.11,0.20,0.00,0.00,20.5,0,0,0,1.1,1.1,0.07,-1.1,-1.1,Matches
+Mathew Leckie,au AUS,"DF,FW",Hertha BSC,28,1991,2.2,0,2,0,0.0,0.92,0.00,0.00,,14.4,0,0,0,0.1,0.1,0.04,-0.1,-0.1,Matches
+Toni Leistner,de GER,DF,Köln,28,1990,11.2,0,3,1,33.3,0.27,0.09,0.00,0.00,10.5,0,0,0,0.3,0.3,0.09,-0.3,-0.3,Matches
+Tim Lemperle,de GER,MF,Köln,17,2002,0.2,0,1,0,0.0,5.63,0.00,0.00,,11.6,0,0,0,0.1,0.1,0.09,-0.1,-0.1,Matches
+Christopher Lenz,de GER,"DF,MF",Union Berlin,24,1994,25.2,0,14,2,14.3,0.56,0.08,0.00,0.00,25.2,1,0,0,0.7,0.7,0.05,-0.7,-0.7,Matches
+Robert Lewandowski,pl POL,FW,Bayern Munich,30,1988,30.7,34,133,62,46.6,4.34,2.02,0.22,0.47,13.4,2,5,5,30.7,26.8,0.20,+3.3,+2.2,Matches
+Stephan Lichtsteiner,ch SUI,DF,Augsburg,35,1984,14.9,0,2,0,0.0,0.13,0.00,0.00,,28.7,0,0,0,0.0,0.0,0.02,0.0,0.0,Matches
+Philipp Lienhart,at AUT,DF,Freiburg,23,1996,20.2,0,7,2,28.6,0.35,0.10,0.00,0.00,22.0,0,0,0,0.8,0.8,0.11,-0.8,-0.8,Matches
+Jürgen Locadia,nl NED,FW,Hoffenheim,25,1993,5.9,4,19,10,52.6,3.23,1.70,0.16,0.30,14.2,0,1,1,3.8,3.0,0.16,+0.2,0.0,Matches
+Ademola Lookman,ng NGA,"FW,MF",RB Leipzig,21,1997,3.4,0,10,1,10.0,2.91,0.29,0.00,0.00,16.1,0,0,0,1.3,1.3,0.13,-1.3,-1.3,Matches
+Eduard Löwen,de GER,MF,Augsburg,22,1997,7.5,2,11,6,54.5,1.48,0.80,0.18,0.33,24.5,3,0,0,0.8,0.8,0.08,+1.2,+1.2,Matches
+Eduard Löwen,de GER,MF,Hertha BSC,22,1997,3.5,0,5,0,0.0,1.43,0.00,0.00,,29.7,2,0,0,0.2,0.2,0.04,-0.2,-0.2,Matches
+Jan Luca Rumpf,de GER,DF,Paderborn 07,20,1999,1.0,0,1,0,0.0,1.00,0.00,0.00,,15.4,0,0,0,0.1,0.1,0.07,-0.1,-0.1,Matches
+Dodi Lukebakio,be BEL,"FW,MF",Hertha BSC,21,1997,22.6,7,40,18,45.0,1.77,0.80,0.18,0.39,16.5,2,0,0,7.5,7.5,0.19,-0.5,-0.5,Matches
+Andreas Luthe,de GER,GK,Augsburg,32,1987,10.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Arne Maier,de GER,MF,Hertha BSC,20,1999,5.9,0,6,3,50.0,1.01,0.50,0.00,0.00,25.8,0,0,0,0.2,0.2,0.03,-0.2,-0.2,Matches
+Yunus Mallı,tr TUR,"MF,FW",Union Berlin,27,1992,7.5,0,12,4,33.3,1.60,0.53,0.00,0.00,17.0,0,0,0,1.2,1.2,0.10,-1.2,-1.2,Matches
+Streli Mamba,de GER,FW,Paderborn 07,25,1994,16.9,5,23,10,43.5,1.36,0.59,0.22,0.50,16.4,0,0,0,4.6,4.6,0.20,+0.4,+0.4,Matches
+Omar Marmoush,eg EGY,"MF,FW",Wolfsburg,20,1999,0.9,0,1,1,100.0,1.11,1.11,0.00,0.00,10.1,0,0,0,0.1,0.1,0.05,-0.1,-0.1,Matches
+Aarón Martín,es ESP,DF,Mainz 05,22,1997,19.9,0,9,3,33.3,0.45,0.15,0.00,0.00,23.8,1,0,0,0.3,0.3,0.04,-0.3,-0.3,Matches
+Javi Martínez,es ESP,"DF,MF",Bayern Munich,30,1988,7.5,0,1,0,0.0,0.13,0.00,0.00,,3.6,0,0,0,0.2,0.2,0.23,-0.2,-0.2,Matches
+Omar Mascarell,es ESP,MF,Schalke 04,26,1993,22.5,0,10,2,20.0,0.44,0.09,0.00,0.00,24.8,0,0,0,0.5,0.5,0.05,-0.5,-0.5,Matches
+Jean-Philippe Mateta,fr FRA,FW,Mainz 05,22,1997,11.7,3,34,11,32.4,2.91,0.94,0.06,0.18,12.3,0,1,1,5.9,5.2,0.15,-2.9,-3.2,Matches
+Rabbi Matondo,wls WAL,"FW,MF",Schalke 04,18,2000,12.9,2,23,7,30.4,1.78,0.54,0.09,0.29,18.0,0,0,0,3.2,3.2,0.14,-1.2,-1.2,Matches
+Philipp Max,de GER,DF,Augsburg,25,1993,30.1,8,35,12,34.3,1.16,0.40,0.20,0.58,24.5,14,1,1,3.6,2.8,0.08,+4.4,+4.2,Matches
+Alexandru Maxim,ro ROU,"MF,DF",Mainz 05,29,1990,1.3,0,3,0,0.0,2.31,0.00,0.00,,21.5,0,0,0,0.1,0.1,0.04,-0.1,-0.1,Matches
+Kevin Mbabu,ch SUI,DF,Wolfsburg,24,1995,18.8,3,11,3,27.3,0.58,0.16,0.27,1.00,11.3,0,0,0,1.7,1.7,0.16,+1.3,+1.3,Matches
+Weston McKennie,us USA,"MF,DF",Schalke 04,20,1998,23.0,3,32,8,25.0,1.39,0.35,0.09,0.38,18.8,0,0,0,2.7,2.7,0.08,+0.3,+0.3,Matches
+Joshua Mees,de GER,"MF,FW",Union Berlin,23,1996,3.6,0,9,3,33.3,2.49,0.83,0.00,0.00,22.3,0,0,0,0.4,0.4,0.04,-0.4,-0.4,Matches
+Admir Mehmedi,ch SUI,"MF,FW",Wolfsburg,28,1991,13.3,2,23,9,39.1,1.72,0.68,0.09,0.22,17.1,0,0,0,1.6,1.6,0.07,+0.4,+0.4,Matches
+Levent Mercan,de GER,"MF,FW",Schalke 04,18,2000,0.8,0,1,0,0.0,1.27,0.00,0.00,,15.1,0,0,0,0.0,0.0,0.05,0.0,0.0,Matches
+Jorge Meré,es ESP,DF,Köln,22,1997,6.9,1,3,1,33.3,0.44,0.15,0.33,1.00,18.7,0,0,0,0.8,0.8,0.26,+0.2,+0.2,Matches
+Sven Michel,de GER,FW,Paderborn 07,29,1990,15.3,5,42,19,45.2,2.75,1.24,0.12,0.26,17.6,0,0,0,5.6,5.6,0.13,-0.6,-0.6,Matches
+Juan Miranda,es ESP,DF,Schalke 04,19,2000,8.7,0,5,1,20.0,0.58,0.12,0.00,0.00,25.1,0,0,0,0.1,0.1,0.03,-0.1,-0.1,Matches
+Maximilian Mittelstädt,de GER,"DF,FW",Hertha BSC,22,1997,21.0,1,22,5,22.7,1.05,0.24,0.05,0.20,21.4,0,0,0,0.9,0.9,0.04,+0.1,+0.1,Matches
+Anthony Modeste,fr FRA,FW,Köln,31,1988,12.6,4,35,11,31.4,2.77,0.87,0.11,0.36,14.8,0,0,0,4.3,4.3,0.12,-0.3,-0.3,Matches
+Kevin Möhwald,de GER,MF,Werder Bremen,26,1993,0.8,0,3,0,0.0,3.65,0.00,0.00,,26.5,0,0,0,0.1,0.1,0.03,-0.1,-0.1,Matches
+Niklas Moisander,fi FIN,DF,Werder Bremen,33,1985,22.0,0,14,2,14.3,0.64,0.09,0.00,0.00,12.6,0,0,0,1.1,1.1,0.08,-1.1,-1.1,Matches
+Alfredo Morales,us USA,MF,Düsseldorf,29,1990,19.2,1,20,4,20.0,1.04,0.21,0.05,0.25,19.9,0,0,0,1.2,1.2,0.06,-0.2,-0.2,Matches
+Jan Morávek,cz CZE,MF,Augsburg,29,1989,5.3,0,2,0,0.0,0.38,0.00,0.00,,27.9,0,0,0,0.1,0.1,0.04,-0.1,-0.1,Matches
+Mateu Morey,es ESP,,Dortmund,19,2000,2.2,0,2,1,50.0,0.91,0.46,0.00,0.00,,,0,0,,,,,,Matches
+Nordi Mukiele,fr FRA,"DF,FW",RB Leipzig,21,1997,19.8,3,22,6,27.3,1.11,0.30,0.14,0.50,16.1,0,0,0,2.8,2.8,0.13,+0.2,+0.2,Matches
+Florian Müller,de GER,GK,Mainz 05,21,1997,12.5,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Thomas Müller,de GER,"MF,FW",Bayern Munich,29,1989,25.1,8,54,19,35.2,2.16,0.76,0.15,0.42,13.7,0,0,0,8.7,8.7,0.16,-0.7,-0.7,Matches
+Torben Müsel,de GER,FW,M'Gladbach,20,1999,0.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Jamal Musiala,de GER,MF,Bayern Munich,16,2003,0.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Yvon Mvogo,ch SUI,GK,RB Leipzig,25,1994,2.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Phillipp Mwene,at AUT,DF,Mainz 05,25,1994,3.5,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Obite N'Dicka,ci CIV,DF,Eint Frankfurt,19,1999,19.1,1,10,2,20.0,0.52,0.10,0.10,0.50,13.0,0,0,0,0.7,0.7,0.07,+0.3,+0.3,Matches
+Matija Nastasić,rs SRB,DF,Schalke 04,26,1993,15.2,0,12,3,25.0,0.79,0.20,0.00,0.00,10.6,0,0,0,1.1,1.1,0.09,-1.1,-1.1,Matches
+Manuel Neuer,de GER,GK,Bayern Munich,33,1986,33.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Florian Neuhaus,de GER,MF,M'Gladbach,22,1997,26.2,4,57,23,40.4,2.18,0.88,0.07,0.17,21.2,2,0,0,6.4,6.3,0.11,-2.4,-2.3,Matches
+Jessic Ngankam,de GER,"FW,MF",Hertha BSC,19,2000,0.9,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Moussa Niakhate,sn SEN,DF,Mainz 05,23,1996,33.0,1,11,5,45.5,0.33,0.15,0.09,0.20,13.0,0,0,0,1.0,1.0,0.09,0.0,0.0,Matches
+Moritz Nicolas,de GER,GK,Union Berlin,21,1997,1.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Florian Niederlechner,de GER,"FW,MF",Augsburg,28,1990,30.2,13,76,38,50.0,2.51,1.26,0.16,0.32,14.1,1,1,2,13.9,12.4,0.16,-0.9,-0.4,Matches
+Christopher Nkunku,fr FRA,"MF,FW",RB Leipzig,21,1997,21.4,5,52,24,46.2,2.43,1.12,0.10,0.21,18.6,3,0,0,7.8,7.8,0.15,-2.8,-2.8,Matches
+Lukas Nmecha,de GER,"MF,FW",Wolfsburg,20,1998,1.5,0,3,0,0.0,2.06,0.00,0.00,,16.8,0,0,0,0.6,0.6,0.19,-0.6,-0.6,Matches
+Håvard Nordtveit,no NOR,DF,Hoffenheim,29,1990,7.8,0,2,0,0.0,0.26,0.00,0.00,,11.2,0,0,0,0.2,0.2,0.10,-0.2,-0.2,Matches
+Alexander Nübel,de GER,GK,Schalke 04,22,1996,25.7,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Kasim Nuhu,gh GHA,DF,Düsseldorf,24,1995,11.1,1,6,3,50.0,0.54,0.27,0.17,0.33,7.4,0,0,0,1.2,1.2,0.20,-0.2,-0.2,Matches
+Bastian Oczipka,de GER,DF,Schalke 04,30,1989,33.5,0,9,3,33.3,0.27,0.09,0.00,0.00,24.4,0,0,0,0.3,0.3,0.03,-0.3,-0.3,Matches
+Álvaro Odriozola,es ESP,DF,Bayern Munich,23,1995,1.7,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Kelvin Ofori,gh GHA,MF,Düsseldorf,18,2001,0.4,0,1,0,0.0,2.43,0.00,0.00,,27.1,0,0,0,0.0,0.0,0.03,0.0,0.0,Matches
+Kwasi Okyere Wriedt,gh GHA,FW,Bayern Munich,25,1994,0.2,0,1,0,0.0,6.43,0.00,0.00,,30.8,0,0,0,0.0,0.0,0.03,0.0,0.0,Matches
+Cauly Oliveira Souza,br BRA,"MF,FW",Paderborn 07,23,1995,8.0,2,14,8,57.1,1.76,1.00,0.14,0.25,20.2,1,0,0,1.5,1.5,0.11,+0.5,+0.5,Matches
+Dani Olmo,es ESP,"MF,FW",RB Leipzig,21,1998,8.3,3,21,6,28.6,2.53,0.72,0.14,0.50,19.8,0,0,0,1.8,1.8,0.08,+1.2,+1.2,Matches
+Karim Onisiwo,at AUT,FW,Mainz 05,27,1992,19.2,4,41,23,56.1,2.14,1.20,0.10,0.17,15.0,0,0,0,5.0,5.0,0.12,-1.0,-1.0,Matches
+Willi Orban,hu HUN,DF,RB Leipzig,26,1992,9.5,1,7,3,42.9,0.74,0.32,0.14,0.33,16.4,1,0,0,0.7,0.7,0.11,+0.3,+0.3,Matches
+Yuya Osako,jp JPN,"FW,MF",Werder Bremen,29,1990,20.5,8,45,19,42.2,2.19,0.93,0.18,0.42,16.4,0,0,0,6.9,6.9,0.15,+1.1,+1.1,Matches
+Paulo Otávio,br BRA,DF,Wolfsburg,24,1994,4.2,0,3,1,33.3,0.71,0.24,0.00,0.00,23.6,0,0,0,0.1,0.1,0.04,-0.1,-0.1,Matches
+Reece Oxford,eng ENG,MF,Augsburg,20,1998,4.2,0,2,0,0.0,0.48,0.00,0.00,,24.8,0,0,0,0.1,0.1,0.04,-0.1,-0.1,Matches
+Levin Öztunalı,de GER,"MF,FW",Mainz 05,23,1996,19.8,4,35,10,28.6,1.77,0.51,0.11,0.40,22.3,0,0,0,2.5,2.5,0.07,+1.5,+1.5,Matches
+Gonçalo Paciência,pt POR,FW,Eint Frankfurt,24,1994,14.3,7,50,17,34.0,3.51,1.19,0.12,0.35,14.3,1,1,1,8.1,7.4,0.15,-1.1,-1.4,Matches
+Exequiel Palacios,ar ARG,MF,Leverkusen,20,1998,2.0,0,5,0,0.0,2.54,0.00,0.00,,22.4,0,0,0,0.2,0.2,0.04,-0.2,-0.2,Matches
+Michael Parensen,de GER,DF,Union Berlin,33,1986,7.0,1,3,2,66.7,0.43,0.29,0.33,0.50,12.5,0,0,0,0.8,0.8,0.27,+0.2,+0.2,Matches
+Paulinho,br BRA,"MF,FW",Leverkusen,19,2000,3.4,3,9,4,44.4,2.66,1.18,0.33,0.75,16.4,0,0,0,2.0,2.0,0.22,+1.0,+1.0,Matches
+Benjamin Pavard,fr FRA,DF,Bayern Munich,23,1996,31.0,4,23,7,30.4,0.74,0.23,0.17,0.57,15.4,0,0,0,2.0,2.0,0.09,+2.0,+2.0,Matches
+Jiří Pavlenka,cz CZE,GK,Werder Bremen,27,1992,33.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Mads Pedersen,dk DEN,DF,Augsburg,22,1996,1.1,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Peter Pekarík,sk SVK,"DF,FW",Hertha BSC,32,1986,8.5,0,3,0,0.0,0.35,0.00,0.00,,25.1,0,0,0,0.1,0.1,0.03,-0.1,-0.1,Matches
+Philipp Pentke,de GER,GK,Hoffenheim,34,1985,4.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Ivan Perišić,hr CRO,"FW,MF",Bayern Munich,30,1989,13.4,4,40,12,30.0,2.99,0.90,0.10,0.33,14.6,0,0,0,4.1,4.1,0.10,-0.1,-0.1,Matches
+Pavao Pervan,at AUT,GK,Wolfsburg,31,1987,8.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Nils Petersen,de GER,"FW,MF",Freiburg,30,1988,27.1,11,54,18,33.3,2.00,0.67,0.19,0.56,11.7,0,1,1,8.9,8.1,0.15,+2.1,+1.9,Matches
+Krzysztof Piątek,pl POL,FW,Hertha BSC,24,1995,10.1,4,23,8,34.8,2.28,0.79,0.09,0.25,17.3,0,2,2,5.0,3.4,0.15,-1.0,-1.4,Matches
+Ronaël Pierre-Gabriel,fr FRA,DF,Mainz 05,21,1998,6.4,0,2,0,0.0,0.31,0.00,0.00,,24.2,0,0,0,0.1,0.1,0.03,-0.1,-0.1,Matches
+Łukasz Piszczek,pl POL,DF,Dortmund,34,1985,23.4,1,7,3,42.9,0.30,0.13,0.14,0.33,20.2,0,0,0,0.3,0.3,0.04,+0.7,+0.7,Matches
+Claudio Pizarro,pe PER,"FW,MF",Werder Bremen,40,1978,2.6,0,4,0,0.0,1.54,0.00,0.00,,10.8,0,0,0,0.5,0.5,0.11,-0.5,-0.5,Matches
+Marvin Plattenhardt,de GER,DF,Hertha BSC,27,1992,15.5,0,4,0,0.0,0.26,0.00,0.00,,23.0,2,0,0,0.3,0.3,0.08,-0.3,-0.3,Matches
+Alassane Pléa,fr FRA,FW,M'Gladbach,26,1993,23.8,10,76,34,44.7,3.19,1.43,0.13,0.29,16.7,4,0,1,12.1,11.3,0.15,-2.1,-1.3,Matches
+Thomas Pledl,de GER,"MF,FW",Düsseldorf,25,1994,1.0,0,1,0,0.0,0.99,0.00,0.00,,22.2,0,0,0,0.1,0.1,0.05,-0.1,-0.1,Matches
+Joel Pohjanpalo,fi FIN,MF,Leverkusen,24,1994,0.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Sebastian Polter,de GER,FW,Union Berlin,28,1991,3.7,2,9,1,11.1,2.45,0.27,0.00,0.00,15.0,0,2,2,2.2,0.6,0.07,-0.2,-0.6,Matches
+Marin Pongračić,hr CRO,DF,Wolfsburg,21,1997,10.3,2,5,2,40.0,0.48,0.19,0.40,1.00,10.6,0,0,0,0.5,0.5,0.09,+1.5,+1.5,Matches
+Stefan Posch,at AUT,DF,Hoffenheim,22,1997,25.6,0,25,6,24.0,0.97,0.23,0.00,0.00,18.0,1,0,0,2.1,2.1,0.09,-2.1,-2.1,Matches
+Yussuf Poulsen,dk DEN,FW,RB Leipzig,25,1994,13.6,5,33,10,30.3,2.43,0.74,0.15,0.50,12.7,0,0,0,6.1,6.1,0.19,-1.1,-1.1,Matches
+Kai Pröger,de GER,"MF,FW",Paderborn 07,27,1992,23.1,2,50,14,28.0,2.16,0.61,0.04,0.14,21.3,3,0,0,3.3,3.3,0.07,-1.3,-1.3,Matches
+Grischa Prömel,de GER,MF,Union Berlin,24,1995,10.3,0,11,3,27.3,1.07,0.29,0.00,0.00,18.5,0,0,0,0.6,0.6,0.06,-0.6,-0.6,Matches
+Robin Quaison,se SWE,"FW,MF",Mainz 05,25,1993,28.9,13,70,27,38.6,2.42,0.93,0.17,0.44,17.8,2,1,1,11.4,10.6,0.15,+1.6,+1.4,Matches
+Raffael,br BRA,"MF,FW",M'Gladbach,34,1985,0.7,0,8,3,37.5,11.25,4.22,0.00,0.00,21.6,2,0,0,1.1,1.1,0.14,-1.1,-1.1,Matches
+Benito Raman,be BEL,FW,Schalke 04,24,1994,17.8,4,34,16,47.1,1.91,0.90,0.12,0.25,17.2,0,0,0,4.3,4.3,0.13,-0.3,-0.3,Matches
+Tobias Raschl,de GER,MF,Dortmund,19,2000,0.3,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Milot Rashica,xk KVX,FW,Werder Bremen,23,1996,25.2,8,70,26,37.1,2.78,1.03,0.09,0.23,23.4,5,2,3,6.0,3.7,0.05,+2.0,+2.3,Matches
+Ante Rebić,hr CRO,"FW,MF",Eint Frankfurt,25,1993,1.0,0,2,1,50.0,2.00,1.00,0.00,0.00,22.2,1,0,0,0.1,0.1,0.06,-0.1,-0.1,Matches
+Daishawn Redan,nl NED,MF,Hertha BSC,18,2001,0.2,0,1,0,0.0,4.29,0.00,0.00,,7.2,0,0,0,0.2,0.2,0.15,-0.2,-0.2,Matches
+Fabian Reese,de GER,FW,Schalke 04,21,1997,1.0,0,3,0,0.0,3.14,0.00,0.00,,24.7,0,0,0,0.1,0.1,0.04,-0.1,-0.1,Matches
+Ken Reichel,de GER,DF,Union Berlin,32,1986,5.9,0,5,3,60.0,0.84,0.51,0.00,0.00,19.4,0,0,0,0.2,0.2,0.05,-0.2,-0.2,Matches
+Karim Rekik,nl NED,DF,Hertha BSC,24,1994,14.0,1,5,2,40.0,0.36,0.14,0.20,0.50,13.1,0,0,0,0.6,0.6,0.13,+0.4,+0.4,Matches
+Panagiotis Retsos,gr GRE,DF,Leverkusen,20,1998,1.3,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Marco Reus,de GER,"MF,FW",Dortmund,30,1989,16.6,11,46,23,50.0,2.77,1.38,0.22,0.43,15.7,3,1,1,8.7,8.0,0.17,+2.3,+2.0,Matches
+Elvis Rexhbeçaj,de GER,MF,Köln,21,1997,6.9,0,13,7,53.8,1.88,1.01,0.00,0.00,17.3,1,0,0,1.5,1.5,0.11,-1.5,-1.5,Matches
+Gio Reyna,us USA,"MF,FW",Dortmund,16,2002,3.9,0,4,2,50.0,1.01,0.51,0.00,0.00,17.4,0,0,0,0.2,0.2,0.05,-0.2,-0.2,Matches
+Lucas Ribeiro,br BRA,MF,Hoffenheim,20,1999,0.7,1,1,1,100.0,1.38,1.38,1.00,1.00,2.6,0,0,0,0.5,0.5,0.47,+0.5,+0.5,Matches
+Chris Richards,us USA,DF,Bayern Munich,19,2000,0.1,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Marco Richter,de GER,"MF,FW",Augsburg,21,1997,25.3,4,64,20,31.3,2.53,0.79,0.06,0.20,23.6,5,0,0,4.7,4.7,0.07,-0.7,-0.7,Matches
+Marcel Risse,de GER,"MF,FW",Köln,29,1989,1.5,0,1,0,0.0,0.68,0.00,0.00,,32.4,1,0,0,0.1,0.1,0.06,-0.1,-0.1,Matches
+Marlon Ritter,de GER,MF,Paderborn 07,24,1994,4.8,0,9,2,22.2,1.86,0.41,0.00,0.00,24.1,2,0,0,0.4,0.4,0.05,-0.4,-0.4,Matches
+Sebastian Rode,de GER,MF,Eint Frankfurt,28,1990,21.5,3,13,6,46.2,0.60,0.28,0.23,0.50,20.4,0,0,0,0.7,0.7,0.05,+2.3,+2.3,Matches
+Jérôme Roussillon,fr FRA,DF,Wolfsburg,26,1993,26.3,1,19,4,21.1,0.72,0.15,0.05,0.25,23.7,0,0,0,1.0,1.0,0.05,0.0,0.0,Matches
+Sebastian Rudy,de GER,"MF,DF",Hoffenheim,29,1990,30.4,1,25,8,32.0,0.82,0.26,0.04,0.13,27.0,0,0,0,1.1,1.1,0.05,-0.1,-0.1,Matches
+Lukas Rupp,de GER,MF,Hoffenheim,28,1991,3.8,0,5,0,0.0,1.32,0.00,0.00,,15.8,0,0,0,0.2,0.2,0.05,-0.2,-0.2,Matches
+Julian Ryerson,no NOR,"DF,MF",Union Berlin,21,1997,4.1,0,2,0,0.0,0.49,0.00,0.00,,17.2,0,0,0,0.8,0.8,0.38,-0.8,-0.8,Matches
+Frederik Rønnow,dk DEN,GK,Eint Frankfurt,26,1992,9.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+João Victor Santos Sá,br BRA,"MF,FW",Wolfsburg,25,1994,18.1,2,29,12,41.4,1.60,0.66,0.07,0.17,16.0,0,0,0,3.9,3.9,0.13,-1.9,-1.9,Matches
+Abdelhamid Sabiri,ma MAR,MF,Paderborn 07,22,1996,11.6,4,41,13,31.7,3.52,1.12,0.07,0.23,23.9,10,1,1,3.1,2.3,0.06,+0.9,+0.7,Matches
+Marcel Sabitzer,at AUT,"MF,FW",RB Leipzig,25,1994,27.8,9,70,24,34.3,2.52,0.86,0.13,0.38,21.5,8,0,0,7.2,7.2,0.10,+1.8,+1.8,Matches
+Nuri Şahin,tr TUR,MF,Werder Bremen,30,1988,13.9,0,12,2,16.7,0.86,0.14,0.00,0.00,25.7,3,0,0,0.5,0.5,0.04,-0.5,-0.5,Matches
+Roland Sallai,hu HUN,"MF,FW",Freiburg,22,1997,12.9,2,34,12,35.3,2.63,0.93,0.06,0.17,15.6,0,0,0,3.1,3.1,0.09,-1.1,-1.1,Matches
+Lazar Samardzic,rs SRB,"MF,FW",Hertha BSC,17,2002,0.4,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Diadie Samassékou,ml MLI,MF,Hoffenheim,23,1996,14.6,0,6,1,16.7,0.41,0.07,0.00,0.00,26.3,0,0,0,0.2,0.2,0.04,-0.2,-0.2,Matches
+Renato Sanches,pt POR,MF,Bayern Munich,21,1997,0.1,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Jadon Sancho,eng ENG,"FW,MF",Dortmund,19,2000,25.4,17,52,28,53.8,2.05,1.10,0.33,0.61,16.0,1,0,0,10.1,10.1,0.19,+6.9,+6.9,Matches
+Salif Sané,sn SEN,DF,Schalke 04,28,1990,12.5,2,9,3,33.3,0.72,0.24,0.22,0.67,13.0,0,0,0,0.9,0.9,0.09,+1.1,+1.1,Matches
+Marcelo Saracchi,uy URU,DF,RB Leipzig,21,1998,2.0,1,4,1,25.0,2.01,0.50,0.25,1.00,20.8,0,0,0,0.3,0.3,0.08,+0.7,+0.7,Matches
+Josh Sargent,us USA,FW,Werder Bremen,19,2000,15.7,4,30,13,43.3,1.91,0.83,0.13,0.31,15.2,0,0,0,4.2,4.2,0.14,-0.2,-0.2,Matches
+Louis Schaub,at AUT,MF,Köln,24,1994,6.9,1,9,5,55.6,1.30,0.72,0.11,0.20,17.2,0,0,0,1.0,1.0,0.11,0.0,0.0,Matches
+Patrik Schick,cz CZE,FW,RB Leipzig,23,1996,14.4,10,53,18,34.0,3.67,1.25,0.19,0.56,11.6,1,0,0,7.2,7.2,0.14,+2.8,+2.8,Matches
+Julian Schieber,de GER,FW,Augsburg,30,1989,0.5,0,1,1,100.0,2.09,2.09,0.00,0.00,17.6,0,0,0,0.1,0.1,0.06,-0.1,-0.1,Matches
+Kingsley Schindler,gh GHA,"FW,MF",Köln,26,1993,9.4,0,14,3,21.4,1.48,0.32,0.00,0.00,18.4,0,0,0,1.1,1.1,0.08,-1.1,-1.1,Matches
+Xaver Schlager,at AUT,MF,Wolfsburg,21,1997,19.1,1,32,7,21.9,1.68,0.37,0.03,0.14,23.0,0,0,0,1.4,1.4,0.05,-0.4,-0.4,Matches
+Keven Schlotterbeck,de GER,DF,Union Berlin,22,1997,21.5,0,11,3,27.3,0.51,0.14,0.00,0.00,18.7,0,0,0,0.9,0.9,0.08,-0.9,-0.9,Matches
+Nico Schlotterbeck,de GER,DF,Freiburg,19,1999,4.1,0,3,1,33.3,0.72,0.24,0.00,0.00,14.1,0,0,0,0.2,0.2,0.08,-0.2,-0.2,Matches
+Marcel Schmelzer,de GER,DF,Dortmund,31,1988,0.7,1,2,1,50.0,2.73,1.36,0.50,1.00,10.2,0,0,0,0.4,0.4,0.18,+0.6,+0.6,Matches
+Jonathan Schmid,fr FRA,DF,Freiburg,29,1990,31.5,5,44,15,34.1,1.40,0.48,0.11,0.33,23.9,12,0,0,3.3,3.3,0.08,+1.7,+1.7,Matches
+Manuel Schmiedebach,de GER,MF,Union Berlin,30,1988,2.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Benno Schmitz,de GER,DF,Köln,24,1994,12.9,0,2,0,0.0,0.16,0.00,0.00,,26.0,0,0,0,0.1,0.1,0.04,-0.1,-0.1,Matches
+Sebastian Schonlau,de GER,DF,Paderborn 07,24,1994,23.0,2,12,4,33.3,0.52,0.17,0.17,0.50,11.7,0,0,0,1.6,1.6,0.13,+0.4,+0.4,Matches
+Alessandro Schöpf,at AUT,MF,Schalke 04,25,1994,15.9,0,15,4,26.7,0.94,0.25,0.00,0.00,19.6,0,0,0,1.1,1.1,0.07,-1.1,-1.1,Matches
+Markus Schubert,de GER,GK,Schalke 04,21,1998,8.2,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Nico Schulz,de GER,"DF,MF",Dortmund,26,1993,6.6,1,6,1,16.7,0.91,0.15,0.17,1.00,16.5,0,0,0,0.4,0.4,0.06,+0.6,+0.6,Matches
+Alexander Schwolow,de GER,GK,Freiburg,27,1992,23.2,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Davie Selke,de GER,FW,Hertha BSC,24,1995,10.7,1,19,3,15.8,1.78,0.28,0.05,0.33,14.2,0,0,0,2.0,2.0,0.10,-1.0,-1.0,Matches
+Davie Selke,de GER,FW,Werder Bremen,24,1995,5.1,0,12,5,41.7,2.33,0.97,0.00,0.00,12.4,0,0,0,1.4,1.4,0.11,-1.4,-1.4,Matches
+Suat Serdar,de GER,MF,Schalke 04,22,1997,17.8,7,36,14,38.9,2.03,0.79,0.19,0.50,20.7,0,0,0,3.1,3.1,0.09,+3.9,+3.9,Matches
+Khiry Shelton,us USA,FW,Paderborn 07,26,1993,0.4,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+André Silva,pt POR,FW,Eint Frankfurt,23,1995,17.5,12,54,20,37.0,3.09,1.14,0.20,0.55,12.0,0,1,1,10.8,10.0,0.19,+1.2,+1.0,Matches
+Sarpreet Singh,nz NZL,"FW,MF",Bayern Munich,20,1999,0.8,0,1,0,0.0,1.25,0.00,0.00,,16.4,0,0,0,0.1,0.1,0.09,-0.1,-0.1,Matches
+Daley Sinkgraven,nl NED,"DF,MF",Leverkusen,24,1995,10.1,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Ellyes Skhiri,tn TUN,MF,Köln,24,1995,29.7,1,25,5,20.0,0.84,0.17,0.04,0.20,18.9,0,0,0,2.2,2.2,0.09,-1.2,-1.2,Matches
+Robert Skov,dk DEN,"DF,FW",Hoffenheim,23,1996,29.0,4,62,18,29.0,2.14,0.62,0.06,0.22,22.7,19,0,0,5.5,5.5,0.09,-1.5,-1.5,Matches
+Steven Skrzybski,de GER,"FW,MF",Düsseldorf,26,1992,5.9,1,14,1,7.1,2.38,0.17,0.07,1.00,19.6,0,0,0,1.4,1.4,0.10,-0.4,-0.4,Matches
+Dennis Smarsch,de GER,GK,Hertha BSC,20,1999,1.7,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Lasse Sobiech,de GER,DF,Köln,28,1991,1.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Marcel Sobottka,de GER,MF,Düsseldorf,25,1994,7.8,0,7,1,14.3,0.90,0.13,0.00,0.00,21.5,0,0,0,0.3,0.3,0.04,-0.3,-0.3,Matches
+Yann Sommer,ch SUI,GK,M'Gladbach,30,1988,34.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Djibril Sow,ch SUI,MF,Eint Frankfurt,22,1997,19.4,1,22,3,13.6,1.13,0.15,0.05,0.33,22.2,0,0,0,1.7,1.7,0.08,-0.7,-0.7,Matches
+Dennis Srbeny,de GER,"FW,MF",Paderborn 07,25,1994,12.4,5,28,9,32.1,2.25,0.72,0.18,0.56,19.0,0,0,0,2.9,2.9,0.10,+2.1,+2.1,Matches
+Jerry St. Juste,nl NED,DF,Mainz 05,22,1996,23.5,2,12,2,16.7,0.51,0.09,0.17,1.00,14.8,0,0,0,0.7,0.7,0.06,+1.3,+1.3,Matches
+Kostas Stafylidis,gr GRE,DF,Hoffenheim,25,1993,4.4,1,4,2,50.0,0.90,0.45,0.25,0.50,28.0,0,0,0,0.1,0.1,0.02,+0.9,+0.9,Matches
+Benjamin Stambouli,fr FRA,DF,Schalke 04,28,1990,9.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Niklas Stark,de GER,DF,Hertha BSC,24,1995,19.2,1,10,2,20.0,0.52,0.10,0.10,0.50,12.2,0,0,0,0.7,0.7,0.07,+0.3,+0.3,Matches
+Renato Steffen,ch SUI,"MF,FW",Wolfsburg,27,1991,17.6,6,29,10,34.5,1.65,0.57,0.21,0.60,17.1,0,0,0,4.5,4.5,0.16,+1.5,+1.5,Matches
+Zack Steffen,us USA,GK,Düsseldorf,24,1995,17.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Lars Stindl,de GER,"MF,FW",M'Gladbach,30,1988,15.9,9,31,13,41.9,1.95,0.82,0.23,0.54,18.4,3,2,2,7.2,5.6,0.18,+1.8,+1.4,Matches
+Kevin Stöger,at AUT,MF,Düsseldorf,25,1993,14.1,0,22,6,27.3,1.56,0.43,0.00,0.00,24.8,1,0,0,0.8,0.8,0.04,-0.8,-0.8,Matches
+Tobias Strobl,de GER,"MF,DF",M'Gladbach,29,1990,6.8,0,1,0,0.0,0.15,0.00,0.00,,30.9,0,0,0,0.0,0.0,0.04,0.0,0.0,Matches
+Christian Strohdiek,de GER,DF,Paderborn 07,31,1988,15.1,1,9,3,33.3,0.59,0.20,0.11,0.33,14.0,0,0,0,1.0,1.0,0.12,0.0,0.0,Matches
+Neven Subotić,rs SRB,DF,Union Berlin,30,1988,21.8,1,12,3,25.0,0.55,0.14,0.08,0.33,12.5,0,0,0,1.2,1.2,0.10,-0.2,-0.2,Matches
+Marek Suchý,cz CZE,DF,Augsburg,31,1988,4.4,0,2,0,0.0,0.45,0.00,0.00,,16.3,0,0,0,0.1,0.1,0.06,-0.1,-0.1,Matches
+Niklas Süle,de GER,DF,Bayern Munich,23,1995,7.1,0,6,1,16.7,0.84,0.14,0.00,0.00,15.2,0,0,0,0.6,0.6,0.09,-0.6,-0.6,Matches
+Markus Suttner,at AUT,DF,Düsseldorf,32,1987,14.9,0,15,2,13.3,1.01,0.13,0.00,0.00,27.0,3,0,0,0.6,0.6,0.04,-0.6,-0.6,Matches
+Ádám Szalai,hu HUN,FW,Mainz 05,31,1987,12.7,1,30,10,33.3,2.35,0.78,0.03,0.10,12.8,0,0,0,4.5,4.5,0.15,-3.5,-3.5,Matches
+Jonathan Tah,de GER,DF,Leverkusen,23,1996,23.2,0,6,1,16.7,0.26,0.04,0.00,0.00,14.9,0,0,0,0.3,0.3,0.05,-0.3,-0.3,Matches
+Edmond Tapsoba,bf BFA,DF,Leverkusen,20,1999,11.8,0,3,0,0.0,0.26,0.00,0.00,,17.6,0,0,0,0.3,0.3,0.09,-0.3,-0.3,Matches
+Georg Teigl,at AUT,"DF,MF",Augsburg,28,1991,1.2,0,1,0,0.0,0.81,0.00,0.00,,13.6,0,0,0,0.1,0.1,0.09,-0.1,-0.1,Matches
+Bernard Tekpetey,gh GHA,"FW,MF",Düsseldorf,21,1997,5.0,0,11,1,9.1,2.21,0.20,0.00,0.00,24.0,0,0,0,0.4,0.4,0.04,-0.4,-0.4,Matches
+Lino Tempelmann,de GER,MF,Freiburg,20,1999,0.4,0,1,0,0.0,2.73,0.00,0.00,,28.1,0,0,0,0.0,0.0,0.03,0.0,0.0,Matches
+Simon Terodde,de GER,FW,Köln,31,1988,9.0,3,35,10,28.6,3.87,1.11,0.09,0.30,10.6,0,0,0,6.1,6.1,0.18,-3.1,-3.1,Matches
+Malick Thiaw,de GER,DF,Schalke 04,17,2001,0.8,0,1,1,100.0,1.18,1.18,0.00,0.00,35.0,0,0,0,0.0,0.0,0.02,0.0,0.0,Matches
+Niclas Thiede,de GER,GK,Freiburg,20,1999,0.8,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Jan Thielmann,de GER,"FW,MF",Köln,17,2002,6.2,0,8,2,25.0,1.30,0.32,0.00,0.00,23.6,0,0,0,0.3,0.3,0.04,-0.3,-0.3,Matches
+Erik Thommy,de GER,"MF,FW",Düsseldorf,24,1994,25.1,6,61,21,34.4,2.43,0.84,0.10,0.29,22.6,2,0,0,4.6,4.6,0.07,+1.4,+1.4,Matches
+Marcus Thuram,fr FRA,FW,M'Gladbach,21,1997,24.5,10,56,36,64.3,2.29,1.47,0.18,0.28,13.4,0,0,0,10.3,10.3,0.18,-0.3,-0.3,Matches
+Marcel Tisserand,cd COD,DF,Wolfsburg,26,1993,13.4,1,8,2,25.0,0.60,0.15,0.13,0.50,12.7,0,0,0,0.8,0.8,0.10,+0.2,+0.2,Matches
+Jean-Clair Todibo,fr FRA,DF,Schalke 04,19,1999,4.1,0,3,1,33.3,0.74,0.25,0.00,0.00,8.2,0,0,0,0.3,0.3,0.09,-0.3,-0.3,Matches
+Corentin Tolisso,fr FRA,MF,Bayern Munich,24,1994,7.1,1,15,3,20.0,2.12,0.42,0.07,0.33,15.9,0,0,0,1.3,1.3,0.09,-0.3,-0.3,Matches
+Ömer Toprak,tr TUR,DF,Werder Bremen,30,1989,7.9,0,4,1,25.0,0.50,0.13,0.00,0.00,16.0,0,0,0,0.2,0.2,0.05,-0.2,-0.2,Matches
+Lucas Torró,es ESP,MF,Eint Frankfurt,25,1994,3.7,0,6,0,0.0,1.63,0.00,0.00,,17.4,0,0,0,0.2,0.2,0.04,-0.2,-0.2,Matches
+Jordan Torunarigha,de GER,DF,Hertha BSC,21,1997,16.2,1,2,1,50.0,0.12,0.06,0.50,1.00,8.5,0,0,0,0.6,0.6,0.28,+0.4,+0.4,Matches
+Almamy Touré,ml MLI,DF,Eint Frankfurt,23,1996,16.6,1,15,5,33.3,0.91,0.30,0.07,0.20,9.7,0,0,0,1.9,1.9,0.13,-0.9,-0.9,Matches
+Ibrahima Traoré,gn GUI,"FW,MF",M'Gladbach,31,1988,1.7,0,4,0,0.0,2.37,0.00,0.00,,22.3,2,0,0,0.6,0.6,0.14,-0.6,-0.6,Matches
+Kevin Trapp,de GER,GK,Eint Frankfurt,29,1990,22.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Christopher Trimmel,at AUT,"DF,MF",Union Berlin,32,1987,31.8,0,5,3,60.0,0.16,0.09,0.00,0.00,24.8,0,0,0,0.1,0.1,0.03,-0.1,-0.1,Matches
+Anthony Ujah,ng NGA,"FW,MF",Union Berlin,28,1990,10.5,3,18,6,33.3,1.71,0.57,0.17,0.50,15.6,0,0,0,2.6,2.6,0.14,+0.4,+0.4,Matches
+Sven Ulreich,de GER,GK,Bayern Munich,30,1988,1.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Dayot Upamecano,fr FRA,DF,RB Leipzig,20,1998,26.2,0,13,4,30.8,0.50,0.15,0.00,0.00,11.3,0,0,0,1.9,1.9,0.16,-1.9,-1.9,Matches
+Mark Uth,de GER,"MF,FW",Köln,27,1991,12.9,5,41,15,36.6,3.18,1.16,0.10,0.27,19.2,6,1,3,6.5,4.7,0.12,-1.5,-0.7,Matches
+Mark Uth,de GER,"FW,MF",Schalke 04,27,1991,3.9,0,7,2,28.6,1.78,0.51,0.00,0.00,13.4,0,0,0,0.9,0.9,0.13,-0.9,-0.9,Matches
+Ruben Vargas,ch SUI,"FW,MF",Augsburg,20,1998,28.1,6,59,25,42.4,2.10,0.89,0.10,0.24,16.6,0,0,0,6.2,6.1,0.10,-0.2,-0.1,Matches
+Sebastian Vasiliadis,gr GRE,MF,Paderborn 07,21,1997,31.2,1,37,8,21.6,1.19,0.26,0.03,0.13,22.1,0,0,0,1.6,1.6,0.04,-0.6,-0.6,Matches
+Miloš Veljković,rs SRB,DF,Werder Bremen,23,1995,22.8,0,7,1,14.3,0.31,0.04,0.00,0.00,12.3,0,0,0,0.3,0.3,0.05,-0.3,-0.3,Matches
+Birger Verstraete,be BEL,MF,Köln,25,1994,7.4,0,7,2,28.6,0.95,0.27,0.00,0.00,25.4,3,0,0,0.4,0.4,0.05,-0.4,-0.4,Matches
+Kevin Vogt,de GER,DF,Hoffenheim,27,1991,10.7,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Kevin Vogt,de GER,"DF,MF",Werder Bremen,27,1991,12.3,0,1,0,0.0,0.08,0.00,0.00,,9.1,0,0,0,0.1,0.1,0.12,-0.1,-0.1,Matches
+Kevin Volland,de GER,FW,Leverkusen,27,1992,22.7,10,78,32,41.0,3.43,1.41,0.13,0.31,14.5,1,0,0,11.5,11.5,0.15,-1.5,-1.5,Matches
+Luca Waldschmidt,de GER,"FW,MF",Freiburg,23,1996,14.1,7,40,9,22.5,2.84,0.64,0.10,0.44,18.7,1,3,3,4.9,2.5,0.06,+2.1,+1.5,Matches
+Wout Weghorst,nl NED,FW,Wolfsburg,26,1992,30.4,16,81,34,42.0,2.66,1.12,0.15,0.35,12.8,1,4,4,18.1,15.0,0.19,-2.1,-3.0,Matches
+Julian Weigl,de GER,"MF,DF",Dortmund,23,1995,11.3,1,9,3,33.3,0.79,0.26,0.11,0.33,24.4,0,0,0,0.3,0.3,0.03,+0.7,+0.7,Matches
+Mitchell Weiser,de GER,"DF,MF",Leverkusen,25,1994,13.0,1,7,1,14.3,0.54,0.08,0.14,1.00,13.9,0,0,0,1.5,1.5,0.22,-0.5,-0.5,Matches
+Wendell,br BRA,"DF,MF",Leverkusen,26,1993,21.1,0,10,1,10.0,0.47,0.05,0.00,0.00,29.7,1,0,0,0.3,0.3,0.03,-0.3,-0.3,Matches
+Oscar Wendt,se SWE,DF,M'Gladbach,33,1985,18.7,2,9,3,33.3,0.48,0.16,0.22,0.67,16.8,0,0,0,1.2,1.2,0.13,+0.8,+0.8,Matches
+Timo Werner,de GER,FW,RB Leipzig,23,1996,31.1,28,120,60,50.0,3.86,1.93,0.21,0.42,15.1,0,3,3,21.2,18.9,0.16,+6.8,+6.1,Matches
+Felix Wiedwald,de GER,GK,Eint Frankfurt,29,1990,3.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+William,br BRA,DF,Wolfsburg,24,1995,15.2,1,18,6,33.3,1.19,0.40,0.06,0.17,19.6,1,0,0,1.6,1.6,0.09,-0.6,-0.6,Matches
+Florian Wirtz,de GER,FW,Leverkusen,16,2003,4.1,1,4,3,75.0,0.98,0.74,0.25,0.33,16.6,0,0,0,0.2,0.2,0.06,+0.8,+0.8,Matches
+Axel Witsel,be BEL,MF,Dortmund,30,1989,24.9,4,31,7,22.6,1.24,0.28,0.13,0.57,18.7,0,0,0,2.6,2.6,0.08,+1.4,+1.4,Matches
+Hannes Wolf,at AUT,"FW,MF",RB Leipzig,20,1999,0.6,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Marius Wolf,de GER,"FW,MF",Hertha BSC,24,1995,15.7,1,14,2,14.3,0.89,0.13,0.07,0.50,16.0,0,0,0,1.1,1.1,0.08,-0.1,-0.1,Matches
+Nick Woltemade,de GER,"FW,MF",Werder Bremen,17,2002,1.0,0,1,0,0.0,0.98,0.00,0.00,,28.4,0,0,0,0.0,0.0,0.03,0.0,0.0,Matches
+Dan-Axel Zagadou,fr FRA,DF,Dortmund,20,1999,10.9,1,4,3,75.0,0.37,0.27,0.25,0.33,20.3,0,0,0,0.3,0.3,0.08,+0.7,+0.7,Matches
+Denis Zakaria,ch SUI,"MF,DF",M'Gladbach,22,1996,21.6,2,23,5,21.7,1.06,0.23,0.09,0.40,20.9,1,0,0,2.3,2.3,0.10,-0.3,-0.3,Matches
+Robin Zentner,de GER,GK,Mainz 05,24,1994,21.5,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Jean Zimmer,de GER,"DF,FW",Düsseldorf,25,1993,8.0,0,9,1,11.1,1.13,0.13,0.00,0.00,22.1,0,0,0,0.5,0.5,0.05,-0.5,-0.5,Matches
+Matthias Zimmermann,de GER,"DF,MF",Düsseldorf,27,1992,32.5,1,16,1,6.3,0.49,0.03,0.06,1.00,22.9,0,0,0,0.6,0.6,0.04,+0.4,+0.4,Matches
+Leopold Zingerle,de GER,GK,Paderborn 07,25,1994,28.0,0,0,0,,0.00,0.00,,,,0,0,0,0.0,0.0,,0.0,0.0,Matches
+Joshua Zirkzee,nl NED,FW,Bayern Munich,18,2001,3.3,4,11,6,54.5,3.33,1.82,0.36,0.67,13.3,0,0,0,2.4,2.4,0.22,+1.6,+1.6,Matches
+Ben Zolinski,de GER,"FW,MF",Paderborn 07,27,1992,13.4,3,19,7,36.8,1.41,0.52,0.16,0.43,13.0,0,0,0,2.9,2.7,0.15,+0.1,+0.3,Matches
+Steven Zuber,ch SUI,"DF,FW",Hoffenheim,27,1991,8.3,2,9,2,22.2,1.08,0.24,0.22,1.00,21.2,0,0,1,1.5,0.7,0.07,+0.5,+1.3,Matches
