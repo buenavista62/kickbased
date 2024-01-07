@@ -219,5 +219,5 @@ if __name__ == "__main__":
     df_us_player = run_player(us)
     df_us_team = run_team(us)
 
-    df_us_player.to_csv("./data/df_us_player.csv")
-    df_us_team.to_csv("./data/df_us_team.csv")
+    df_us_player.to_csv("../data/df_us_player.csv")
+    df_us_team.to_csv("../data/df_us_team.csv")

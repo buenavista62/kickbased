@@ -495,7 +495,7 @@ def fbref(season):
         )
         df = df.loc[:, ~df.columns.str.endswith("_y")]
         df.columns = df.columns.str.removesuffix("_x")
-        df.to_csv(f"./data/{season}fbref_full.csv", index=False)
+        df.to_csv(f"../data/{season}fbref_full.csv", index=False)
         # return df
 
     ScrapeFbref()

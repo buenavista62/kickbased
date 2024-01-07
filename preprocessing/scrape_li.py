@@ -100,4 +100,4 @@ async def ligains_async():
 if __name__ == "__main__":
     # To run the async function
     df = asyncio.run(ligains_async())
-    df.to_csv("./data/ligainsider_df.csv", index=False)
+    df.to_csv("../data/ligainsider_df.csv", index=False)
