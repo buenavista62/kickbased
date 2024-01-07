@@ -5,3 +5,4 @@ calculate_odds.py
 archive/*
 /preprocessing/scrape_li copy.py
 .env
+packages.txt
