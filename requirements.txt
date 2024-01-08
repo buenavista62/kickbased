@@ -20,4 +20,4 @@ streamlit==1.28.1
 understatapi==0.6.1
 Unidecode==1.3.7
 understatapi @ git+https://github.com/buenavista62/understatAPI.git@77b2f5a6568233b5b86bf0f5b695d411a7f7bb93
--e git+https://github.com/buenavista62/kickbase-api-extended.git@c4baa0dc9ecd28387385755d419968d294177e16#egg=Kickbase_API
+-e git+https://github.com/buenavista62/kickbase-api-extended.git@6e0866f4ecc4025750090fd223b63c8fa4a3d89c#egg=Kickbase_API
