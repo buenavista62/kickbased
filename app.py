@@ -32,6 +32,7 @@ def loadKBPlayer():
                     "TeamCover": [str(player.team_path) for player in players],
                 }
             )
+            df.to_csv("./data/kb_df.csv")
             st.session_state.players = players
     except:
         pass

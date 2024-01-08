@@ -261,7 +261,7 @@ def prepare_pred_page(df_kb_point_hist, df_us_player, df_kb):
         return temp
 
     c = 0
-    for i in range(2017, 2024):
+    for i in range(2023, 2024):
         season = str(i) + "-" + str(i + 1)
         temp = load_fbref_hist(season)
         temp["season"] = str(i)
@@ -307,7 +307,7 @@ def prepare_pred_page(df_kb_point_hist, df_us_player, df_kb):
             name,
             [c.split("_")[0] for c in filtered_candidates],
             scorer=fuzz.token_set_ratio,
-            score_cutoff=85,
+            score_cutoff=75,
         )
 
         # Return the full candidate string if a match is found
@@ -421,6 +421,8 @@ def prepare_pred_page(df_kb_point_hist, df_us_player, df_kb):
 
     df_kb_point_hist["Season"] = df_kb_point_hist["Season"].str[0:4]
     df_kb_point_hist.rename(columns=({"Season": "season"}), inplace=True)
+    df_kb_point_hist.season = df_kb_point_hist.season.astype("str")
+    df_kb_point_hist.ID = df_kb_point_hist.ID.astype("str")
 
     merged_df_field = final_df_lihist_grouped_field.merge(
         df_kb_point_hist, on=["ID", "season"]
@@ -466,7 +468,7 @@ def prepare_pred_page(df_kb_point_hist, df_us_player, df_kb):
         + df_us_player["games"].astype("str")
     )
 
-    def get_best_match_us(matching_string, candidate_list, score_cutoff=80):
+    def get_best_match_us(matching_string, candidate_list, score_cutoff=50):
         parts = matching_string.split("_")
         fuzzy_part = "_".join(
             parts[:-2]
