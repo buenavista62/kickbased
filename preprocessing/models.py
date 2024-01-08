@@ -18,6 +18,7 @@ def train_ml_player(train_data, field=True, use_grid_search=False):
     df = train_data.copy()
 
     df.index = df.ID
+    df = df.loc[df.minutes >= 600]
     df = df.drop(["season", "minutes", "ID", "age"], axis=1)
     df = df.loc[df["games"] > 0]
     # Exclude specific column(s) from division
@@ -213,12 +214,13 @@ def predict_ml_player(predict_data, model, cols_for_predict, scaler):
     # rest_predict = (model.predict(X) * 34) / new_pred_data["games"]
     # act_points_scaled = (new_pred_data["Points"] * 34) / new_pred_data["games"]
     number_of_games_played = new_pred_data.games.max()
-
+    prediction = model.predict(X)
     new_pred_data["prediction"] = (
-        model.predict(X) * (34 - number_of_games_played)
+        prediction * (34 - number_of_games_played)
     ) + new_pred_data["Points"]
 
     new_pred_data["ID"] = IDS.astype("string")
+    new_pred_data["ppg_exp"] = prediction
     return new_pred_data
 
 

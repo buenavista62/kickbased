@@ -468,7 +468,7 @@ def prepare_pred_page(df_kb_point_hist, df_us_player, df_kb):
         + df_us_player["games"].astype("str")
     )
 
-    def get_best_match_us(matching_string, candidate_list, score_cutoff=50):
+    def get_best_match_us(matching_string, candidate_list, score_cutoff=45):
         parts = matching_string.split("_")
         fuzzy_part = "_".join(
             parts[:-2]
