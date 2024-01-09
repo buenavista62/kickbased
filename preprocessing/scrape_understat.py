@@ -32,6 +32,28 @@ def get_team_info(
     return t_df_agg
 
 
+team_df = get_team_info("2023")
+team_df.head()
+
+c = 0
+for i in range(2014, 2024):
+    season = str(i)
+    temp = get_team_info(season)
+    temp["season"] = season
+    if c == 0:
+        df = temp
+    else:
+        df = pd.concat([df, temp], axis=0)
+    c += 1
+
+df
+
+us_team_df_train = df[df.season != "2023"]
+us_team_df_train.to_csv("./data/us_team_train.csv")
+us_team_df_predict = df[df.season == "2023"]
+us_team_df_predict.to_csv("./data/us_team_predict.csv")
+
+
 def flatten_dict(d, parent_key="", sep="_"):
     items = []
     for k, v in d.items():
@@ -203,7 +225,7 @@ def run_player(us):
 
 def run_team(us):
     c = 0
-    for i in range(2017, 2024):
+    for i in range(2014, 2024):
         season = str(i)
         temp = get_team_info(season, understat_client=us)
         temp["season"] = season

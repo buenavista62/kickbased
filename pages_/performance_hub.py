@@ -51,6 +51,22 @@ def perform_prediction():
     )
 
 
+@st.cache_resource
+def load_team_model():
+    with open("./preprocessing/team_model.pkl", "rb") as file:
+        team_model = pickle.load(file)
+    return team_model
+
+
+@st.cache_data
+def run_team_prediction():
+    df = pd.read_csv("./data/df_us_team.csv")
+    df = df.loc[df.season.astype("str") == "2023"]
+    team_model = load_team_model()
+    team_predicted = models.predict_ml_team(team_model, df)
+    return team_predicted
+
+
 def manipulate_data(predict_data):
     data = predict_data.copy()
     data["ppg"] = np.round(data.Points / data.games, 0)
@@ -78,41 +94,47 @@ def manipulate_data(predict_data):
 
 
 def main():
-    st.title("Vorhersage der Spielerpunkte")
+    st.title("Performance Hub")
+    tab1, tab2 = st.tabs(["Spieler", "Teams"])
 
-    if "predicted_df" not in ss:
-        prepare_data()
-        perform_prediction()
+    with tab1:
+        if "predicted_df" not in ss:
+            prepare_data()
+            perform_prediction()
 
-    ss.player_predict_df = manipulate_data(ss.predicted_df)
-    ss.ppdf_true = ss.player_predict_df.dropna()
-    show_true = st.toggle("Zeige nur für die Vorhersage gültige Spieler an", True)
-    if show_true:
-        st.dataframe(
-            ss.ppdf_true.style.background_gradient(
-                subset="performance", cmap="RdYlGn"
-            ).format(precision=0),
-            column_config={
-                "ppg": "PPS",
-                "ppg_exp": "xPPS",
-                "prediction": "xPunkte",
-                "Points": "Punkte",
-            },
-            hide_index=True,
-        )
-    else:
-        st.dataframe(
-            ss.player_predict_df.style.background_gradient(
-                subset="performance", cmap="RdYlGn"
-            ),
-            column_config={
-                "ppg": "PPS",
-                "ppg_exp": "xPPS",
-                "prediction": "xPunkte",
-                "Points": "Punkte",
-            },
-            hide_index=True,
-        )
+        ss.player_predict_df = manipulate_data(ss.predicted_df)
+        ss.ppdf_true = ss.player_predict_df.dropna()
+        show_true = st.toggle("Zeige nur für die Vorhersage gültige Spieler an", True)
+        if show_true:
+            st.dataframe(
+                ss.ppdf_true.style.background_gradient(
+                    subset="performance", cmap="RdYlGn"
+                ).format(precision=0),
+                column_config={
+                    "ppg": "PPS",
+                    "ppg_exp": "xPPS",
+                    "prediction": "xPunkte",
+                    "Points": "Punkte",
+                },
+                hide_index=True,
+            )
+        else:
+            st.dataframe(
+                ss.player_predict_df.style.background_gradient(
+                    subset="performance", cmap="RdYlGn"
+                ),
+                column_config={
+                    "ppg": "PPS",
+                    "ppg_exp": "xPPS",
+                    "prediction": "xPunkte",
+                    "Points": "Punkte",
+                },
+                hide_index=True,
+            )
+    with tab2:
+        if "team_pred_df" not in ss:
+            ss.team_pred_df = run_team_prediction()
+        st.dataframe(ss.team_pred_df)
 
 
 if __name__ == "__main__":

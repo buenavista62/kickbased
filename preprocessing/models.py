@@ -7,11 +7,14 @@ from sklearn.ensemble import (
 from sklearn.preprocessing import normalize, StandardScaler
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn import linear_model
-from sklearn.feature_selection import VarianceThreshold, SelectKBest
+from sklearn.feature_selection import VarianceThreshold
 from sklearn.neural_network import MLPRegressor
 import numpy as np
 import pandas as pd
 import pickle
+import preprocessing.scrape_understat as su
+
+from understatapi import UnderstatClient
 
 
 def train_ml_player(train_data, field=True, use_grid_search=False):
@@ -133,10 +136,11 @@ def train_ml_player(train_data, field=True, use_grid_search=False):
 
 
 def train_ml_team():
+    us = UnderstatClient()
     c = 0
     for i in range(2014, 2023):
         c += 1
-        temp_df = get_team_info(str(i), us)
+        temp_df = su.get_team_info(str(i), us)
         if c == 1:
             df = temp_df
         else:
@@ -149,7 +153,21 @@ def train_ml_team():
     ml_df_avg = df.div(df["games_played"], axis=0)
 
     y = ml_df_avg["pts"]
-    X = ml_df_avg.drop(["pts", "games_played"], axis=1)  # 'team_id' is already dropped
+    X = ml_df_avg.drop(
+        [
+            "pts",
+            "games_played",
+            "xpts",
+            "wins",
+            "draws",
+            "loses",
+            "xG",
+            "xGA",
+            "scored",
+            "missed",
+        ],
+        axis=1,
+    )  # 'team_id' is already dropped
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=0.33, random_state=17
     )
@@ -176,19 +194,40 @@ def train_ml_team():
     return vote
 
 
-def predict_ml_team(model, data):
-    ind = data.index
-    X = data.drop(["pts", "team_id"], axis=1)
-    X = X.div(X["games_played"], axis=0)
+def predict_ml_team(model, pred_data):
+    data = pred_data.copy()
+    ind = data.team_title
+    pts = data.pts
+    X = data.drop(
+        [
+            "pts",
+            "team_id",
+            "team_title",
+            "season",
+            "xpts",
+            "wins",
+            "draws",
+            "loses",
+            "xG",
+            "xGA",
+            "scored",
+            "missed",
+        ],
+        axis=1,
+    )
     gp = X["games_played"]
+    X = X.div(X["games_played"], axis=0)
+
     X = X.drop("games_played", axis=1)
-    pred = model.predict(X) * 34
+    pred = (model.predict(X) * (34 - gp)) + pts
     data["prediction"] = np.round(pred, 0)
     # Calculate strength score
-    total_predicted_points = data["prediction"].sum()
+    total_predicted_points = (model.predict(X) * 34).sum()
     data["strength_score"] = np.round(
         (data["prediction"] / total_predicted_points) * 100, 2
     )
+    data.index = ind
+    data.drop(columns=["team_title", "season"], inplace=True)
     return data
 
 
@@ -271,3 +310,14 @@ with open("./preprocessing/cols_for_predict.pkl", "wb") as file:
 
 with open("./preprocessing/scaler.pkl", "wb") as file:
     pickle.dump(scaler, file)
+
+model_team = train_ml_team()
+
+team_pred_df = pd.read_csv("./data/df_us_team.csv")
+team_pred_df.season
+team_pred_df = team_pred_df.loc[team_pred_df.season.astype("str") == "2023"]
+team_pred_df
+team_predicted = predict_ml_team(model_team, team_pred_df)
+
+with open("./preprocessing/team_model.pkl", "wb") as file:
+    pickle.dump(model_team, file)
