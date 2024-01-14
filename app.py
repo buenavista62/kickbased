@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit import session_state as ss
 from kickbase_api.kickbase import Kickbase  # Import the appropriate class
 from kickbase_api.exceptions import KickbaseLoginException
 import pandas as pd
@@ -29,7 +30,6 @@ def loadKBPlayer():
                     "Punktetotal": [player.totalPoints for player in players],
                     "UserID": [str(player.user_id) for player in players],
                     "TeamID": [str(player.team_id) for player in players],
-                    "TeamCover": [str(player.team_path) for player in players],
                 }
             )
             st.session_state.players = players
@@ -42,14 +42,14 @@ def loadKBPlayer():
 def main():
     st.title("Kickbased")
 
-    if "logged" not in st.session_state:
-        st.session_state.logged = False
+    if "logged" not in ss:
+        ss.logged = False
         hide_pages(["Spieler", "Mein Verein", "Meine Liga", "Kickbot", "Vorhersagen"])
 
-    elif st.session_state.logged == True:
+    elif ss.logged == True:
         st.success("eingeloggt")
 
-    if st.session_state.logged == False:
+    if ss.logged == False:
         st.warning("Logge dich bei Kickbase ein")
         with st.form(key="login_form"):
             email = st.text_input("Email")
@@ -61,54 +61,48 @@ def main():
                     logging = kickbase_singleton.login(email, password)
                     if logging:
                         st.success("Logged in successfully!")
-                        st.session_state.logged = True
+                        ss.logged = True
                     else:
                         st.error("Invalid email or password. Please try again.")
-                        st.session_state.logged = False
+                        ss.logged = False
 
-    if st.session_state.logged == True:
-        if "kb" not in st.session_state:
-            st.session_state.kb = kickbase_singleton.kb
+    if ss.logged == True:
+        if "kb" not in ss:
+            ss.kb = kickbase_singleton.kb
         league_names = ["Wähle eine Liga..."] + [
-            st.session_state.kb.leagues()[i].name
-            for i in range(len(st.session_state.kb.leagues()))
+            ss.kb.leagues()[i].name for i in range(len(ss.kb.leagues()))
         ]
         selected_league = st.selectbox("Liga", league_names)
         if selected_league != "Wähle eine Liga...":
-            if "liga" not in st.session_state:
-                st.session_state.liga = st.session_state.kb.leagues()[
-                    league_names.index(selected_league) - 1
-                ]
-            if "user_info" not in st.session_state:
-                keys = [
-                    x.id
-                    for x in st.session_state.kb.league_users(st.session_state.liga)
-                ]
-                values = [
-                    x.name
-                    for x in st.session_state.kb.league_users(st.session_state.liga)
-                ]
-                st.session_state.user_info = dict(zip(keys, values))
+            if "liga" not in ss:
+                ss.liga = ss.kb.leagues()[league_names.index(selected_league) - 1]
+            if "user_info" not in ss:
+                keys = [x.id for x in ss.kb.league_users(ss.liga)]
+                values = [x.name for x in ss.kb.league_users(ss.liga)]
+                ss.user_info = dict(zip(keys, values))
 
-            if "kb_data" not in st.session_state:
+            if "kb_data" not in ss:
                 with st.status("Data preperation"):
                     st.write("Downloading Kickbase data...")
-                    st.session_state.kb_data = loadKBPlayer()
+                    ss.kb_data = loadKBPlayer()
                     st.write("Merging data with ligainsider...")
                     df_li = pd.read_csv("./data/ligainsider_df.csv")
                     df_li.ID = df_li.ID.astype("str")
                     df_li.drop(columns=(["Name", "Team", "birth_year"]), inplace=True)
-                    st.session_state.kb_data_merged = fn.mergeKB(
-                        df_li, st.session_state.kb_data
+                    ss.kb_data_merged = fn.mergeKB(df_li, ss.kb_data)
+
+                    ss.kb_radarcharts = fn.radarcharts(ss.kb_data_merged)
+
+                    team_logos = pd.DataFrame(ss.kb.TeamsInfo())
+                    team_logos.drop(columns=("Name"), inplace=True)
+                    ss.kb_data_merged = ss.kb_data_merged.merge(
+                        team_logos, on="TeamID", how="left"
                     )
 
-                    st.session_state.kb_radarcharts = fn.radarcharts(
-                        st.session_state.kb_data_merged
-                    )
-                    if "matches" not in st.session_state:
-                        m = st.session_state.kb.matches()
+                    if "matches" not in ss:
+                        m = ss.kb.matches()
                         matches_df = pd.DataFrame(m)
-                        st.session_state.matches = pd.DataFrame(
+                        ss.matches = pd.DataFrame(
                             {
                                 "Match Time": pd.to_datetime(
                                     matches_df["d"]
@@ -126,15 +120,15 @@ def main():
                         )
                     st.write("Data is ready")
                     st.toast("Daten sind geladen!")
-                    if "data_ready" not in st.session_state:
-                        st.session_state.data_ready = True
+                    if "data_ready" not in ss:
+                        ss.data_ready = True
 
-                    if "data_ready" in st.session_state:
+                    if "data_ready" in ss:
                         show_pages_from_config()
 
             logout_button = st.button("Logout")
             if logout_button:
-                del st.session_state.logged
+                del ss.logged
                 st.rerun()
 
 
