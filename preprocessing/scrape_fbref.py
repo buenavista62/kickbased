@@ -1,9 +1,5 @@
 import html
-import random as rd
-import re
-import time
 
-import html5lib
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup, Comment

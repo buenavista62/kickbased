@@ -1,17 +1,15 @@
-import pandas as pd
-import streamlit as st
 import json
-import functions as fn
-from streamlit import session_state as ss
-
-from unidecode import unidecode
-import plotly.graph_objects as go
-
 from datetime import datetime
-from babel.dates import format_datetime
+
+import pandas as pd
+import plotly.graph_objects as go
 import pytz
+import streamlit as st
+from babel.dates import format_datetime
+from streamlit import session_state as ss
+from unidecode import unidecode
 
-
+import functions as fn
 import mappings as mp
 
 if __name__ == "__main__":
@@ -20,7 +18,6 @@ if __name__ == "__main__":
         st.link_button("Zum Login", "https://kickbased.streamlit.app/")
 
     else:
-        st.write(ss.kb_data_merged.head())
         with open("li_update.txt") as li_datenstand:
             for line in li_datenstand:
                 line = line.strip()
@@ -72,7 +69,7 @@ if __name__ == "__main__":
                 ss.df_spieler["Position"] = ss.df_spieler["Position"].map(
                     position_mapping
                 )
-                ss.df_spieler.drop(["TeamCover", "Trend"], axis=1)
+                ss.df_spieler.drop(["Logo", "Trend"], axis=1)
 
                 ss.df_spieler["UserID"] = ss.df_spieler["UserID"].map(ss.user_info)
                 ss.df_spieler.loc[ss.df_spieler["UserID"].isna(), "UserID"] = "Kickbase"
@@ -86,7 +83,7 @@ if __name__ == "__main__":
                         "Stats": None,
                         "ID": None,
                         "TeamID": None,
-                        "TeamCover": None,
+                        "Logo": st.column_config.ImageColumn(""),
                         "Einsatzquote": st.column_config.NumberColumn(
                             "Einsatzquote",
                             min_value=0,

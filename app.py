@@ -1,42 +1,42 @@
-import streamlit as st
-from streamlit import session_state as ss
-from kickbase_api.kickbase import Kickbase  # Import the appropriate class
-from kickbase_api.exceptions import KickbaseLoginException
 import pandas as pd
-from kickbase_singleton import kickbase_singleton
-import functions as fn
+import streamlit as st
 from st_pages import hide_pages, show_pages_from_config
+from streamlit import session_state as ss
+
+import functions as fn
+from kickbase_singleton import kickbase_singleton
 
 
 def loadKBPlayer():
-    # kb = kickbase_singleton.kb
-    try:
-        if "kb_data_merged" not in st.session_state:
-            players = st.session_state.kb.get_all_players(st.session_state.liga.id)
-            df = pd.DataFrame(
-                {
-                    "ID": [str(player.id) for player in players],
-                    "Name": [
-                        str(player.first_name) + " " + str(player.last_name)
-                        for player in players
-                    ],
-                    "Team": [player.teamName for player in players],
-                    "Position": [str(player.position) for player in players],
-                    "Marktwert": [player.market_value for player in players],
-                    "Trend": [player.market_value_trend for player in players],
-                    "Bild": [player.profile_big_path for player in players],
-                    "Status": [player.status for player in players],
-                    "Punkteschnitt": [player.average_points for player in players],
-                    "Punktetotal": [player.totalPoints for player in players],
-                    "UserID": [str(player.user_id) for player in players],
-                    "TeamID": [str(player.team_id) for player in players],
-                }
-            )
-            st.session_state.players = players
-    except:
-        pass
+    if "kb_data_merged" in ss:
+        return ss["kb_data_merged"]
 
-    return df
+    try:
+        players = ss.kb.get_all_players(ss.liga.id)
+        player_data = [
+            {
+                "ID": str(player.id),
+                "Name": f"{player.first_name} {player.last_name}",
+                "Team": player.teamName,
+                "Position": str(player.position),
+                "Marktwert": player.market_value,
+                "Trend": player.market_value_trend,
+                "Bild": player.profile_big_path,
+                "Status": player.status,
+                "Punkteschnitt": player.average_points,
+                "Punktetotal": player.totalPoints,
+                "UserID": str(player.user_id),
+                "TeamID": str(player.team_id),
+            }
+            for player in players
+        ]
+
+        df = pd.DataFrame(player_data)
+        ss["kb_data_merged"] = df
+        return df
+    except Exception as e:
+        st.error(f"Failed to load player data: {e}")
+        return pd.DataFrame()
 
 
 def main():

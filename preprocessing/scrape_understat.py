@@ -1,7 +1,7 @@
-from understatapi import UnderstatClient
-import pandas as pd
-
 from datetime import datetime, timedelta
+
+import pandas as pd
+from understatapi import UnderstatClient
 
 us = UnderstatClient()
 

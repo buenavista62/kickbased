@@ -1,16 +1,13 @@
-from unidecode import unidecode
+import ast
+import datetime
+import json
 
 import pandas as pd
-import plotly.graph_objects as go
-from sklearn.preprocessing import MinMaxScaler
-import ast
-import json
-import streamlit as st
-import numpy as np
-import matplotlib.pyplot as plt
-import datetime
 import plotly.express as px
-from rapidfuzz import process, fuzz
+import plotly.graph_objects as go
+import streamlit as st
+from rapidfuzz import fuzz, process
+from unidecode import unidecode
 
 
 def SearchPlayer(df, search):

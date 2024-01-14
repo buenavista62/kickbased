@@ -1,20 +1,21 @@
+import pickle
+
+import numpy as np
+import pandas as pd
+from sklearn import linear_model
 from sklearn.ensemble import (
+    ExtraTreesRegressor,
     HistGradientBoostingRegressor,
     RandomForestRegressor,
     VotingRegressor,
-    ExtraTreesRegressor,
 )
-from sklearn.preprocessing import normalize, StandardScaler
-from sklearn.model_selection import train_test_split, GridSearchCV
-from sklearn import linear_model
 from sklearn.feature_selection import VarianceThreshold
+from sklearn.model_selection import GridSearchCV, train_test_split
 from sklearn.neural_network import MLPRegressor
-import numpy as np
-import pandas as pd
-import pickle
-import preprocessing.scrape_understat as su
-
+from sklearn.preprocessing import StandardScaler
 from understatapi import UnderstatClient
+
+import preprocessing.scrape_understat as su
 
 
 def train_ml_player(train_data, field=True, use_grid_search=False):

@@ -1,6 +1,7 @@
 import asyncio
-import aiohttp
 import re
+
+import aiohttp
 import pandas as pd
 from bs4 import BeautifulSoup
 
