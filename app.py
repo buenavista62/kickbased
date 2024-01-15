@@ -39,9 +39,7 @@ def loadKBPlayer():
         return pd.DataFrame()
 
 
-def main():
-    st.title("Kickbased")
-
+def logging_process():
     if "logged" not in ss:
         ss.logged = False
         hide_pages(["Spieler", "Mein Verein", "Meine Liga", "Kickbot", "Vorhersagen"])
@@ -66,6 +64,51 @@ def main():
                         st.error("Invalid email or password. Please try again.")
                         ss.logged = False
 
+
+def load_kickbase_data():
+    ss.kb_data = loadKBPlayer()
+
+
+def data_prep():
+    df_li = pd.read_csv("./data/ligainsider_df.csv")
+    df_li.ID = df_li.ID.astype("str")
+    df_li.drop(columns=(["Name", "Team", "birth_year"]), inplace=True)
+    ss.kb_data_merged = fn.mergeKB(df_li, ss.kb_data)
+
+    ss.kb_radarcharts = fn.radarcharts(ss.kb_data_merged)
+
+    team_logos = pd.DataFrame(ss.kb.TeamsInfo())
+    team_logos.drop(columns=("Name"), inplace=True)
+    ss.kb_data_merged = ss.kb_data_merged.merge(team_logos, on="TeamID", how="left")
+
+
+def load_matches():
+    if "matches" not in ss:
+        m = ss.kb.matches()
+        matches_df = pd.DataFrame(m)
+        ss.matches = pd.DataFrame(
+            {
+                "Match Time": pd.to_datetime(matches_df["d"]).dt.strftime(
+                    "%Y-%m-%d %H:%M"
+                ),
+                "Home Team ID": matches_df["t1i"],
+                "Home Team": matches_df["t1n"],
+                "Home Team Abbreviation": matches_df["t1y"],
+                "Home Team Score": matches_df["t1s"],
+                "Away Team ID": matches_df["t2i"],
+                "Away Team": matches_df["t2n"],
+                "Away Team Abbreviation": matches_df["t2y"],
+                "Away Team Score": matches_df["t2s"],
+                "Matchday": matches_df["md"],
+            }
+        )
+
+
+def main():
+    st.title("Kickbased")
+
+    logging_process()
+
     if ss.logged == True:
         if "kb" not in ss:
             ss.kb = kickbase_singleton.kb
@@ -84,47 +127,20 @@ def main():
             if "kb_data" not in ss:
                 with st.status("Data preperation"):
                     st.write("Downloading Kickbase data...")
-                    ss.kb_data = loadKBPlayer()
+                    load_kickbase_data()
                     st.write("Merging data with ligainsider...")
-                    df_li = pd.read_csv("./data/ligainsider_df.csv")
-                    df_li.ID = df_li.ID.astype("str")
-                    df_li.drop(columns=(["Name", "Team", "birth_year"]), inplace=True)
-                    ss.kb_data_merged = fn.mergeKB(df_li, ss.kb_data)
-
-                    ss.kb_radarcharts = fn.radarcharts(ss.kb_data_merged)
-
-                    team_logos = pd.DataFrame(ss.kb.TeamsInfo())
-                    team_logos.drop(columns=("Name"), inplace=True)
-                    ss.kb_data_merged = ss.kb_data_merged.merge(
-                        team_logos, on="TeamID", how="left"
-                    )
-
-                    if "matches" not in ss:
-                        m = ss.kb.matches()
-                        matches_df = pd.DataFrame(m)
-                        ss.matches = pd.DataFrame(
-                            {
-                                "Match Time": pd.to_datetime(
-                                    matches_df["d"]
-                                ).dt.strftime("%Y-%m-%d %H:%M"),
-                                "Home Team ID": matches_df["t1i"],
-                                "Home Team": matches_df["t1n"],
-                                "Home Team Abbreviation": matches_df["t1y"],
-                                "Home Team Score": matches_df["t1s"],
-                                "Away Team ID": matches_df["t2i"],
-                                "Away Team": matches_df["t2n"],
-                                "Away Team Abbreviation": matches_df["t2y"],
-                                "Away Team Score": matches_df["t2s"],
-                                "Matchday": matches_df["md"],
-                            }
-                        )
+                    data_prep()
+                    st.write("Loading matches...")
+                    load_matches()
                     st.write("Data is ready")
-                    st.toast("Daten sind geladen!")
-                    if "data_ready" not in ss:
-                        ss.data_ready = True
 
-                    if "data_ready" in ss:
-                        show_pages_from_config()
+            if "data_ready" not in ss:
+                ss.data_ready = True
+
+            st.toast("Daten sind geladen!")
+
+            if "data_ready" in ss:
+                show_pages_from_config()
 
             logout_button = st.button("Logout")
             if logout_button:
