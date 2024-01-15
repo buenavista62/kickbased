@@ -30,7 +30,7 @@ def loadKBPlayer():
             }
             for player in players
         ]
-
+        ss.players = players
         df = pd.DataFrame(player_data)
         ss["kb_data_merged"] = df
         return df
