@@ -4,6 +4,19 @@ import functions as fn
 import mappings as mp
 
 
+def calculate_player_delta(df):
+    delta_sum = 0
+    for _, player in df.iterrows():
+        player_mw_yd = st.session_state.kb.get_player_market_value_last_n_days(
+            days=2,
+            league_id=st.session_state.liga.id,
+            player_id=player["ID"],
+        )[0]
+        delta = player["Marktwert"] - player_mw_yd
+        delta_sum += delta
+    return delta_sum
+
+
 def display_player_data(df):
     num_players = len(df)
     for i in range(0, num_players, 3):
@@ -20,22 +33,25 @@ def display_player_data(df):
                 )
                 st.image(player["Bild"], width=200)  # Adjust width as needed
 
-                player_mw_yd = st.session_state.kb.get_player_market_value_last_n_days(
-                    days=2,
-                    league_id=st.session_state.liga.id,
-                    player_id=player["ID"],
-                )[0]
-
-                delta = player["Marktwert"] - player_mw_yd
+                # Retrieve formatted market value and delta
                 player_mw = fn.market_value_formatter(player["Marktwert"])
+                delta = (
+                    player["Marktwert"]
+                    - st.session_state.kb.get_player_market_value_last_n_days(
+                        days=2,
+                        league_id=st.session_state.liga.id,
+                        player_id=player["ID"],
+                    )[0]
+                )
+                delta_formatted = f"{int(delta):,} €"
 
-                delta = f"{int(delta):,} €"
                 st.metric(
                     label="Marktwert",
                     value=player_mw,
-                    delta=delta,
+                    delta=delta_formatted,
                 )
 
+                # Display other player details
                 st.markdown(f"**Punkteschnitt:** {player['Punkteschnitt']}")
                 st.markdown(f"**Punktetotal:** {player['Punktetotal']}")
                 ply_position = mp.position_mapping.get(player["Position"], "Unbekannt")
@@ -43,6 +59,7 @@ def display_player_data(df):
                 ply_status = mp.status_mapping.get(player["Status"], "Unbekannt")
                 st.markdown(f"**Status:** {ply_status}")
         st.divider()
+    # Display the formatted delta_sum at the end or wherever needed
 
 
 if __name__ == "__main__":
@@ -51,8 +68,15 @@ if __name__ == "__main__":
         st.link_button("Zum Login", "https://kickbased.streamlit.app/")
 
     else:
-        col1, col2 = st.columns([0.6, 0.4])
-
+        my_players = st.session_state.kb.league_user_players(
+            st.session_state.liga, st.session_state.kb.user
+        )
+        my_player_ids = [player.id for player in my_players]
+        my_pl_df = st.session_state.kb_data_merged.loc[
+            st.session_state.kb_data_merged["ID"].isin(my_player_ids), :
+        ]
+        col1, col2 = st.columns([0.5, 0.5])
+        delta_sum = st.empty()
         # Custom CSS to vertically center the content in the container and remove margins
         st.markdown(
             """
@@ -91,12 +115,9 @@ if __name__ == "__main__":
                 f"<div class='vertical-center no-margin'><h4>Teamwert: {team_value} €</h4></div>",
                 unsafe_allow_html=True,
             )
+            st.markdown(
+                f"<div class='vertical-center no-margin'><h4>Marktwertänderung: {fn.market_value_formatter(calculate_player_delta(my_pl_df))}</h4></div>",
+                unsafe_allow_html=True,
+            )
 
-        my_players = st.session_state.kb.league_user_players(
-            st.session_state.liga, st.session_state.kb.user
-        )
-        my_player_ids = [player.id for player in my_players]
-        my_pl_df = st.session_state.kb_data_merged.loc[
-            st.session_state.kb_data_merged["ID"].isin(my_player_ids), :
-        ]
         display_player_data(my_pl_df)
