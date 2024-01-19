@@ -125,7 +125,7 @@ def train_ml_player(train_data, field=True, use_grid_search=False):
         return vote, cols_for_predict, scaler
 
 
-def train_ml_team(use_grid_search=False):
+def load_team_data_us():
     us = UnderstatClient()
     c = 0
     for i in range(2014, 2023):
@@ -137,7 +137,10 @@ def train_ml_team(use_grid_search=False):
             else:
                 df = pd.concat([df, temp_df])
             c += 1
+    return df
 
+
+def train_ml_team(df, use_grid_search=False):
     df = df.reset_index(drop=True)
     # Drop 'team_id' here before any other operations
     df = df.drop("team_id", axis=1)
@@ -200,7 +203,7 @@ def train_ml_team(use_grid_search=False):
             ]
         )
         vote = vote.fit(X_train, y_train)
-        print(vote.score(X_test, y_test))
+        print(vote.score(X_test, y_test), " Team Pred Score")
         return vote
 
 
@@ -306,30 +309,30 @@ def test_ml(predict_data, model, cols_for_predict):
     return new_pred_data
 
 
-train_data = pd.read_csv("./data/train_field.csv")
-predict_data = pd.read_csv("./data/predict_field.csv")
-
-model, cols_for_predict, scaler = train_ml_player(train_data)
-
-with open("./preprocessing/model.pkl", "wb") as file:
-    pickle.dump(model, file)
-
-with open("./preprocessing/cols_for_predict.pkl", "wb") as file:
-    pickle.dump(cols_for_predict, file)
-
-with open("./preprocessing/scaler.pkl", "wb") as file:
-    pickle.dump(scaler, file)
-
-model_team = train_ml_team(use_grid_search=False)
-
-team_pred_df = pd.read_csv("./data/df_us_team.csv")
-
-team_pred_df = team_pred_df.loc[team_pred_df.season.astype("str") == "2023"]
-
-team_predicted = predict_ml_team(model_team, team_pred_df)
-
-with open("./preprocessing/team_model.pkl", "wb") as file:
-    pickle.dump(model_team, file)
-
 if __name__ == "__main__":
-    pass
+    train_data = pd.read_csv("./data/train_field.csv")
+    predict_data = pd.read_csv("./data/predict_field.csv")
+
+    model, cols_for_predict, scaler = train_ml_player(train_data)
+
+    with open("./preprocessing/model.pkl", "wb") as file:
+        pickle.dump(model, file)
+
+    with open("./preprocessing/cols_for_predict.pkl", "wb") as file:
+        pickle.dump(cols_for_predict, file)
+
+    with open("./preprocessing/scaler.pkl", "wb") as file:
+        pickle.dump(scaler, file)
+
+    team_ml_data_us = load_team_data_us()
+
+    model_team = train_ml_team(use_grid_search=False, df=team_ml_data_us)
+
+    team_pred_df = pd.read_csv("./data/df_us_team.csv")
+
+    team_pred_df = team_pred_df.loc[team_pred_df.season.astype("str") == "2023"]
+
+    team_predicted = predict_ml_team(model_team, team_pred_df)
+
+    with open("./preprocessing/team_model.pkl", "wb") as file:
+        pickle.dump(model_team, file)
