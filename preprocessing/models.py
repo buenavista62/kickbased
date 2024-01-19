@@ -136,21 +136,22 @@ def train_ml_player(train_data, field=True, use_grid_search=False):
         return vote, cols_for_predict, scaler
 
 
-def train_ml_team():
+def train_ml_team(use_grid_search=False):
     us = UnderstatClient()
     c = 0
     for i in range(2014, 2023):
-        c += 1
-        temp_df = su.get_team_info(str(i), us)
-        if c == 1:
-            df = temp_df
-        else:
-            df = pd.concat([df, temp_df])
-    df = df.reset_index(drop=True)
+        leagues = ["Bundesliga", "EPL", "La_Liga", "Serie_A", "Ligue_1"]
+        for league in leagues:
+            temp_df = su.get_team_info(str(i), us, league=league)
+            if c == 0:
+                df = temp_df
+            else:
+                df = pd.concat([df, temp_df])
+            c += 1
 
+    df = df.reset_index(drop=True)
     # Drop 'team_id' here before any other operations
     df = df.drop("team_id", axis=1)
-
     ml_df_avg = df.div(df["games_played"], axis=0)
 
     y = ml_df_avg["pts"]
@@ -172,27 +173,46 @@ def train_ml_team():
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=0.33, random_state=17
     )
-    ml1 = HistGradientBoostingRegressor()
-    # ml_score = ml1.score(X_test, y_test)
-    # print(ml_score)
 
-    # ml2_score = ml2.score(X_test,y_test)
-    # print(ml2_score, ' grad')
-    ml3 = RandomForestRegressor()
-    # ml3_score = ml3.score(X_test,y_test)
-    # print(ml3_score, ' random')
-    ml4 = linear_model.LinearRegression()
+    if use_grid_search == True:
+        ml1 = HistGradientBoostingRegressor()
+        ml2 = linear_model.Ridge()
+        ml3 = RandomForestRegressor()
+        vote = VotingRegressor(
+            estimators=[
+                ("histgrad", ml1),
+                ("linear", ml2),
+                ("randf", ml3),
+            ]
+        )
+        params = {
+            "histgrad__l2_regularization": [0, 0.5, 1, 2],
+            "histgrad__max_leaf_nodes": [10, 20, 30, 40, 50],
+            "linear__alpha": [0, 1, 2],
+            "randf__max_features": [1.0, 0.3],
+            "randf__ccp_alpha": [0.0, 0.05, 0.01, 0.02],
+        }
+        grid = GridSearchCV(
+            estimator=vote, param_grid=params, cv=5, verbose=10, return_train_score=True
+        )
+        grid = grid.fit(X_train, y_train)
+        print(grid.score(X_test, y_test))
+        return (grid.best_estimator_,)
 
-    vote = VotingRegressor(
-        estimators=[
-            ("histgrad", ml1),
-            ("randf", ml3),
-            ("linear", ml4),
-        ]
-    )
-    vote = vote.fit(X_train, y_train)
-    print(vote.score(X_test, y_test))
-    return vote
+    else:
+        ml1 = HistGradientBoostingRegressor(l2_regularization=0.5, max_leaf_nodes=10)
+        ml2 = linear_model.Ridge(alpha=2)
+        ml3 = RandomForestRegressor(max_features=0.3)
+        vote = VotingRegressor(
+            estimators=[
+                ("histgrad", ml1),
+                ("linear", ml2),
+                ("randf", ml3),
+            ]
+        )
+        vote = vote.fit(X_train, y_train)
+        print(vote.score(X_test, y_test))
+        return vote
 
 
 def predict_ml_team(model, pred_data):
@@ -220,13 +240,12 @@ def predict_ml_team(model, pred_data):
     X = X.div(X["games_played"], axis=0)
 
     X = X.drop("games_played", axis=1)
-    pred = (model.predict(X) * (34 - gp)) + pts
+    m_pred = model.predict(X)
+    pred = (m_pred * (34 - gp)) + pts
     data["prediction"] = np.round(pred, 0)
     # Calculate strength score
-    total_predicted_points = (model.predict(X) * 34).sum()
-    data["strength_score"] = np.round(
-        (data["prediction"] / total_predicted_points) * 100, 2
-    )
+    total_predicted_points = (m_pred * 34).sum()
+    data["strength_score"] = np.round(((m_pred * 34) / total_predicted_points) * 100, 2)
     data.index = ind
     data.drop(columns=["team_title", "season"], inplace=True)
     return data
@@ -312,12 +331,12 @@ with open("./preprocessing/cols_for_predict.pkl", "wb") as file:
 with open("./preprocessing/scaler.pkl", "wb") as file:
     pickle.dump(scaler, file)
 
-model_team = train_ml_team()
+model_team = train_ml_team(use_grid_search=False)
 
 team_pred_df = pd.read_csv("./data/df_us_team.csv")
-team_pred_df.season
+
 team_pred_df = team_pred_df.loc[team_pred_df.season.astype("str") == "2023"]
-team_pred_df
+
 team_predicted = predict_ml_team(model_team, team_pred_df)
 
 with open("./preprocessing/team_model.pkl", "wb") as file:
