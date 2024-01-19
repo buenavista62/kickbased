@@ -34,23 +34,12 @@ def train_ml_player(train_data, field=True, use_grid_search=False):
         columns_to_divide = df.columns.difference(
             ["Position", "age", "games", "Points"]
         )
-    # df[columns_to_divide] = df[columns_to_divide] * 100
-    # Perform division only on the selected columns
+
     df[columns_to_divide] = df[columns_to_divide].truediv(other=df["games"], axis=0)
     df["Points"] = df["Points"].truediv(other=df["games"], axis=0)
     y = df["Points"]
     X = df.drop(["Points", "games"], axis=1)
-    """ corrs = X.corr().abs()
-    upper_tri = corrs.where(np.triu(np.ones(corrs.shape), k=1).astype(bool))
 
-    to_drop = [
-        column
-        for column in upper_tri.columns
-        if any(upper_tri[column] > 0.85) and column != "Points"
-    ]
-    X = X.drop(to_drop, axis=1) """
-    # fillnacols = X.columns.difference(["Position"])
-    # X[fillnacols] = X[fillnacols].fillna(0)
     feat_selector = VarianceThreshold(0.01)
     feat_selector.fit_transform(X)
 
@@ -341,3 +330,6 @@ team_predicted = predict_ml_team(model_team, team_pred_df)
 
 with open("./preprocessing/team_model.pkl", "wb") as file:
     pickle.dump(model_team, file)
+
+if __name__ == "__main__":
+    pass

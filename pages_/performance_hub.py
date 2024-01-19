@@ -55,6 +55,7 @@ def perform_prediction():
 @st.cache_resource
 def load_team_model():
     with open("./preprocessing/team_model.pkl", "rb") as file:
+        print("loading team_model")
         team_model = pickle.load(file)
     return team_model
 
@@ -63,7 +64,9 @@ def load_team_model():
 def run_team_prediction():
     df = pd.read_csv("./data/df_us_team.csv")
     df = df.loc[df.season.astype("str") == "2023"]
+    print("init teammodel")
     team_model = load_team_model()
+    print("predicting teams")
     team_predicted = models.predict_ml_team(team_model, df)
     return team_predicted
 
@@ -92,6 +95,12 @@ def manipulate_data(predict_data):
     data.Position = data.Position.map(mp.position_mapping)
     data.Status = data.Status.map(mp.status_mapping)
     return data
+
+
+team_df_cols = {
+    "all": ss.team_pred_df.columns,
+    "relevant": ["pts", "prediction", "strength_score"],
+}
 
 
 def main():
@@ -135,7 +144,22 @@ def main():
     with tab2:
         if "team_pred_df" not in ss:
             ss.team_pred_df = run_team_prediction()
-        st.dataframe(ss.team_pred_df)
+
+        show_relevant = st.toggle("Zeige nur Hauptinfos an", True)
+        if show_relevant:
+            st.dataframe(
+                ss.team_pred_df.loc[
+                    :, team_df_cols["relevant"]
+                ].style.background_gradient(subset="strength_score", cmap="RdYlGn")
+            )
+        else:
+            st.dataframe(
+                ss.team_pred_df.style.background_gradient(
+                    subset="strength_score", cmap="RdYlGn"
+                )
+            )
+
+            st.write("hello")
 
 
 if __name__ == "__main__":
