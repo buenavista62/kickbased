@@ -98,7 +98,6 @@ def manipulate_data(predict_data):
 
 
 team_df_cols = {
-    "all": ss.team_pred_df.columns,
     "relevant": ["pts", "prediction", "strength_score"],
 }
 
