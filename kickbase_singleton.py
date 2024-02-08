@@ -1,6 +1,7 @@
 # kickbase_singleton.py
-from kickbase_api.kickbase import Kickbase
+
 from kickbase_api.exceptions import KickbaseLoginException
+from kickbase_api.kickbase import Kickbase
 
 
 class KickbaseSingleton(Kickbase):

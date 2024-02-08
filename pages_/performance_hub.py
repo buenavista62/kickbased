@@ -97,15 +97,16 @@ def manipulate_data(predict_data):
     return data
 
 
-team_df_cols = {
-    "all": ss.team_pred_df.columns,
-    "relevant": ["pts", "prediction", "strength_score"],
-}
-
-
 def main():
     st.title("Performance Hub")
     tab1, tab2 = st.tabs(["Spieler", "Teams"])
+
+    if "team_pred_df" not in ss:
+        ss.team_pred_df = run_team_prediction()
+    team_df_cols = {
+        "all": ss.team_pred_df.columns,
+        "relevant": ["pts", "prediction", "strength_score"],
+    }
 
     with tab1:
         if "predicted_df" not in ss:
@@ -142,9 +143,6 @@ def main():
                 hide_index=True,
             )
     with tab2:
-        if "team_pred_df" not in ss:
-            ss.team_pred_df = run_team_prediction()
-
         show_relevant = st.toggle("Zeige nur Hauptinfos an", True)
         if show_relevant:
             st.dataframe(

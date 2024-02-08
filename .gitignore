@@ -6,3 +6,5 @@ archive/*
 /preprocessing/scrape_li copy.py
 .env
 packages.txt
+connect.py
+test*
