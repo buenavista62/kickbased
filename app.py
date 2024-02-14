@@ -9,7 +9,6 @@ import functions as fn
 from kickbase_singleton import kickbase_singleton
 
 
-@st.cache_data
 def loadKBPlayer(liga_id: str) -> Optional[pd.DataFrame]:
     """Fetches and processes all players for a given league ID.
 
@@ -116,7 +115,6 @@ def process_for_visualization():
     ss.kb_data_merged = ss.kb_data_merged.merge(team_logos, on="TeamID", how="left")
 
 
-@st.cache_data
 def load_and_prepare_matches():
     """Loads match data from Kickbase API and prepares it for presentation."""
     if "matches" not in ss:
@@ -163,7 +161,7 @@ def main():
             # Provide an option for the user to log out
             if st.button("Logout"):
                 perform_logout()
-                st.experimental_rerun()
+                st.rerun()
 
 
 def initialize_kickbase_singleton():

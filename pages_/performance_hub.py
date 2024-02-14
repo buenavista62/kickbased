@@ -7,6 +7,7 @@ from streamlit import session_state as ss
 
 import functions as fn
 import mappings as mp
+from app import loadKBPlayer
 from preprocessing import models
 
 
@@ -20,7 +21,7 @@ def load_model():
     return model, scaler
 
 
-@st.cache_data
+@st.cache_resource
 def load_model_ext():
     with open("./preprocessing/cols_for_predict.pkl", "rb") as file:
         cols_for_predict = pickle.load(file)
@@ -28,8 +29,9 @@ def load_model_ext():
 
 
 # Function to prepare data
-def prepare_data():
-    ss.df_kb_point_hist = fn.get_points_history(ss.players)
+@st.cache_data
+def prepare_data(_players):
+    ss.df_kb_point_hist = fn.get_points_history(_players)
     ss.df_us_player = pd.read_csv("./data/df_us_player.csv")
     ss.predict_data = fn.prepare_pred_page(
         ss.df_kb_point_hist, ss.df_us_player, df_kb=ss.kb_data
@@ -97,6 +99,10 @@ def manipulate_data(predict_data):
     return data
 
 
+if "players" not in ss:
+    ss.players = ss.kb.get_all_players(ss.liga.id)
+
+
 def main():
     st.title("Performance Hub")
     tab1, tab2 = st.tabs(["Spieler", "Teams"])
@@ -110,7 +116,7 @@ def main():
 
     with tab1:
         if "predicted_df" not in ss:
-            prepare_data()
+            prepare_data(ss.players)
             perform_prediction()
 
         ss.player_predict_df = manipulate_data(ss.predicted_df)
