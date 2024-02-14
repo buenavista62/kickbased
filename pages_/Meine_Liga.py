@@ -1,5 +1,8 @@
+import networkx as nx
+import plotly.graph_objects as go
 import streamlit as st
 from kickbase_api.models.user import User
+from streamlit import session_state as ss
 
 
 def map_league_user_to_user(league_user):
@@ -17,6 +20,124 @@ def map_league_user_to_user(league_user):
     # Create a User instance with the dictionary
     user_instance = User(league_user_data)
     return user_instance
+
+
+def create_network_graph(player_transfers):
+    # Create a new graph
+    G = nx.Graph()
+
+    # Process the transfer data
+    for player, data in player_transfers.items():
+        transactions = data["Transaction"]
+        for buyer, seller, value in zip(
+            transactions["Buyer"], transactions["Seller"], transactions["Value"]
+        ):
+            # Add nodes for buyers and sellers
+            G.add_node(buyer, type="buyer")
+            G.add_node(seller, type="seller")
+
+            # Add an edge representing the transfer
+            G.add_edge(buyer, seller, weight=value, player=player)
+
+    # Generate positions for each node using a layout
+    pos = nx.spring_layout(
+        G, k=0.5
+    )  # 'k' is the optimal distance between nodes, adjust as necessary
+
+    # Create a dictionary to map user IDs to user names
+    user_id_to_name = {user.id: user.name for user in kb.league_users(kb.leagues()[0])}
+
+    # Calculate edge widths based on the sum of weights between two nodes
+    edge_weights = nx.get_edge_attributes(G, "weight")
+    max_edge_weight = max(edge_weights.values())
+    scaled_edge_widths = [
+        edge_weights[edge] / max_edge_weight * 10 for edge in G.edges()
+    ]  # Adjust scaling factor as needed
+
+    # Create edges
+    edge_x = []
+    edge_y = []
+    for edge, width in zip(G.edges(), scaled_edge_widths):
+        x0, y0 = pos[edge[0]]
+        x1, y1 = pos[edge[1]]
+        edge_x.extend([x0, x1, None])
+        edge_y.extend([y0, y1, None])
+
+    edge_traces = []
+    for edge, width in zip(G.edges(), scaled_edge_widths):
+        x0, y0 = pos[edge[0]]
+        x1, y1 = pos[edge[1]]
+        edge_traces.append(
+            go.Scatter(
+                x=[
+                    x0,
+                    x1,
+                    None,
+                ],  # None will create a break between lines, simulating separate edges
+                y=[y0, y1, None],
+                line=dict(width=width, color="Grey"),
+                hoverinfo="none",
+                mode="lines",
+            )
+        )
+    # Add edge data to the edge_trace
+
+    # Create nodes with sizes reflecting the number of connections
+    node_x = []
+    node_y = []
+    node_sizes = []
+    node_text = []
+    for node in G.nodes():
+        x, y = pos[node]
+        node_x.append(x)
+        node_y.append(y)
+        node_sizes.append(10 * nx.degree(G, node))  # Scale node size by degree
+        node_text.append(
+            f"{user_id_to_name.get(node, 'Unknown')} ({nx.degree(G, node)} transfers)"
+        )
+
+    node_trace = go.Scatter(
+        x=node_x,
+        y=node_y,
+        mode="markers",
+        hoverinfo="text",
+        text=node_text,
+        marker=dict(
+            size=node_sizes,
+            color=node_sizes,  # Color nodes by their size for additional visual distinction
+            colorscale="Blues",
+            showscale=True,
+            colorbar=dict(
+                title="Number of Transfers", xanchor="left", titleside="right"
+            ),
+            line=dict(width=2, color="DarkSlateGrey"),
+        ),
+    )
+
+    # Create the layout for the graph
+    # Create the layout for the graph
+    layout = go.Layout(
+        title="<br>Network graph of player transfers",
+        titlefont_size=16,
+        hovermode="closest",
+        margin=dict(b=20, l=5, r=5, t=40),
+        xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+        yaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+        showlegend=False,
+    )
+
+    # Create the figure adding all edge traces and the node trace
+    fig = go.Figure(layout=layout)
+    for edge_trace in edge_traces:
+        fig.add_trace(edge_trace)
+    fig.add_trace(node_trace)
+
+    # Check positions and widths
+    print("Positions:", pos)
+    print("Scaled edge widths:", scaled_edge_widths)
+
+    # Display the figure
+    st.plotly_chart(fig)
 
 
 if __name__ == "__main__":
@@ -41,22 +162,32 @@ if __name__ == "__main__":
         st.write(f"Durchschnittliche Punkte: {league_instance.average_points}")
         st.write(f"Maximale Nutzer: {league_instance.max_users}")
         st.write(f"Totale Transfers: {league_instance.total_transfers}")
+        tab1, tab2 = st.tabs(["Ligaranking", "Transfers"])
         st.divider()
-        st.divider()
-        # Display league stats
-        col1, col2 = st.columns(2)
 
-        # Display user stats sorted by placement
-        for i, stats in enumerate(sorted_user_stats):
-            col = col1 if i % 2 == 0 else col2
-            with col:
-                st.image(
-                    stats.profile_image_path,
-                    width=100,
-                )
-                st.markdown(f"**Name:** {stats.name}")
-                st.markdown(f"**Platzierung:** {stats.placement}")
-                st.markdown(f"**Punkte:** {stats.points}")
-                st.markdown(f"**Teamwert:** €{stats.team_value:,.0f}")
+        with tab1:
+            # Display league stats
+            col1, col2 = st.columns(2)
 
-                st.divider()
+            # Display user stats sorted by placement
+            for i, stats in enumerate(sorted_user_stats):
+                col = col1 if i % 2 == 0 else col2
+                with col:
+                    st.image(
+                        stats.profile_image_path,
+                        width=100,
+                    )
+                    st.markdown(f"**Name:** {stats.name}")
+                    st.markdown(f"**Platzierung:** {stats.placement}")
+                    st.markdown(f"**Punkte:** {stats.points}")
+                    st.markdown(f"**Teamwert:** €{stats.team_value:,.0f}")
+
+                    st.divider()
+        with tab2:
+            if "player_transfers" not in ss:
+                ss.player_transfers = {}
+                for player in ss.players:
+                    ss.player_transfers[f"{player.firstName} {player.lastName}"] = (
+                        kb.player_market_history(kb.leagues()[0].id, player.id)
+                    )
+            create_network_graph(ss.player_transfers)
