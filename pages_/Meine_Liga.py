@@ -1,4 +1,5 @@
 import networkx as nx
+import numpy as np
 import plotly.graph_objects as go
 import streamlit as st
 from kickbase_api.models.user import User
@@ -22,7 +23,10 @@ def map_league_user_to_user(league_user):
     return user_instance
 
 
-def create_network_graph(player_transfers):
+# Adjust the function to correct the legend values
+
+
+def create_network_graph(player_transfers, kb_league_users, kb_leagues):
     # Create a new graph
     G = nx.Graph()
 
@@ -39,13 +43,11 @@ def create_network_graph(player_transfers):
             # Add an edge representing the transfer
             G.add_edge(buyer, seller, weight=value, player=player)
 
-    # Generate positions for each node using a layout
-    pos = nx.spring_layout(
-        G, k=0.5
-    )  # 'k' is the optimal distance between nodes, adjust as necessary
+    # Use the Kamada-Kawai layout algorithm
+    pos = nx.kamada_kawai_layout(G)
 
     # Create a dictionary to map user IDs to user names
-    user_id_to_name = {user.id: user.name for user in kb.league_users(kb.leagues()[0])}
+    user_id_to_name = {user.id: user.name for user in kb_league_users(kb_leagues()[0])}
 
     # Calculate edge widths based on the sum of weights between two nodes
     edge_weights = nx.get_edge_attributes(G, "weight")
@@ -55,14 +57,6 @@ def create_network_graph(player_transfers):
     ]  # Adjust scaling factor as needed
 
     # Create edges
-    edge_x = []
-    edge_y = []
-    for edge, width in zip(G.edges(), scaled_edge_widths):
-        x0, y0 = pos[edge[0]]
-        x1, y1 = pos[edge[1]]
-        edge_x.extend([x0, x1, None])
-        edge_y.extend([y0, y1, None])
-
     edge_traces = []
     for edge, width in zip(G.edges(), scaled_edge_widths):
         x0, y0 = pos[edge[0]]
@@ -80,21 +74,25 @@ def create_network_graph(player_transfers):
                 mode="lines",
             )
         )
-    # Add edge data to the edge_trace
 
     # Create nodes with sizes reflecting the number of connections
     node_x = []
     node_y = []
     node_sizes = []
     node_text = []
+    degrees = []
     for node in G.nodes():
         x, y = pos[node]
+        degree = nx.degree(G, node)
         node_x.append(x)
         node_y.append(y)
-        node_sizes.append(10 * nx.degree(G, node))  # Scale node size by degree
-        node_text.append(
-            f"{user_id_to_name.get(node, 'Unknown')} ({nx.degree(G, node)} transfers)"
-        )
+        node_sizes.append(10 * degree)  # Visual scaling factor for node size
+        degrees.append(degree)  # Actual degree for the legend
+        node_text.append(f"{user_id_to_name.get(node, 'Unknown')} ({degree} transfers)")
+
+    # Normalize the degrees to create a continuous range for the color scale
+    max_degree = max(degrees)
+    node_color = [degree / max_degree for degree in degrees]
 
     node_trace = go.Scatter(
         x=node_x,
@@ -104,7 +102,7 @@ def create_network_graph(player_transfers):
         text=node_text,
         marker=dict(
             size=node_sizes,
-            color=node_sizes,  # Color nodes by their size for additional visual distinction
+            color=node_color,  # Use normalized degrees for coloring
             colorscale="Blues",
             showscale=True,
             colorbar=dict(
@@ -114,7 +112,6 @@ def create_network_graph(player_transfers):
         ),
     )
 
-    # Create the layout for the graph
     # Create the layout for the graph
     layout = go.Layout(
         title="<br>Network graph of player transfers",
@@ -132,12 +129,13 @@ def create_network_graph(player_transfers):
         fig.add_trace(edge_trace)
     fig.add_trace(node_trace)
 
-    # Check positions and widths
-    print("Positions:", pos)
-    print("Scaled edge widths:", scaled_edge_widths)
+    # Return the figure
+    return fig
 
-    # Display the figure
-    st.plotly_chart(fig)
+
+# The function would be called and the graph displayed in an interactive environment.
+# fig = create_network_graph(player_transfers, kb_league_users, kb_leagues)
+# fig.show()
 
 
 if __name__ == "__main__":
@@ -190,4 +188,6 @@ if __name__ == "__main__":
                     ss.player_transfers[f"{player.firstName} {player.lastName}"] = (
                         kb.player_market_history(kb.leagues()[0].id, player.id)
                     )
-            create_network_graph(ss.player_transfers)
+            st.plotly_chart(
+                create_network_graph(ss.player_transfers, kb.league_users, kb.leagues)
+            )
